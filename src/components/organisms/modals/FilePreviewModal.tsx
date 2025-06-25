@@ -7,6 +7,7 @@ import {
   ZoomIn, 
   ZoomOut, 
   Maximize2,
+  Minimize2,
   Loader2 
 } from 'lucide-react';
 import {
@@ -83,10 +84,6 @@ export function FilePreviewModal({ file, isOpen, onClose }: FilePreviewModalProp
   
   const handleZoomOut = () => {
     setZoom(prev => Math.max(prev - 25, 50));
-  };
-  
-  const handleFitToPage = () => {
-    setZoom(100);
   };
   
   const renderPreview = () => {
@@ -197,6 +194,9 @@ export function FilePreviewModal({ file, isOpen, onClose }: FilePreviewModalProp
         }
         showCloseButton={false}
       >
+        {/* Hidden DialogTitle for accessibility */}
+        <DialogTitle className="sr-only">{file.name}</DialogTitle>
+        
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b shrink-0">
           <h2 className="text-lg font-semibold truncate pr-4">{file.name}</h2>
@@ -223,14 +223,6 @@ export function FilePreviewModal({ file, isOpen, onClose }: FilePreviewModalProp
                   title={fileManagementStrings.modal.preview.actions.zoomIn}
                 >
                   <ZoomIn className="h-4 w-4" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={handleFitToPage}
-                  title={fileManagementStrings.modal.preview.actions.fitToPage}
-                >
-                  <Maximize2 className="h-4 w-4" />
                 </Button>
                 <Separator orientation="vertical" className="h-6" />
               </>

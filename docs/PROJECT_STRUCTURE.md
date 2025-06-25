@@ -1,16 +1,16 @@
 # JustPing Backend Project Structure Documentation
 
-> Generated on 2025-06-25 at 09:45:20
+> Generated on 2025-06-25 at 12:23:03
 
 ## 📊 Project Statistics
 
 | Metric | Value |
 |--------|-------|
-| **Total Files** | 537 |
-| **Total Lines of Code** | 80,014 |
-| **API Modules** | 46 |
+| **Total Files** | 530 |
+| **Total Lines of Code** | 80,036 |
+| **API Modules** | 45 |
 | **API Endpoints Detected** | 0 |
-| **Average Lines per File** | 149 |
+| **Average Lines per File** | 151 |
 
 ## 🏗️ Architecture Overview
 
@@ -26,27 +26,27 @@ This is a Node.js/Express backend API with the following key architectural compo
 
 | File | Lines | Size (KB) | Category |
 |------|-------|-----------|----------|
-| `package-lock.json` | 12766 | 451.4 | .json |
-| `api/Templates/service.js` | 2579 | 107.7 | .js |
-| `api/Broadcast/service.js` | 1828 | 63.5 | .js |
-| `AgentsFlow/webhookFlowManager.js` | 1199 | 38.7 | .js |
-| `AgentsFlow/aiService.js` | 972 | 33.8 | .js |
-| `api/Channel/service.js` | 962 | 34.4 | .js |
-| `AgentsFlow/strictAgentValidator.js` | 955 | 31.6 | .js |
-| `api/Agents/service.js` | 935 | 31.8 | .js |
-| `api/ConversationFlow/controller.js` | 921 | 27.5 | .js |
+| `package-lock.json` | 12766 | 463.8 | .json |
+| `api/Templates/service.js` | 2579 | 110.5 | .js |
+| `api/Broadcast/service.js` | 1828 | 65.5 | .js |
+| `AgentsFlow/webhookFlowManager.js` | 1199 | 40.0 | .js |
+| `AgentsFlow/aiService.js` | 972 | 34.9 | .js |
+| `api/Channel/service.js` | 962 | 35.4 | .js |
+| `AgentsFlow/strictAgentValidator.js` | 955 | 32.7 | .js |
+| `api/Agents/service.js` | 935 | 32.8 | .js |
+| `api/ConversationFlow/controller.js` | 921 | 28.5 | .js |
 | `api/Contacts/service.js` | 846 | 28.3 | .js |
 | `api/Contacts/repository.js` | 777 | 24.9 | .js |
-| `src/app/(dashboard)/contacts/groups/[groupId]/bulk-add/page.tsx` | 720 | 27.0 | .tsx |
+| `src/app/(dashboard)/contacts/groups/[groupId]/bulk-add/page.tsx` | 720 | 27.7 | .tsx |
 | `api/Contacts/controller.js` | 718 | 19.5 | .js |
-| `AgentsFlow/whatsAppServiceProviders.js` | 704 | 20.4 | .js |
-| `system/providers/Karix/broadcast.js` | 678 | 21.9 | .js |
+| `AgentsFlow/whatsAppServiceProviders.js` | 704 | 21.2 | .js |
+| `system/providers/Karix/broadcast.js` | 678 | 22.6 | .js |
 
 ## 📈 Module Complexity Analysis
 
 | Module | Files | Lines | Avg Lines/File |
 |--------|-------|-------|----------------|
-| **src** | 209 | 24,082 | 115 |
+| **src** | 210 | 24,111 | 115 |
 | **package-lock** | 1 | 12,766 | 12766 |
 | **AgentsFlow** | 17 | 7,373 | 434 |
 | **system** | 71 | 7,318 | 103 |
@@ -66,7 +66,7 @@ This is a Node.js/Express backend API with the following key architectural compo
 | **Role** | 7 | 884 | 126 |
 | **Campaign** | 5 | 791 | 158 |
 | **MessageEvents** | 2 | 780 | 390 |
-| **docs** | 12 | 541 | 45 |
+| **docs** | 12 | 535 | 45 |
 | **change-log** | 1 | 304 | 304 |
 | **.claude** | 1 | 159 | 159 |
 | **start-dev** | 2 | 149 | 75 |
@@ -78,8 +78,8 @@ This is a Node.js/Express backend API with the following key architectural compo
 | **dev-start** | 1 | 35 | 35 |
 | **run-contact-worker** | 1 | 35 | 35 |
 | **test** | 1 | 35 | 35 |
-| **tsconfig** | 2 | 28 | 14 |
 | **purgecss.config** | 1 | 27 | 27 |
+| **tsconfig** | 2 | 27 | 14 |
 | **package-minimal** | 1 | 24 | 24 |
 | **components** | 1 | 18 | 18 |
 | **knexfile** | 1 | 15 | 15 |
@@ -88,10 +88,9 @@ This is a Node.js/Express backend API with the following key architectural compo
 | **knip** | 1 | 3 | 3 |
 | **README** | 1 | 0 | 0 |
 | **design screens** | 25 | 0 | 0 |
-| **public** | 36 | 0 | 0 |
+| **public** | 37 | 0 | 0 |
 | **tempassets** | 8 | 0 | 0 |
 | **tree_structure** | 1 | 0 | 0 |
-| **uploads** | 9 | 0 | 0 |
 
 ## 🗂️ Project Structure Tree
 
@@ -218,11 +217,11 @@ justping-backend/
     ├── 📄 1.1 Create Password.jpg
     ├── 📄 1.2 Create password Successfully.jpg
     ├── 📄 1.3 Sign in.jpg
-    ├── 📄 1.4 About Company.jpg
-    ├── 📄 1.5 About Company 2.jpg
+    ├── 📄 1.4 AboutCompany.jpg
+    ├── 📄 1.5 AboutCompany 2.jpg
     ├── 📄 1.6 Admin details about company 3.jpg
-    ├── 📄 1.7 Add Team Member(add).jpg
-    ├── 📄 1.8 Add Team Member.jpg
+    ├── 📄 1.7 Add TeamMember(add).jpg
+    ├── 📄 1.8 Add TeamMember.jpg
     ├── 📄 1.9 welcome with dropdown.jpg
     ├── 📄 1.9b welcome with dropdown.jpg
     ├── 📄 2.3 Edit business Profile.png
@@ -242,7 +241,7 @@ justping-backend/
     ├── 📄 State=Selected.png
 └── 📄 dev-start.js (35 lines)
 └── 📁 docs/
-    ├── 📄 .project-cache.json (541 lines)
+    ├── 📄 .project-cache.json (535 lines)
     ├── 📖 AUDIT_REPORT.md
     ├── 📖 COMPONENT_ARCHITECTURE.md
     ├── 📖 CSS_AUDIT_REPORT.md
@@ -329,6 +328,7 @@ justping-backend/
     ├── 📄 negativelogo.png
     ├── 📄 next.svg
     ├── 📁 test-docs/
+    │   ├── 📄 1mb.xlsx
     │   ├── 📄 915qP2I1KGL._AC_SX679_.jpg
     │   ├── 📄 Contextual Customer Intelligence-Insights Platform Apkar May 24.pdf
     │   ├── 📄 Draft MOU Instrive CMI Template 2025.docx
@@ -397,6 +397,8 @@ justping-backend/
     │   │   │   ├── 📄 page.tsx (158 lines)
     │   │   ├── 📁 integrations/
     │   │   │   ├── 📄 page.tsx (119 lines)
+    │   │   ├── 📁 knowledgebase/
+    │   │   │   ├── 📄 page.tsx (33 lines)
     │   │   ├── 📄 layout.tsx (21 lines)
     │   │   ├── 📁 loading-test/
     │   │   │   ├── 📄 page.tsx (58 lines)
@@ -468,7 +470,7 @@ justping-backend/
     │   │   ├── 📄 ActionCard.tsx (119 lines)
     │   │   ├── 📄 AuthDivider.tsx (18 lines)
     │   │   ├── 📄 EmptyState.tsx (46 lines)
-    │   │   ├── 📄 FileIcon.tsx (104 lines)
+    │   │   ├── 📄 FileIcon.tsx (111 lines)
     │   │   ├── 📄 Loader.tsx (98 lines)
     │   │   ├── 📄 LogoutFab.tsx (34 lines)
     │   │   ├── 📄 PageHeader.tsx (35 lines)
@@ -495,13 +497,13 @@ justping-backend/
     │   │   ├── 📄 ChatMessage.tsx (167 lines)
     │   │   ├── 📄 DocumentManager.tsx (116 lines)
     │   │   ├── 📄 FileBreadcrumb.tsx (37 lines)
-    │   │   ├── 📄 FileCard.tsx (87 lines)
-    │   │   ├── 📄 FileCardView.tsx (65 lines)
+    │   │   ├── 📄 FileCard.tsx (72 lines)
+    │   │   ├── 📄 FileCardView.tsx (79 lines)
     │   │   ├── 📄 FileInfo.tsx (61 lines)
-    │   │   ├── 📄 FileListRow.tsx (76 lines)
-    │   │   ├── 📄 FileListView.tsx (57 lines)
-    │   │   ├── 📄 FileThumbnail.tsx (220 lines)
-    │   │   ├── 📄 FileThumbnailView.tsx (29 lines)
+    │   │   ├── 📄 FileListRow.tsx (68 lines)
+    │   │   ├── 📄 FileListView.tsx (42 lines)
+    │   │   ├── 📄 FileThumbnail.tsx (193 lines)
+    │   │   ├── 📄 FileThumbnailView.tsx (31 lines)
     │   │   ├── 📄 FileUploadArea.tsx (53 lines)
     │   │   ├── 📄 FileUploadCard.tsx (32 lines)
     │   │   ├── 📄 FormField.tsx (38 lines)
@@ -523,7 +525,7 @@ justping-backend/
     │   │   ├── 📄 ChannelCard.tsx (129 lines)
     │   │   ├── 📄 ChatWidget.tsx (257 lines)
     │   │   ├── 📄 ConversationsWidgetExpanded.tsx (363 lines)
-    │   │   ├── 📄 FileExplorer.tsx (218 lines)
+    │   │   ├── 📄 FileExplorer.tsx (223 lines)
     │   │   ├── 📄 GlobalSearch.tsx (186 lines)
     │   │   ├── 📄 ImageGallery.tsx (181 lines)
     │   │   ├── 📄 ImageViewer.tsx (85 lines)
@@ -540,7 +542,7 @@ justping-backend/
     │   │   │   ├── 📄 CreateKnowledgebaseModal.tsx (299 lines)
     │   │   │   ├── 📄 DriveConfigModal.tsx (325 lines)
     │   │   │   ├── 📄 EditTeamMemberModal.tsx (104 lines)
-    │   │   │   ├── 📄 FilePreviewModal.tsx (232 lines)
+    │   │   │   ├── 📄 FilePreviewModal.tsx (239 lines)
     │   │   │   ├── 📄 ImageCropperModal.tsx (187 lines)
     │   │   │   ├── 📄 IntegrationConfigModal.tsx (549 lines)
     │   │   │   ├── 📄 RemoveTeamMemberModal.tsx (75 lines)
@@ -574,7 +576,7 @@ justping-backend/
     │   │   └── 📄 scroll-area.tsx (43 lines)
     │   │   └── 📄 select.tsx (177 lines)
     │   │   └── 📄 separator.tsx (27 lines)
-    │   │   └── 📄 slider.tsx (77 lines)
+    │   │   └── 📄 slider.tsx (83 lines)
     │   │   └── 📄 table.tsx (107 lines)
     │   │   └── 📄 tabs.tsx (48 lines)
     │   │   └── 📄 textarea.tsx (23 lines)
@@ -600,7 +602,7 @@ justping-backend/
     │   ├── 📁 states/
     │   │   ├── 📄 businessProfile.json (14 lines)
     │   │   ├── 📄 contacts.json (17 lines)
-    │   │   ├── 📄 fileManagement.json (46 lines)
+    │   │   ├── 📄 fileManagement.json (55 lines)
     │   │   ├── 📄 home.json (16 lines)
     │   │   ├── 📄 onboarding.json (79 lines)
     │   │   ├── 📄 settings.json (32 lines)
@@ -626,7 +628,7 @@ justping-backend/
     │   ├── 📄 useAuthForm.ts (78 lines)
     │   ├── 📄 useBusinessProfile.ts (126 lines)
     │   ├── 📄 useContent.ts (67 lines)
-    │   ├── 📄 useFileManager.ts (309 lines)
+    │   ├── 📄 useFileManager.ts (320 lines)
     │   ├── 📄 useIntegrations.ts (215 lines)
     │   ├── 📄 useSettings.ts (117 lines)
     │   ├── 📄 useTeamMembers.ts (167 lines)
@@ -751,19 +753,7 @@ justping-backend/
 └── 🧪 test.json (35 lines)
 └── 📄 tree_structure.txt
 └── ⚡ tsconfig.json (27 lines)
-└── ⚡ tsconfig.tsbuildinfo (1 lines)
-└── 📁 uploads/
-    └── 📁 storage/
-        └── 📁 contacts/
-            └── 📄 1358d6b1-85bd-4840-a815-9e1e7de58603.xlsx
-            └── 📄 2eb88428-1e18-4f61-9f68-7fa5feeeb05c.xlsx
-            └── 📄 39d95a97-31a6-4b87-be64-ba49a8bd5091.xlsx
-            └── 📄 4261f13d-4dc7-405c-b49e-71de2cc6ce64.xlsx
-            └── 📄 5b04b272-2c93-45d2-91bc-50d89304d598.xlsx
-            └── 📄 73ef26f9-4dc4-4f3b-a12f-c50dbd067ade.xlsx
-            └── 📄 ccf4241d-b022-4cd7-ac1c-2e73c77e46c0.xlsx
-            └── 📄 d17340c8-fb2c-4018-9658-d53cd703ad65.xlsx
-            └── 📄 d6fff336-44cb-4514-acb0-6cf475978535.xlsx
+└── ⚡ tsconfig.tsbuildinfo
 ```
 
 ## 📄 File Extensions Summary
@@ -771,9 +761,9 @@ justping-backend/
 | Extension | Files | Lines | Avg Lines/File |
 |-----------|-------|-------|----------------|
 | `.js` | 206 | 40,507 | 197 |
-| `.json` | 46 | 17,205 | 374 |
-| `.tsx` | 127 | 16,252 | 128 |
-| `.ts` | 45 | 4,445 | 99 |
+| `.json` | 46 | 17,208 | 374 |
+| `.tsx` | 128 | 16,261 | 127 |
+| `.ts` | 45 | 4,456 | 99 |
 | `.css` | 1 | 630 | 630 |
 | `.html` | 4 | 574 | 144 |
 | `.yml` | 1 | 99 | 99 |
@@ -782,19 +772,19 @@ justping-backend/
 | `.cmd` | 1 | 61 | 61 |
 | `.mjs` | 2 | 41 | 21 |
 | `.bak` | 1 | 35 | 35 |
-| `.tsbuildinfo` | 1 | 1 | 1 |
 | `.md` | 20 | 0 | 0 |
 | `.jpg` | 14 | 0 | 0 |
 | `.png` | 38 | 0 | 0 |
 | `.svg` | 6 | 0 | 0 |
 | `.ico` | 2 | 0 | 0 |
 | `.webp` | 2 | 0 | 0 |
+| `.xlsx` | 1 | 0 | 0 |
 | `.pdf` | 3 | 0 | 0 |
 | `.docx` | 1 | 0 | 0 |
 | `.mp4` | 3 | 0 | 0 |
 | `.pptx` | 1 | 0 | 0 |
 | `.txt` | 1 | 0 | 0 |
-| `.xlsx` | 9 | 0 | 0 |
+| `.tsbuildinfo` | 1 | 0 | 0 |
 
 ## 🔧 Development Notes
 

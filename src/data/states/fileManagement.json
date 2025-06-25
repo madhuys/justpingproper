@@ -3,15 +3,15 @@
     "connectedProviders": {
       "google-drive": {
         "id": "google-drive",
-        "accessToken": "mock_access_google-drive_1750817926683",
-        "refreshToken": "mock_refresh_google-drive_1750817926683",
-        "connectedAt": "2025-06-25T02:18:46.683Z",
-        "expiresAt": "2025-06-25T03:18:46.683Z"
+        "accessToken": "mock_access_google-drive_1750839435269",
+        "refreshToken": "mock_refresh_google-drive_1750839435269",
+        "connectedAt": "2025-06-25T08:17:15.270Z",
+        "expiresAt": "2025-06-25T09:17:15.270Z"
       }
     },
     "currentProvider": null,
     "currentPath": [],
-    "viewMode": "thumbnail",
+    "viewMode": "card",
     "cardSize": "sm",
     "sortBy": "name",
     "sortOrder": "asc",
