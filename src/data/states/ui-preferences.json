@@ -1,0 +1,12 @@
+{
+  "theme": "dark",
+  "notificationsPaneWidth": 280,
+  "conversationsDateRange": 7,
+  "expandedSections": {
+    "quickConnect": true,
+    "conversations": true
+  },
+  "pinnedItems": [],
+  "preferredChannelView": "all",
+  "contentExpanded": false
+}

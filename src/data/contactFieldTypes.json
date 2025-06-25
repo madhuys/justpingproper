@@ -1,0 +1,88 @@
+{
+  "fieldTypes": [
+    {
+      "value": "text",
+      "label": "Text",
+      "icon": "Type",
+      "validations": ["none", "minLength", "maxLength", "customRegex"]
+    },
+    {
+      "value": "number",
+      "label": "Number",
+      "icon": "Hash",
+      "validations": ["none", "digits5to10", "minValue", "maxValue", "customRegex"]
+    },
+    {
+      "value": "email",
+      "label": "Email",
+      "icon": "Mail",
+      "validations": ["validEmail"]
+    },
+    {
+      "value": "date",
+      "label": "Date",
+      "icon": "Calendar",
+      "validations": ["none", "dateRange", "futureOnly", "pastOnly"]
+    },
+    {
+      "value": "dropdown",
+      "label": "Dropdown",
+      "icon": "ChevronDown",
+      "validations": ["none", "required"]
+    }
+  ],
+  "validationRules": {
+    "none": {
+      "label": "None",
+      "pattern": null
+    },
+    "validEmail": {
+      "label": "Valid email",
+      "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+    },
+    "digits5to10": {
+      "label": "5-10 digits",
+      "pattern": "^\\d{5,10}$"
+    },
+    "minLength": {
+      "label": "Min length",
+      "requiresParam": true,
+      "paramLabel": "Minimum characters"
+    },
+    "maxLength": {
+      "label": "Max length",
+      "requiresParam": true,
+      "paramLabel": "Maximum characters"
+    },
+    "minValue": {
+      "label": "Min value",
+      "requiresParam": true,
+      "paramLabel": "Minimum value"
+    },
+    "maxValue": {
+      "label": "Max value",
+      "requiresParam": true,
+      "paramLabel": "Maximum value"
+    },
+    "customRegex": {
+      "label": "Custom regex",
+      "requiresParam": true,
+      "paramLabel": "Regular expression"
+    },
+    "dateRange": {
+      "label": "Date range",
+      "requiresParam": true,
+      "paramLabel": "Date range"
+    },
+    "futureOnly": {
+      "label": "Future dates only"
+    },
+    "pastOnly": {
+      "label": "Past dates only"
+    },
+    "required": {
+      "label": "Required",
+      "pattern": ".+"
+    }
+  }
+}

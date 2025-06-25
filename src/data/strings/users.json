@@ -1,0 +1,29 @@
+{
+  "header": {
+    "title": "Team Management",
+    "description": "Manage your team members and their roles"
+  },
+  "actions": {
+    "addMember": "Add Team Member",
+    "viewMatrix": "View Role Access Matrix"
+  },
+  "emptyState": {
+    "title": "No team members yet",
+    "description": "Get started by adding your first team member"
+  },
+  "messages": {
+    "inviteSuccess": "Invitation sent successfully",
+    "inviteError": "Failed to send invitation",
+    "updateSuccess": "Team member updated",
+    "updateError": "Failed to update team member",
+    "removeSuccess": "Team member removed",
+    "removeError": "Failed to remove team member",
+    "resendSuccess": "Invitation resent to {email}",
+    "resendError": "Failed to resend invitation",
+    "matrixComingSoon": "Role Access Matrix feature coming soon!"
+  },
+  "labels": {
+    "adminUser": "Admin User",
+    "superadmin": "superadmin"
+  }
+}

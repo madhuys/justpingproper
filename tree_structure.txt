@@ -1,0 +1,404 @@
+├── @rawuploads
+│   ├── AgentsFlow_controller.js.txt
+│   ├── AgentsFlow_handler.js.txt
+│   ├── AgentsFlow_index.js.txt
+│   ├── AgentsFlow_middleware.js.txt
+│   ├── AgentsFlow_route.js.txt
+│   ├── AgentsFlow_schema.js.txt
+│   ├── AgentsFlow_service.js.txt
+│   ├── api_Agents_controller.js.txt
+│   ├── api_Agents_index.js.txt
+│   ├── api_Agents_middleware.js.txt
+│   ├── api_Agents_route.js.txt
+│   ├── api_Agents_schema.js.txt
+│   ├── api_Agents_service.js.txt
+│   ├── api_Auth_controller.js.txt
+│   ├── api_Auth_index.js.txt
+│   ├── api_Auth_repository.js.txt
+│   ├── api_Auth_route.js.txt
+│   ├── api_Auth_schema.js.txt
+│   ├── api_Auth_service.js.txt
+│   ├── api_Auth_utils.js.txt
+│   ├── api_Broadcast_controller.js.txt
+│   ├── api_Broadcast_index.js.txt
+│   ├── api_Broadcast_route.js.txt
+│   ├── api_Broadcast_schema.js.txt
+│   ├── api_Broadcast_service.js.txt
+│   ├── api_Business_business.md.txt
+│   ├── api_Business_controller.js.txt
+│   ├── api_Business_index.js.txt
+│   ├── api_Business_repository.js.txt
+│   ├── api_Business_route.js.txt
+│   ├── api_Business_schema.js.txt
+│   ├── api_Business_service.js.txt
+│   ├── api_Campaign_controller.js.txt
+│   ├── api_Campaign_index.js.txt
+│   ├── api_Campaign_route.js.txt
+│   ├── api_Campaign_schema.js.txt
+│   ├── api_Campaign_service.js.txt
+│   ├── api_Channel_controller.js.txt
+│   ├── api_Channel_index.js.txt
+│   ├── api_Channel_route.js.txt
+│   ├── api_Channel_schema.js.txt
+│   ├── api_Channel_service.js.txt
+│   ├── api_Contacts_contacts.md.txt
+│   ├── api_Contacts_controller.js.txt
+│   ├── api_Contacts_index.js.txt
+│   ├── api_Contacts_repository.js.txt
+│   ├── api_Contacts_route.js.txt
+│   ├── api_Contacts_schema.js.txt
+│   ├── api_Contacts_service.js.txt
+│   ├── api_Contacts_workers_contactUploadWorker.js.txt
+│   ├── api_MessageEvents_controller.js.txt
+│   ├── api_MessageEvents_service.js.txt
+│   ├── api_Role_controller.js.txt
+│   ├── api_Role_index.js.txt
+│   ├── api_Role_repository.js.txt
+│   ├── api_Role_role.md.txt
+│   ├── api_Role_route.js.txt
+│   ├── api_Role_schema.js.txt
+│   ├── api_Role_service.js.txt
+│   ├── api_Team_controller.js.txt
+│   ├── api_Team_index.js.txt
+│   ├── api_Team_repository.js.txt
+│   ├── api_Team_route.js.txt
+│   ├── api_Team_schema.js.txt
+│   ├── api_Team_service.js.txt
+│   ├── api_Team_teamMangement.md.txt
+│   ├── api_Templates_controller.js.txt
+│   ├── api_Templates_index.js.txt
+│   ├── api_Templates_route.js.txt
+│   ├── api_Templates_schema.js.txt
+│   ├── api_Templates_service.js.txt
+│   ├── app.js.txt
+│   ├── bin_www.txt
+│   ├── knexfile.js.txt
+│   ├── local.env.txt
+│   ├── migrations_MIGRATIONS.md.txt
+│   ├── migrations_cli.js.txt
+│   ├── migrations_knex_20250402161618_add_business_management.js.txt
+│   ├── migrations_knex_20250403161136_add_firebase_auth_support.js.txt
+│   ├── migrations_knex_20250408044631_create_contacts_management_table.js.txt
+│   ├── migrations_knex_20250408094818_create_auth_table.js.txt
+│   ├── migrations_knex_20250409085842_create_language_table.js.txt
+│   ├── migrations_knex_20250416053148_create_document_table.js.txt
+│   ├── migrations_knex_20250416115221_add_business_verification.js.txt
+│   ├── migrations_knex_20250417063418_create_team_management_tables.js.txt
+│   ├── migrations_knex_20250422065115_create_table_agents.js.txt
+│   ├── migrations_knex_20250422094838_create_table_agent_nodes.js.txt
+│   ├── migrations_knex_20250422095009_create_table_ai_configs.js.txt
+│   ├── migrations_knex_20250424121038_create_table_campaign.js.txt
+│   ├── migrations_knex_20250501055719_create_table_business_channel.js.txt
+│   ├── migrations_knex_20250501055753_create_table_channel.js.txt
+│   ├── migrations_knex_20250501094244_create_table_broadcast.js.txt
+│   ├── migrations_knex_20250502054536_create_table_conversation.js.txt
+│   ├── migrations_knex_20250502055601_create_table_message.js.txt
+│   ├── migrations_knex_20250502083839_create_table_broadcast_batch_results.js.txt
+│   ├── migrations_knex_20250502091259_add_country_code_to_end_user.js.txt
+│   ├── migrations_knex_20250502091400_add_column_country_code_to_table_end_user.js.txt
+│   ├── migrations_scripts_run-migrations.js.txt
+│   ├── migrations_seeds_01_languages.js.txt
+│   ├── migrations_utils_migration-utils.js.txt
+│   ├── package.json.txt
+│   ├── routers_private.js.txt
+│   ├── routers_public.js.txt
+│   ├── routers_webhooks.js.txt
+│   ├── run-contact-worker.js.txt
+│   ├── system_config_config.js.txt
+│   ├── system_config_database.js.txt
+│   ├── system_config_firebase.js.txt
+│   ├── system_config_middleware.js.txt
+│   ├── system_db_database.js.txt
+│   ├── system_db_postgres.js.txt
+│   ├── system_emailsTemplates_password-reset.html.txt
+│   ├── system_emailsTemplates_team-invitation.html.txt
+│   ├── system_emailsTemplates_verification.html.txt
+│   ├── system_emailsTemplates_welcome.html.txt
+│   ├── system_error_doc.yml.txt
+│   ├── system_error_handler.js.txt
+│   ├── system_error_index.js.txt
+│   ├── system_middleware_auth.js.txt
+│   ├── system_middleware_log-error.js.txt
+│   ├── system_middleware_validate-request.js.txt
+│   ├── system_models_AIConfig.js.txt
+│   ├── system_models_Agent.js.txt
+│   ├── system_models_AgentNode.js.txt
+│   ├── system_models_BaseModel.js.txt
+│   ├── system_models_Broadcast.js.txt
+│   ├── system_models_BroadcastBatchResult.js.txt
+│   ├── system_models_BroadcastMessage.js.txt
+│   ├── system_models_Business.js.txt
+│   ├── system_models_BusinessChannel.js.txt
+│   ├── system_models_BusinessDocument.js.txt
+│   ├── system_models_BusinessUser.js.txt
+│   ├── system_models_BusinessUserInvitation.js.txt
+│   ├── system_models_BusinessVerification.js.txt
+│   ├── system_models_Campaign.js.txt
+│   ├── system_models_Channel.js.txt
+│   ├── system_models_ContactGroup.js.txt
+│   ├── system_models_ContactGroupAssociation.js.txt
+│   ├── system_models_ContactGroupField.js.txt
+│   ├── system_models_ContactUpload.js.txt
+│   ├── system_models_Conversation.js.txt
+│   ├── system_models_Document.js.txt
+│   ├── system_models_EndUser.js.txt
+│   ├── system_models_Language.js.txt
+│   ├── system_models_Message.js.txt
+│   ├── system_models_MessageAttachment.js.txt
+│   ├── system_models_MessageStatus .js.txt
+│   ├── system_models_Role.js.txt
+│   ├── system_models_Team.js.txt
+│   ├── system_models_TeamMember.js.txt
+│   ├── system_models_Template.js.txt
+│   ├── system_models_TemplateButton.js.txt
+│   ├── system_models_TemplateComponent.js.txt
+│   ├── system_models_TemplateMedia.js.txt
+│   ├── system_models_TemplateProvider.js.txt
+│   ├── system_models_TokenBlacklist.js.txt
+│   ├── system_services_Azure_blob.js.txt
+│   ├── system_services_Azure_communication.js.txt
+│   ├── system_services_Azure_keyWalt.js.txt
+│   ├── system_services_Azure_queue.js.txt
+│   ├── system_services_Email_index.js.txt
+│   ├── system_services_Gupshup_broadcast.js.txt
+│   ├── system_services_Gupshup_templates.js.txt
+│   ├── system_services_Karix_broadcast.js.txt
+│   ├── system_services_Karix_templates.js.txt
+│   ├── system_services_Meta_broadcast.js.txt
+│   ├── system_services_Meta_templates.js.txt
+│   ├── system_utils_checks.js.txt
+│   ├── system_utils_controller-handler.js.txt
+│   ├── system_utils_datetime.js.txt
+│   ├── system_utils_file-uploader.js.txt
+│   ├── system_utils_file.js.txt
+│   ├── system_utils_logger.js.txt
+│   ├── system_utils_pagination.js.txt
+│   ├── test.json.txt
+│   └── tree_structure.txt.txt
+├── AgentsFlow
+│   ├── controller.js
+│   ├── handler.js
+│   ├── index.js
+│   ├── middleware.js
+│   ├── route.js
+│   ├── schema.js
+│   └── service.js
+├── api
+│   ├── Agents
+│   │   ├── controller.js
+│   │   ├── index.js
+│   │   ├── middleware.js
+│   │   ├── route.js
+│   │   ├── schema.js
+│   │   └── service.js
+│   ├── Auth
+│   │   ├── controller.js
+│   │   ├── index.js
+│   │   ├── repository.js
+│   │   ├── route.js
+│   │   ├── schema.js
+│   │   ├── service.js
+│   │   └── utils.js
+│   ├── Broadcast
+│   │   ├── controller.js
+│   │   ├── index.js
+│   │   ├── route.js
+│   │   ├── schema.js
+│   │   └── service.js
+│   ├── Business
+│   │   ├── business.md
+│   │   ├── controller.js
+│   │   ├── index.js
+│   │   ├── repository.js
+│   │   ├── route.js
+│   │   ├── schema.js
+│   │   └── service.js
+│   ├── Campaign
+│   │   ├── controller.js
+│   │   ├── index.js
+│   │   ├── route.js
+│   │   ├── schema.js
+│   │   └── service.js
+│   ├── Channel
+│   │   ├── controller.js
+│   │   ├── index.js
+│   │   ├── route.js
+│   │   ├── schema.js
+│   │   └── service.js
+│   ├── Contacts
+│   │   ├── contacts.md
+│   │   ├── controller.js
+│   │   ├── index.js
+│   │   ├── repository.js
+│   │   ├── route.js
+│   │   ├── schema.js
+│   │   ├── service.js
+│   │   └── workers
+│   │       └── contactUploadWorker.js
+│   ├── MessageEvents
+│   │   ├── controller.js
+│   │   └── service.js
+│   ├── Role
+│   │   ├── controller.js
+│   │   ├── index.js
+│   │   ├── repository.js
+│   │   ├── role.md
+│   │   ├── route.js
+│   │   ├── schema.js
+│   │   └── service.js
+│   ├── Team
+│   │   ├── controller.js
+│   │   ├── index.js
+│   │   ├── repository.js
+│   │   ├── route.js
+│   │   ├── schema.js
+│   │   ├── service.js
+│   │   └── teamMangement.md
+│   └── Templates
+│       ├── controller.js
+│       ├── index.js
+│       ├── route.js
+│       ├── schema.js
+│       └── service.js
+├── app.js
+├── bin
+│   └── www
+├── knexfile.js
+├── local.env
+├── migrations
+│   ├── MIGRATIONS.md
+│   ├── cli.js
+│   ├── knex
+│   │   ├── 20250402161618_add_business_management.js
+│   │   ├── 20250403161136_add_firebase_auth_support.js
+│   │   ├── 20250408044631_create_contacts_management_table.js
+│   │   ├── 20250408094818_create_auth_table.js
+│   │   ├── 20250409085842_create_language_table.js
+│   │   ├── 20250416053148_create_document_table.js
+│   │   ├── 20250416115221_add_business_verification.js
+│   │   ├── 20250417063418_create_team_management_tables.js
+│   │   ├── 20250422065115_create_table_agents.js
+│   │   ├── 20250422094838_create_table_agent_nodes.js
+│   │   ├── 20250422095009_create_table_ai_configs.js
+│   │   ├── 20250424121038_create_table_campaign.js
+│   │   ├── 20250501055719_create_table_business_channel.js
+│   │   ├── 20250501055753_create_table_channel.js
+│   │   ├── 20250501094244_create_table_broadcast.js
+│   │   ├── 20250502054536_create_table_conversation.js
+│   │   ├── 20250502055601_create_table_message.js
+│   │   ├── 20250502083839_create_table_broadcast_batch_results.js
+│   │   ├── 20250502091259_add_country_code_to_end_user.js
+│   │   └── 20250502091400_add_column_country_code_to_table_end_user.js
+│   ├── scripts
+│   │   └── run-migrations.js
+│   ├── seeds
+│   │   └── 01_languages.js
+│   └── utils
+│       └── migration-utils.js
+├── package-lock.json
+├── package.json
+├── routers
+│   ├── private.js
+│   ├── public.js
+│   └── webhooks.js
+├── run-contact-worker.js
+├── system
+│   ├── config
+│   │   ├── config.js
+│   │   ├── database.js
+│   │   ├── firebase.js
+│   │   └── middleware.js
+│   ├── db
+│   │   ├── database.js
+│   │   └── postgres.js
+│   ├── emailsTemplates
+│   │   ├── password-reset.html
+│   │   ├── team-invitation.html
+│   │   ├── verification.html
+│   │   └── welcome.html
+│   ├── error
+│   │   ├── doc.yml
+│   │   ├── handler.js
+│   │   └── index.js
+│   ├── middleware
+│   │   ├── auth.js
+│   │   ├── log-error.js
+│   │   └── validate-request.js
+│   ├── models
+│   │   ├── AIConfig.js
+│   │   ├── Agent.js
+│   │   ├── AgentNode.js
+│   │   ├── BaseModel.js
+│   │   ├── Broadcast.js
+│   │   ├── BroadcastBatchResult.js
+│   │   ├── BroadcastMessage.js
+│   │   ├── Business.js
+│   │   ├── BusinessChannel.js
+│   │   ├── BusinessDocument.js
+│   │   ├── BusinessUser.js
+│   │   ├── BusinessUserInvitation.js
+│   │   ├── BusinessVerification.js
+│   │   ├── Campaign.js
+│   │   ├── Channel.js
+│   │   ├── ContactGroup.js
+│   │   ├── ContactGroupAssociation.js
+│   │   ├── ContactGroupField.js
+│   │   ├── ContactUpload.js
+│   │   ├── Conversation.js
+│   │   ├── Document.js
+│   │   ├── EndUser.js
+│   │   ├── Language.js
+│   │   ├── Message.js
+│   │   ├── MessageAttachment.js
+│   │   ├── MessageStatus .js
+│   │   ├── Role.js
+│   │   ├── Team.js
+│   │   ├── TeamMember.js
+│   │   ├── Template.js
+│   │   ├── TemplateButton.js
+│   │   ├── TemplateComponent.js
+│   │   ├── TemplateMedia.js
+│   │   ├── TemplateProvider.js
+│   │   └── TokenBlacklist.js
+│   ├── services
+│   │   ├── Azure
+│   │   │   ├── blob.js
+│   │   │   ├── communication.js
+│   │   │   ├── keyWalt.js
+│   │   │   └── queue.js
+│   │   ├── Email
+│   │   │   └── index.js
+│   │   ├── Gupshup
+│   │   │   ├── broadcast.js
+│   │   │   └── templates.js
+│   │   ├── Karix
+│   │   │   ├── broadcast.js
+│   │   │   └── templates.js
+│   │   └── Meta
+│   │       ├── broadcast.js
+│   │       └── templates.js
+│   └── utils
+│       ├── checks.js
+│       ├── controller-handler.js
+│       ├── datetime.js
+│       ├── file-uploader.js
+│       ├── file.js
+│       ├── logger.js
+│       └── pagination.js
+├── test.json
+├── tree_structure.txt
+└── uploads
+    └── storage
+        ├── contacts
+        │   ├── 1358d6b1-85bd-4840-a815-9e1e7de58603.xlsx
+        │   ├── 2eb88428-1e18-4f61-9f68-7fa5feeeb05c.xlsx
+        │   ├── 39d95a97-31a6-4b87-be64-ba49a8bd5091.xlsx
+        │   ├── 4261f13d-4dc7-405c-b49e-71de2cc6ce64.xlsx
+        │   ├── 5b04b272-2c93-45d2-91bc-50d89304d598.xlsx
+        │   ├── 73ef26f9-4dc4-4f3b-a12f-c50dbd067ade.xlsx
+        │   ├── ccf4241d-b022-4cd7-ac1c-2e73c77e46c0.xlsx
+        │   ├── d17340c8-fb2c-4018-9658-d53cd703ad65.xlsx
+        │   └── d6fff336-44cb-4514-acb0-6cf475978535.xlsx
+        ├── documents
+        │   └── business
+        └── profiles

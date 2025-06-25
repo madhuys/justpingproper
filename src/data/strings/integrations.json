@@ -1,0 +1,107 @@
+{
+  "page": {
+    "title": "Integrations",
+    "subtitle": "Connect your favorite tools and services to JustPing",
+    "search": {
+      "placeholder": "Search integrations..."
+    }
+  },
+  "card": {
+    "status": {
+      "connected": "Connected",
+      "action_required": "Action Required",
+      "not_connected": "Not Connected"
+    },
+    "actions": {
+      "connect": "Connect",
+      "manage": "Manage"
+    },
+    "labels": {
+      "mcp_supported": "MCP Supported",
+      "coming_soon": "Coming Soon",
+      "ideal_for": "Ideal for:",
+      "cost": "Cost:",
+      "last_sync": "Last sync:"
+    }
+  },
+  "modal": {
+    "title": {
+      "connect": "Connect {name}",
+      "manage": "Manage {name}"
+    },
+    "steps": {
+      "provider": "Select Provider",
+      "configuration": "Configuration",
+      "test": "Test Connection"
+    },
+    "providers": {
+      "whatsapp": {
+        "title": "Select WhatsApp Provider",
+        "subtitle": "Choose how you want to connect WhatsApp to JustPing",
+        "justping": {
+          "name": "WhatsApp JustPing",
+          "description": "Direct Meta integration by JustPing",
+          "constraints": "1 WABA, multiple numbers"
+        },
+        "gupshup": {
+          "name": "Gupshup",
+          "description": "Popular WhatsApp BSP with global reach",
+          "constraints": "Multiple WABAs, 1 number per WABA"
+        },
+        "wati": {
+          "name": "WATI",
+          "description": "WhatsApp Team Inbox with CRM features",
+          "constraints": "1 WABA, multiple numbers"
+        },
+        "karix": {
+          "name": "Karix",
+          "description": "Reliable Indian WhatsApp BSP",
+          "constraints": "Multiple WABAs, multiple numbers"
+        },
+        "twilio": {
+          "name": "Twilio",
+          "description": "Global communications platform",
+          "constraints": "1 WABA, multiple numbers"
+        }
+      }
+    },
+    "fields": {
+      "help": {
+        "required": "This field is required",
+        "copy": "Click to copy",
+        "readonly": "This field is read-only"
+      }
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "back": "Back",
+      "next": "Next",
+      "test": "Test Connection",
+      "testing": "Testing...",
+      "save": "Save",
+      "saving": "Saving...",
+      "remove": "Remove Integration",
+      "removing": "Removing...",
+      "copy": "Copy"
+    },
+    "messages": {
+      "test_success": "Connection successful!",
+      "test_failure": "Connection failed. Please check your credentials.",
+      "save_success": "Integration saved successfully",
+      "remove_success": "Integration removed",
+      "remove_confirm": "Are you sure you want to remove this integration?",
+      "copied": "Copied to clipboard",
+      "required_fields": "Please fill in all required fields",
+      "select_provider": "Please select a provider to continue"
+    }
+  },
+  "tooltips": {
+    "whatsapp": {
+      "gupshup": "Connect via Gupshup's WhatsApp Business API",
+      "wati": "Connect via WATI's team inbox platform",
+      "karix": "Connect via Karix's messaging infrastructure",
+      "twilio": "Connect via Twilio's global platform",
+      "justping_meta": "Direct connection to Meta's WhatsApp Business Platform"
+    }
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "whatsapp": {
+    "id": "whatsapp",
+    "name": "WhatsApp",
+    "icon": "MessageCircle",
+    "color": "from-green-500 to-green-600",
+    "description": "Business messaging with 2B+ users",
+    "idealFor": "Customer support, notifications, marketing",
+    "mcpSupported": true,
+    "cost": "1 JustPing credit per message sent + WhatsApp conversation cost (Meta)",
+    "providers": [
+      {
+        "id": "justping",
+        "name": "WhatsApp JustPing",
+        "description": "Direct Meta integration by JustPing",
+        "fields": [
+          {
+            "name": "phoneNumber",
+            "label": "Phone Number",
+            "type": "tel",
+            "required": true,
+            "placeholder": "+1234567890"
+          },
+          {
+            "name": "accessToken",
+            "label": "Access Token",
+            "type": "password",
+            "required": true
+          },
+          {
+            "name": "webhookUrl",
+            "label": "Webhook URL",
+            "type": "url",
+            "required": true,
+            "readOnly": true,
+            "value": "${baseUrl}/webhooks/whatsapp/direct"
+          }
+        ]
+      },
+      {
+        "id": "gupshup",
+        "name": "Gupshup",
+        "description": "Popular WhatsApp BSP with global reach",
+        "fields": [
+          {
+            "name": "appName",
+            "label": "App Name",
+            "type": "text",
+            "required": true
+          },
+          {
+            "name": "apiKey",
+            "label": "API Key",
+            "type": "password",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "karix",
+        "name": "Karix",
+        "description": "Reliable Indian WhatsApp BSP",
+        "fields": [
+          {
+            "name": "accountId",
+            "label": "Account ID",
+            "type": "text",
+            "required": true
+          },
+          {
+            "name": "authToken",
+            "label": "Auth Token",
+            "type": "password",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "wati",
+        "name": "WATI",
+        "description": "WhatsApp Team Inbox with CRM features",
+        "fields": [
+          {
+            "name": "apiEndpoint",
+            "label": "API Endpoint",
+            "type": "url",
+            "required": true
+          },
+          {
+            "name": "apiKey",
+            "label": "API Key",
+            "type": "password",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "twilio",
+        "name": "Twilio",
+        "description": "Global communications platform",
+        "fields": [
+          {
+            "name": "accountSid",
+            "label": "Account SID",
+            "type": "text",
+            "required": true
+          },
+          {
+            "name": "authToken",
+            "label": "Auth Token",
+            "type": "password",
+            "required": true
+          },
+          {
+            "name": "messagingServiceSid",
+            "label": "Messaging Service SID",
+            "type": "text",
+            "required": true
+          }
+        ]
+      }
+    ]
+  },
+  "instagram": {
+    "id": "instagram",
+    "name": "Instagram Direct Messages",
+    "icon": "Instagram",
+    "color": "from-pink-500 to-purple-600",
+    "description": "Direct messaging on Instagram",
+    "idealFor": "Brand engagement, influencer marketing",
+    "mcpSupported": true,
+    "cost": "1 JustPing credit per message sent + Meta IG messaging cost (if applicable)",
+    "fields": [
+      {
+        "name": "accessToken",
+        "label": "Access Token",
+        "type": "password",
+        "required": true
+      },
+      {
+        "name": "pageId",
+        "label": "Instagram Business Account ID",
+        "type": "text",
+        "required": true
+      }
+    ]
+  },
+  "telegram": {
+    "id": "telegram",
+    "name": "Telegram",
+    "icon": "Send",
+    "color": "from-blue-500 to-blue-600",
+    "description": "Secure messaging with bot API",
+    "idealFor": "Tech-savvy audiences, notifications",
+    "mcpSupported": false,
+    "cost": "1 JustPing credit per message sent; no extra provider cost",
+    "fields": [
+      {
+        "name": "botToken",
+        "label": "Bot Token",
+        "type": "password",
+        "required": true,
+        "placeholder": "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
+      },
+      {
+        "name": "botUsername",
+        "label": "Bot Username",
+        "type": "text",
+        "required": true,
+        "placeholder": "@YourBotName"
+      }
+    ]
+  },
+  "messenger": {
+    "id": "messenger",
+    "name": "Facebook Messenger",
+    "icon": "Facebook",
+    "color": "from-blue-600 to-blue-700",
+    "description": "Chat with Facebook users",
+    "idealFor": "Social commerce, customer service",
+    "mcpSupported": true,
+    "cost": "1 JustPing credit per message sent + Meta Messenger cost (if applicable)",
+    "fields": [
+      {
+        "name": "pageAccessToken",
+        "label": "Page Access Token",
+        "type": "password",
+        "required": true
+      },
+      {
+        "name": "verifyToken",
+        "label": "Verify Token",
+        "type": "text",
+        "required": true
+      }
+    ]
+  },
+  "webAgent": {
+    "id": "webAgent",
+    "name": "Web Agent",
+    "icon": "Globe",
+    "color": "from-gray-600 to-gray-700",
+    "description": "Live chat widget for websites",
+    "idealFor": "Website visitor engagement",
+    "mcpSupported": false,
+    "cost": "1 JustPing credit per message sent; no extra provider cost",
+    "fields": [
+      {
+        "name": "widgetName",
+        "label": "Widget Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "domain",
+        "label": "Website Domain",
+        "type": "url",
+        "required": true,
+        "placeholder": "https://example.com"
+      },
+      {
+        "name": "embedCode",
+        "label": "Embed Code",
+        "type": "textarea",
+        "readOnly": true,
+        "value": "<!-- JustPing Chat Widget -->\n<script src=\"${baseUrl}/widget.js\" data-key=\"${widgetKey}\"></script>"
+      }
+    ]
+  },
+  "shopify": {
+    "id": "shopify",
+    "name": "Shopify",
+    "icon": "ShoppingBag",
+    "color": "from-green-600 to-green-700",
+    "description": "E-commerce customer support",
+    "idealFor": "Online stores, order inquiries",
+    "mcpSupported": false,
+    "cost": "1 JustPing credit per message sent; integration cost varies by provider",
+    "subChannels": [
+      {
+        "id": "shopifyInbox",
+        "name": "Shopify Inbox",
+        "fields": [
+          {
+            "name": "shopDomain",
+            "label": "Shop Domain",
+            "type": "text",
+            "required": true,
+            "placeholder": "myshop.myshopify.com"
+          },
+          {
+            "name": "accessToken",
+            "label": "Access Token",
+            "type": "password",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "shopifyWhatsApp",
+        "name": "WhatsApp (SuperLemon)",
+        "fields": [
+          {
+            "name": "apiKey",
+            "label": "SuperLemon API Key",
+            "type": "password",
+            "required": true
+          }
+        ]
+      }
+    ]
+  },
+  "wix": {
+    "id": "wix",
+    "name": "Wix",
+    "icon": "Layout",
+    "color": "from-black to-gray-800",
+    "description": "Chat for Wix websites",
+    "idealFor": "Small business websites",
+    "mcpSupported": false,
+    "cost": "1 JustPing credit per message sent; no extra provider cost",
+    "fields": [
+      {
+        "name": "siteUrl",
+        "label": "Wix Site URL",
+        "type": "url",
+        "required": true
+      },
+      {
+        "name": "apiKey",
+        "label": "API Key",
+        "type": "password",
+        "required": true
+      }
+    ]
+  },
+  "bigcommerce": {
+    "id": "bigcommerce",
+    "name": "BigCommerce",
+    "icon": "ShoppingCart",
+    "color": "from-blue-800 to-blue-900",
+    "description": "Enterprise e-commerce support",
+    "idealFor": "Large online retailers",
+    "mcpSupported": false,
+    "cost": "1 JustPing credit per message sent; no extra provider cost",
+    "fields": [
+      {
+        "name": "storeHash",
+        "label": "Store Hash",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "accessToken",
+        "label": "Access Token",
+        "type": "password",
+        "required": true
+      }
+    ]
+  },
+  "magento": {
+    "id": "magento",
+    "name": "Magento",
+    "icon": "Box",
+    "color": "from-orange-600 to-orange-700",
+    "description": "Open-source e-commerce chat",
+    "idealFor": "Custom e-commerce solutions",
+    "mcpSupported": false,
+    "cost": "1 JustPing credit per message sent; no extra provider cost",
+    "fields": [
+      {
+        "name": "storeUrl",
+        "label": "Store URL",
+        "type": "url",
+        "required": true
+      },
+      {
+        "name": "apiToken",
+        "label": "API Token",
+        "type": "password",
+        "required": true
+      }
+    ]
+  },
+  "linkedin": {
+    "id": "linkedin",
+    "name": "LinkedIn",
+    "icon": "Linkedin",
+    "color": "from-blue-700 to-blue-800",
+    "description": "Professional networking messages",
+    "idealFor": "B2B outreach, professional networking",
+    "mcpSupported": false,
+    "cost": "Coming Soon",
+    "comingSoon": true,
+    "fields": []
+  }
+}

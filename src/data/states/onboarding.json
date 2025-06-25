@@ -1,0 +1,79 @@
+{
+  "steps": [
+    {
+      "id": "create-profile",
+      "title": "Create Your Profile",
+      "description": "Create your business and user profile with JustPing.AI's intuitive tools. Share these profiles with end users during agent interactions or campaigns for enhanced engagement.",
+      "completed": false,
+      "action": {
+        "text": "Go to Profile Page",
+        "link": "/business-profile"
+      }
+    },
+    {
+      "id": "add-users",
+      "title": "Add Users",
+      "description": "Add users easily to your admin app and assign roles as admins or other users to help manage various aspects of the system effectively.",
+      "completed": false,
+      "action": {
+        "text": "Add User",
+        "link": "/team"
+      }
+    },
+    {
+      "id": "create-first-agent",
+      "title": "Create Your First Agent",
+      "description": "Create your first agent. These autonomous agents are powered by workflows and AI to enable end-to-end objective-based user interactions.",
+      "completed": false,
+      "action": {
+        "text": "Create Your Agent",
+        "link": "/agents/new"
+      }
+    },
+    {
+      "id": "integrate-messaging",
+      "title": "Integrate Your Messaging Providers",
+      "description": "Integrate your preferred messaging providers to enhance your communication capabilities. Connect multiple providers and choose the most suitable one.",
+      "completed": false,
+      "action": {
+        "text": "Go To Integrate Providers",
+        "link": "/integrations"
+      }
+    },
+    {
+      "id": "create-broadcast-template",
+      "title": "Create Your First Broadcast Template",
+      "description": "Create Your First Broadcast Template. Use these templates to broadcast messages to users. Templates require approval from platforms like WhatsApp.",
+      "completed": false,
+      "action": {
+        "text": "Create Broadcast",
+        "link": "/templates/new"
+      }
+    }
+  ],
+  "settings": {
+    "showWelcomeScreen": true,
+    "defaultScreen": "home",
+    "onboardingComplete": true
+  },
+  "personalInfo": {
+    "fullName": "madhu",
+    "email": "test@example.com",
+    "country": "Afghanistan",
+    "role": "hr-manager"
+  },
+  "useCases": [
+    "recruitment",
+    "customer-support",
+    "conversational-commerce"
+  ],
+  "companyInfo": {
+    "companyName": "test",
+    "website": "",
+    "companySize": "11-50",
+    "industry": "",
+    "country": "India"
+  },
+  "currentStep": 3,
+  "updatedAt": "2025-06-25T01:41:05.193Z"
+}

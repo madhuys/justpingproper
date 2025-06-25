@@ -1,0 +1,97 @@
+{
+  "header": {
+    "title": "Business Profile",
+    "description": "Manage your company information and documents",
+    "editButton": "Edit Profile",
+    "saveButton": "Save Changes",
+    "cancelButton": "Cancel",
+    "createKnowledgebaseButton": "Create Company Knowledgebase"
+  },
+  "fields": {
+    "legalBusinessName": "Legal Business Name",
+    "companyEmail": "Company Email Address", 
+    "website": "Website",
+    "registeredAddress": "Registered Address",
+    "gstNumber": "GST Number / Tax ID",
+    "countryCode": "Country Code",
+    "adminPhoneNumber": "Admin Phone Number",
+    "logo": "Logo",
+    "additionalImages": "Additional Images",
+    "countryOfOperation": "Country of Operation",
+    "industry": "Industry",
+    "companySize": "Company Size",
+    "aboutCompany": "About the Company",
+    "documents": "Documents"
+  },
+  "placeholders": {
+    "phoneNumber": "+91 9876543210",
+    "selectCountry": "Select country",
+    "searchCountries": "Search countries...",
+    "noCountryFound": "No country found.",
+    "selectIndustry": "Select industry",
+    "searchIndustries": "Search industries...",
+    "noIndustryFound": "No industry found.",
+    "selectCompanySize": "Select company size",
+    "searchCompanySizes": "Search company sizes...",
+    "noCompanySizeFound": "No company size found."
+  },
+  "labels": {
+    "uploadLogo": "Upload Logo",
+    "noLogo": "No Logo",
+    "change": "Change",
+    "crop": "Crop",
+    "remove": "Remove",
+    "noDocumentsUploaded": "No documents uploaded",
+    "logoRecommendation": "Square format recommended (PNG or JPG)"
+  },
+  "tooltips": {
+    "legalBusinessName": "Your registered company name for legal and compliance purposes. This will be used in official communications and contracts.",
+    "companyEmail": "Official company email for business communications, notifications, and account recovery.",
+    "website": "Your company website URL. Used for verification and to provide customers with additional information.",
+    "registeredAddress": "Your official registered business address for legal correspondence and compliance requirements.",
+    "gstNumber": "Your tax identification number (GST/VAT/TIN) required for billing and tax compliance.",
+    "adminPhoneNumber": "Primary contact number with country code for account administration and urgent business matters (e.g., +1 234-567-8900).",
+    "countryOfOperation": "Primary country where your business operates. Used for compliance and service availability.",
+    "industry": "Your business industry sector. Helps us provide relevant features and comply with industry-specific regulations.",
+    "companySize": "Number of employees in your organization. Helps us tailor features and pricing to your business needs.",
+    "aboutCompany": "Brief description of your company, its mission, and services. Used for your public profile.",
+    "documents": "Business documents like certificates, licenses, or compliance documents. Stored securely for verification purposes."
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "upload": "Upload",
+    "addMore": "Add More"
+  },
+  "knowledgebaseModal": {
+    "title": "Create Company Knowledgebase",
+    "fields": {
+      "name": "Knowledgebase Name",
+      "useExistingDocs": "Use existing documents",
+      "addMoreDocs": "Add more documents",
+      "includeWebContent": "Include web content"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "create": "Create",
+      "addUrl": "Add",
+      "gotIt": "Got it"
+    },
+    "messages": {
+      "submissionSuccess": "Your knowledgebase request is submitted. It will be ready in 5–30 minutes depending on content volume. You'll be notified once it's available.",
+      "creationInProgress": "Knowledgebase creation in progress. You'll be notified when it's ready.",
+      "readyNotification": "Your knowledgebase '{{name}}' is now ready. View it under Knowledgebases."
+    }
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address",
+    "invalidUrl": "Please enter a valid URL"
+  },
+  "toast": {
+    "profileUpdated": "Profile updated successfully",
+    "profileUpdateError": "Failed to update profile",
+    "knowledgebaseCreated": "Knowledgebase creation initiated",
+    "knowledgebaseError": "Failed to create knowledgebase"
+  }
+}

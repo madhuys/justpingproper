@@ -1,0 +1,52 @@
+[
+  {
+    "id": "entrepreneur",
+    "name": "Entrepreneur / Founder",
+    "value": "entrepreneur"
+  },
+  {
+    "id": "hr-manager",
+    "name": "HR Manager / Recruiter",
+    "value": "hr-manager"
+  },
+  {
+    "id": "customer-success",
+    "name": "Customer Success Manager",
+    "value": "customer-success"
+  },
+  {
+    "id": "sales-manager",
+    "name": "Sales Manager / Account Executive",
+    "value": "sales-manager"
+  },
+  {
+    "id": "operations-manager",
+    "name": "Operations Manager",
+    "value": "operations-manager"
+  },
+  {
+    "id": "support-agent",
+    "name": "Support Agent / Helpdesk",
+    "value": "support-agent"
+  },
+  {
+    "id": "it-admin",
+    "name": "IT Administrator",
+    "value": "it-admin"
+  },
+  {
+    "id": "marketing-manager",
+    "name": "Marketing Manager",
+    "value": "marketing-manager"
+  },
+  {
+    "id": "finance-specialist",
+    "name": "Finance / Billing Specialist",
+    "value": "finance-specialist"
+  },
+  {
+    "id": "knowledge-manager",
+    "name": "Knowledge Manager",
+    "value": "knowledge-manager"
+  }
+]

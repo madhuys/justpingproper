@@ -1,0 +1,109 @@
+{
+  "header": {
+    "title": "Settings",
+    "description": "Manage your account and business preferences"
+  },
+  "tabs": {
+    "userSettings": "User Settings",
+    "businessSettings": "Business Settings"
+  },
+  "user": {
+    "notifications": {
+      "title": "Notification Preferences",
+      "email": {
+        "label": "Email Notifications",
+        "description": "Receive notifications via email"
+      },
+      "sms": {
+        "label": "SMS Notifications",
+        "description": "Receive notifications via SMS"
+      },
+      "push": {
+        "label": "Push Notifications",
+        "description": "Receive push notifications in browser"
+      },
+      "marketing": {
+        "label": "Marketing Emails",
+        "description": "Receive marketing and promotional emails"
+      }
+    },
+    "preferences": {
+      "title": "User Preferences",
+      "language": "Language",
+      "timezone": "Timezone",
+      "theme": {
+        "label": "Theme Preference",
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+      }
+    }
+  },
+  "business": {
+    "hours": {
+      "title": "Business Hours",
+      "enable": {
+        "label": "Enable Business Hours",
+        "description": "Automatically manage availability based on business hours"
+      },
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "timezone": "Timezone",
+      "workingDays": "Working Days"
+    },
+    "autoReply": {
+      "title": "Auto Reply Settings",
+      "enable": {
+        "label": "Enable Auto Reply",
+        "description": "Automatically respond to incoming messages"
+      },
+      "message": {
+        "label": "Auto Reply Message",
+        "placeholder": "Enter your auto reply message..."
+      },
+      "outsideHours": {
+        "label": "Reply Outside Business Hours",
+        "description": "Send auto reply when outside business hours"
+      }
+    },
+    "branding": {
+      "title": "Branding Customization",
+      "logo": {
+        "label": "Company Logo",
+        "uploadButton": "Upload Logo",
+        "recommendation": "Recommended: 200x200px, PNG or JPG"
+      },
+      "colors": {
+        "primary": "Primary Color",
+        "secondary": "Secondary Color",
+        "primaryPlaceholder": "#3b82f6",
+        "secondaryPlaceholder": "#64748b"
+      }
+    }
+  },
+  "actions": {
+    "save": "Save Changes",
+    "saving": "Saving..."
+  },
+  "messages": {
+    "saveSuccess": "Settings saved successfully",
+    "saveError": "Failed to save settings"
+  },
+  "languages": [
+    { "code": "en", "name": "English" },
+    { "code": "es", "name": "Spanish" },
+    { "code": "fr", "name": "French" },
+    { "code": "de", "name": "German" },
+    { "code": "hi", "name": "Hindi" }
+  ],
+  "timezones": [
+    { "value": "Asia/Kolkata", "label": "Asia/Kolkata (IST)" },
+    { "value": "America/New_York", "label": "America/New_York (EST)" },
+    { "value": "Europe/London", "label": "Europe/London (GMT)" },
+    { "value": "Asia/Singapore", "label": "Asia/Singapore (SGT)" },
+    { "value": "Australia/Sydney", "label": "Australia/Sydney (AEDT)" }
+  ],
+  "workingDays": [
+    "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+  ]
+}

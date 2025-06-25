@@ -1,0 +1,304 @@
+{
+  "entries": [
+    {
+      "file": "tree_structure.txt",
+      "status": "Deleted",
+      "comment": "File deleted",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "test.json",
+      "status": "Deleted",
+      "comment": "File deleted",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "\"system/models/MessageStatus .js\"",
+      "status": "Deleted",
+      "comment": "File deleted",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/utils/phoneNormalization.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/models/MessageStatus.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "scripts/",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "progress.md",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "migrations/knex/20250611180000_add_type_column_to_broadcast.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "migrations/knex/20250611120000_add_agent_id_to_conversation.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "migrations/knex/20250610172021_add_current_step_to_conversation.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "migrations/knex/20250609083112_add_provider_message_id_to_message_table.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "migrations/knex/20250609083111_create_message_status_table.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "migrations/knex/20250502111718_add_column_fields_table_conversation.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "change-log.json",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "api/ConversationFlow/",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "AgentsFlow/whatsAppServiceProviders.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "AgentsFlow/webhookFlowManager.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "AgentsFlow/utils.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "AgentsFlow/strictAgentValidator.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "AgentsFlow/helper.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "AgentsFlow/flowManager.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "AgentsFlow/conversationFlowService.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "AgentsFlow/config.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "AgentsFlow/broadcastFlowIntegration.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "AgentsFlow/analytics.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "AgentsFlow/aiProcessor.js",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "ARCHITECTURE.md",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "API_DOCUMENTATION.md",
+      "status": "Untracked",
+      "comment": "New untracked file",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/utils/controller-handler.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/utils/checks.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/providers/Karix/broadcast.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/models/Message.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/models/EndUser.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/models/Conversation.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/models/Broadcast.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/middleware/auth.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/error/handler.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/db/postgres.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "system/config/database.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "routers/public.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "routers/private.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "package.json",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "app.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "api/MessageEvents/service.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "api/Contacts/service.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "api/Contacts/repository.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "api/Broadcast/service.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "api/Broadcast/schema.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "api/Broadcast/controller.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    },
+    {
+      "file": "api/Agents/service.js",
+      "status": "Modified",
+      "comment": "File modified",
+      "timestamp": "June 16, 2025 at 04:46 PM"
+    }
+  ]
+}

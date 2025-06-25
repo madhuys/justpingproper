@@ -1,0 +1,149 @@
+{
+  "root": {
+    "id": "root",
+    "name": "My Drive",
+    "type": "folder",
+    "path": "/",
+    "modifiedAt": "2024-06-20T10:00:00Z",
+    "children": [
+      {
+        "id": "folder-documents",
+        "name": "Documents",
+        "type": "folder",
+        "path": "/Documents",
+        "modifiedAt": "2024-06-19T15:30:00Z",
+        "children": [
+          {
+            "id": "file-justping-super-ai",
+            "name": "Just Ping super AI.pdf",
+            "type": "file",
+            "mimeType": "application/pdf",
+            "size": 1457600,
+            "path": "/Documents/Just Ping super AI.pdf",
+            "modifiedAt": "2024-06-18T09:15:00Z",
+            "downloadUrl": "/test-docs/Just Ping super AI.pdf"
+          },
+          {
+            "id": "file-contextual-insights",
+            "name": "Contextual Customer Intelligence-Insights Platform Apkar May 24.pdf",
+            "type": "file",
+            "mimeType": "application/pdf",
+            "size": 2457600,
+            "path": "/Documents/Contextual Customer Intelligence-Insights Platform Apkar May 24.pdf",
+            "modifiedAt": "2024-05-24T11:30:00Z",
+            "downloadUrl": "/test-docs/Contextual Customer Intelligence-Insights Platform Apkar May 24.pdf"
+          },
+          {
+            "id": "file-marketing-report",
+            "name": "just_ping_marketing_20250623075600.pdf",
+            "type": "file",
+            "mimeType": "application/pdf",
+            "size": 843776,
+            "path": "/Documents/just_ping_marketing_20250623075600.pdf",
+            "modifiedAt": "2025-06-23T07:56:00Z",
+            "downloadUrl": "/test-docs/just_ping_marketing_20250623075600.pdf"
+          },
+          {
+            "id": "file-draft-mou",
+            "name": "Draft MOU Instrive CMI Template 2025.docx",
+            "type": "file",
+            "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "size": 524288,
+            "path": "/Documents/Draft MOU Instrive CMI Template 2025.docx",
+            "modifiedAt": "2025-01-15T14:00:00Z",
+            "downloadUrl": "/test-docs/Draft MOU Instrive CMI Template 2025.docx"
+          }
+        ]
+      },
+      {
+        "id": "folder-presentations",
+        "name": "Presentations",
+        "type": "folder",
+        "path": "/Presentations",
+        "modifiedAt": "2024-06-20T08:00:00Z",
+        "children": [
+          {
+            "id": "file-pitch-deck",
+            "name": "Pitch Deck for Just Ping - dCommerce.pptx",
+            "type": "file",
+            "mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+            "size": 5242880,
+            "path": "/Presentations/Pitch Deck for Just Ping - dCommerce.pptx",
+            "modifiedAt": "2024-06-17T14:20:00Z",
+            "downloadUrl": "/test-docs/Pitch Deck for Just Ping - dCommerce.pptx"
+          }
+        ]
+      },
+      {
+        "id": "folder-images",
+        "name": "Images",
+        "type": "folder",
+        "path": "/Images",
+        "modifiedAt": "2024-06-20T08:00:00Z",
+        "children": [
+          {
+            "id": "file-product-image-1",
+            "name": "915qP2I1KGL._AC_SX679_.jpg",
+            "type": "file",
+            "mimeType": "image/jpeg",
+            "size": 204800,
+            "path": "/Images/915qP2I1KGL._AC_SX679_.jpg",
+            "modifiedAt": "2024-06-10T12:00:00Z",
+            "thumbnailUrl": "/test-docs/915qP2I1KGL._AC_SX679_.jpg",
+            "downloadUrl": "/test-docs/915qP2I1KGL._AC_SX679_.jpg"
+          },
+          {
+            "id": "file-download-image",
+            "name": "download (1).jpg",
+            "type": "file",
+            "mimeType": "image/jpeg",
+            "size": 102400,
+            "path": "/Images/download (1).jpg",
+            "modifiedAt": "2024-06-09T10:30:00Z",
+            "thumbnailUrl": "/test-docs/download (1).jpg",
+            "downloadUrl": "/test-docs/download (1).jpg"
+          }
+        ]
+      },
+      {
+        "id": "folder-videos",
+        "name": "Videos",
+        "type": "folder",
+        "path": "/Videos",
+        "modifiedAt": "2024-06-19T12:00:00Z",
+        "children": [
+          {
+            "id": "file-gen3-alpha",
+            "name": "Gen-3 Alpha Turbo 1396960789.mp4",
+            "type": "file",
+            "mimeType": "video/mp4",
+            "size": 52428800,
+            "path": "/Videos/Gen-3 Alpha Turbo 1396960789.mp4",
+            "modifiedAt": "2024-06-05T13:30:00Z",
+            "downloadUrl": "/test-docs/Gen-3 Alpha Turbo 1396960789, The camera pulls bac, Cropped - ChatGPT Im, M 5, cam_R -1, cam_Z -15.mp4"
+          },
+          {
+            "id": "file-akshita-v2",
+            "name": "akshitav2.mp4",
+            "type": "file",
+            "mimeType": "video/mp4",
+            "size": 15728640,
+            "path": "/Videos/akshitav2.mp4",
+            "modifiedAt": "2024-06-08T10:15:00Z",
+            "downloadUrl": "/test-docs/akshitav2.mp4"
+          },
+          {
+            "id": "file-akshita-v3",
+            "name": "akshitav3.mp4",
+            "type": "file",
+            "mimeType": "video/mp4",
+            "size": 20971520,
+            "path": "/Videos/akshitav3.mp4",
+            "modifiedAt": "2024-06-08T11:30:00Z",
+            "downloadUrl": "/test-docs/akshitav3.mp4"
+          }
+        ]
+      }
+    ]
+  }
+}

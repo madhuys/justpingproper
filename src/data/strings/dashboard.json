@@ -1,0 +1,63 @@
+{
+  "page": {
+    "title": "Dashboard",
+    "subtitle": "Welcome to your JustPing dashboard"
+  },
+  "stats": {
+    "conversations": {
+      "title": "Total Conversations",
+      "value": "1,234",
+      "trend": {
+        "positive": "+12% from last month",
+        "negative": "-12% from last month"
+      }
+    },
+    "agents": {
+      "title": "Active Agents",
+      "value": 8,
+      "subtitle": {
+        "single": "1 agent online",
+        "multiple": "2 agents online",
+        "none": "No agents online"
+      }
+    },
+    "responseTime": {
+      "title": "Response Time",
+      "value": "2.3s",
+      "trend": {
+        "improvement": "-0.5s from last week",
+        "degradation": "+0.5s from last week"
+      }
+    },
+    "messages": {
+      "title": "Messages Sent",
+      "value": "5,678",
+      "trend": {
+        "positive": "+18% from last month",
+        "negative": "-5% from last month"
+      }
+    },
+    "automation": {
+      "title": "Automation Rate",
+      "value": "87%",
+      "subtitle": "AI handled conversations"
+    },
+    "satisfaction": {
+      "title": "Customer Satisfaction",
+      "value": "4.8",
+      "subtitle": "Average rating"
+    }
+  },
+  "actions": {
+    "newCampaign": "New Campaign",
+    "viewAll": "View All",
+    "refresh": "Refresh Data",
+    "export": "Export Report"
+  },
+  "empty": {
+    "noData": "No data available",
+    "noDataDescription": "There's no data to display at the moment. Check back later or refresh the page.",
+    "loading": "Loading dashboard data...",
+    "error": "Failed to load dashboard data. Please try again."
+  }
+}

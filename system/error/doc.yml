@@ -1,0 +1,100 @@
+components:
+  schemas:
+    400Error:
+      type: object
+      properties:
+        statusCode:
+          type: number
+        error:
+          type: string
+        message:
+          type: string
+        validation:
+          type: object
+      example:
+        statusCode: 400
+        error: 'Bad Request'
+        message: 'property1 is required. property2 is required.'
+        validation:
+          source: 'body'
+          keys: 
+            - property1
+            - property2
+    401Error:
+      type: object
+      properties:
+        statusCode:
+          type: number
+        error:
+          type: string
+        message:
+          type: string
+      example:
+        statusCode: 401
+        error: 'Unauthorized'
+        message: 'Access token is missing or invalid.'
+    404Error:
+      type: object
+      properties:
+        statusCode:
+          type: number
+        error:
+          type: string
+        message:
+          type: string
+      example:
+        statusCode: 404
+        error: 'Not Found'
+        message: 'Object not found.'
+    409Error:
+      type: object
+      properties:
+        statusCode:
+          type: number
+        error:
+          type: string
+        message:
+          type: string
+      example:
+        statusCode: 409
+        error: 'Conflict'
+        message: 'Object with name already exists.'
+    500Error:
+      type: object
+      properties:
+        statusCode:
+          type: number
+        error:
+          type: string
+        message:
+          type: string
+      example:
+        statusCode: 500
+        error: 'Internal Server Error'
+        message: 'Internal Server Error'
+  responses:
+    400Error:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/400Error' 
+    401Error:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/401Error' 
+    404Error:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/404Error' 
+    500Error:
+      description: Internal Server Error.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/500Error' 
+    

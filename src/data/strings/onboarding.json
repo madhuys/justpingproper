@@ -1,0 +1,45 @@
+{
+  "personalInfoStep": {
+    "title": "Let's get to know you",
+    "description": "We'll use this to personalize your experience",
+    "fullNameLabel": "What's your full name?",
+    "fullNamePlaceholder": "John Doe",
+    "emailLabel": "What's your email address?",
+    "emailPlaceholder": "john@example.com",
+    "countryLabel": "Which country are you in?",
+    "countryPlaceholder": "Select your country",
+    "roleLabel": "What's your role?",
+    "rolePlaceholder": "Select your role",
+    "nextButton": "Continue"
+  },
+  "useCaseStep": {
+    "title": "How will you use JustPing?",
+    "description": "Select all that apply to help us customize your experience",
+    "useCaseLabel": "What will you use our product for?",
+    "nextButton": "Continue",
+    "backButton": "Back"
+  },
+  "companyInfoStep": {
+    "title": "Tell us about your company",
+    "description": "This helps us tailor JustPing to your business needs",
+    "companyNameLabel": "What's your company name?",
+    "companyNamePlaceholder": "Acme Corporation",
+    "websiteLabel": "What's your company's website?",
+    "websitePlaceholder": "https://example.com",
+    "websiteOptional": "(optional)",
+    "companySizeLabel": "What's your company size?",
+    "companySizePlaceholder": "Select company size",
+    "industryLabel": "What industry are you in?",
+    "industryPlaceholder": "Select your industry",
+    "industryOptional": "(optional)",
+    "companyCountryLabel": "Which country is your company based in?",
+    "companyCountryPlaceholder": "Select country",
+    "completeButton": "Complete Setup",
+    "backButton": "Back"
+  },
+  "common": {
+    "optional": "Optional",
+    "required": "Required",
+    "skip": "Skip for now"
+  }
+}

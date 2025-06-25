@@ -1,0 +1,17 @@
+{
+  "groups": [],
+  "currentGroup": null,
+  "selectedGroups": [],
+  "searchQuery": "",
+  "sortBy": "dateCreated",
+  "sortOrder": "desc",
+  "currentPage": 1,
+  "rowsPerPage": 25,
+  "uploadedFile": null,
+  "mappingPreview": null,
+  "importProgress": {
+    "current": 0,
+    "total": 0,
+    "status": "idle"
+  }
+}

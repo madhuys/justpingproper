@@ -1,0 +1,143 @@
+{
+  "page": {
+    "title": "What would you like to do today?",
+    "subtitle": "Choose an action to get started"
+  },
+  "widgets": {
+    "conversations": {
+      "title": "Total Conversations",
+      "inbound": "Inbound",
+      "outbound": "Outbound",
+      "dateRange": {
+        "today": "Today",
+        "last7days": "Last 7 Days",
+        "custom": "Custom"
+      }
+    },
+    "quickConnect": {
+      "title": "Quick Connect",
+      "subtitle": "Connect your communication channels",
+      "addChannel": "+ Add Channel",
+      "channels": {
+        "whatsapp": {
+          "name": "WhatsApp",
+          "description": "Connect WhatsApp Business",
+          "providers": {
+            "direct": "WhatsApp Direct",
+            "gupshup": "Gupshup",
+            "karix": "Karix", 
+            "wati": "WATI"
+          }
+        },
+        "instagram": {
+          "name": "Instagram Direct Messages",
+          "description": "Connect Instagram Business"
+        },
+        "telegram": {
+          "name": "Telegram",
+          "description": "Connect Telegram Bot"
+        },
+        "messenger": {
+          "name": "Facebook Messenger",
+          "description": "Connect Facebook Page"
+        },
+        "webAgent": {
+          "name": "Web Agent",
+          "description": "Add chat to your website"
+        },
+        "wix": {
+          "name": "Wix",
+          "description": "Connect via Wix Inbox"
+        },
+        "bigcommerce": {
+          "name": "BigCommerce",
+          "description": "Connect via supported apps"
+        },
+        "magento": {
+          "name": "Magento",
+          "description": "Connect via extensions"
+        },
+        "shopify": {
+          "name": "Shopify",
+          "description": "Connect Shopify Inbox & WhatsApp"
+        }
+      }
+    },
+    "pinnedShortcuts": {
+      "title": "Pinned Shortcuts",
+      "subtitle": "Your favorite items for quick access",
+      "empty": "No pinned items yet",
+      "types": {
+        "agent": "Agent",
+        "knowledgebase": "Knowledgebase",
+        "campaign": "Campaign"
+      }
+    },
+    "notifications": {
+      "title": "Notifications & Alerts",
+      "pendingApprovals": "Pending Approvals",
+      "failedRuns": "Failed Runs",
+      "integrationErrors": "Integration Errors",
+      "viewAll": "View All"
+    },
+    "globalSearch": {
+      "placeholder": "Search agents, contacts, knowledgebases, campaigns...",
+      "recentSearches": "Recent Searches",
+      "suggestions": "Suggestions"
+    }
+  },
+  "actions": {
+    "buildAgent": {
+      "title": "Build an Agent",
+      "subtitle": "Create AI-powered agents"
+    },
+    "manageContacts": {
+      "title": "Manage Contacts",
+      "subtitle": "Organize your contacts"
+    },
+    "manageKnowledge": {
+      "title": "Manage Knowledgebases",
+      "subtitle": "Build your knowledge hub"
+    },
+    "browseTemplates": {
+      "title": "Browse Agent Templates",
+      "subtitle": "Start with templates"
+    },
+    "yourAgents": {
+      "title": "Your Agents",
+      "subtitle": "View and manage agents"
+    },
+    "teamMembers": {
+      "title": "Team Members",
+      "subtitle": "Manage your team"
+    },
+    "businessProfile": {
+      "title": "Business Profile",
+      "subtitle": "Update company info"
+    },
+    "campaigns": {
+      "title": "Campaigns",
+      "subtitle": "Launch & track campaigns"
+    },
+    "settings": {
+      "title": "Settings & Integrations",
+      "subtitle": "Configure your workspace"
+    }
+  },
+  "help": {
+    "needHelp": "Need help?",
+    "liveChat": "Live Chat",
+    "startChat": "Start a conversation"
+  },
+  "tooltips": {
+    "whatsapp": "Connect WhatsApp Business API for messaging customers",
+    "instagram": "Manage Instagram Direct Messages from your business account",
+    "telegram": "Create and manage Telegram bots for customer support",
+    "messenger": "Connect Facebook Pages to handle Messenger conversations",
+    "webAgent": "Add live chat widget to your website",
+    "wix": "Integrate with Wix Inbox and supported third-party apps",
+    "bigcommerce": "Connect through apps like Gorgias or Zendesk",
+    "magento": "Use FB Messenger & WhatsApp extensions",
+    "shopify": "Use Shopify Inbox for Messenger and WhatsApp integration apps"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "defaultState": {
+    "connectedProviders": {
+      "google-drive": {
+        "id": "google-drive",
+        "accessToken": "mock_access_google-drive_1750817926683",
+        "refreshToken": "mock_refresh_google-drive_1750817926683",
+        "connectedAt": "2025-06-25T02:18:46.683Z",
+        "expiresAt": "2025-06-25T03:18:46.683Z"
+      }
+    },
+    "currentProvider": null,
+    "currentPath": [],
+    "viewMode": "thumbnail",
+    "cardSize": "sm",
+    "sortBy": "name",
+    "sortOrder": "asc",
+    "searchQuery": "",
+    "selectedFiles": [],
+    "expandedFolders": []
+  },
+  "viewModes": {
+    "list": "list",
+    "card": "card",
+    "thumbnail": "thumbnail"
+  },
+  "sortOptions": {
+    "name": "name",
+    "date": "modifiedAt",
+    "size": "size",
+    "type": "mimeType"
+  },
+  "config": {
+    "itemsPerPage": 50,
+    "maxFileSize": 10485760,
+    "previewTimeout": 30000,
+    "thumbnailSize": {
+      "small": 64,
+      "medium": 128,
+      "large": 256
+    },
+    "supportedPreviewTypes": [
+      "application/pdf",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "image/jpeg",
+      "image/png",
+      "image/gif",
+      "image/svg+xml",
+      "text/plain",
+      "text/markdown"
+    ]
+  }
+}

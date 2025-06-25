@@ -1,0 +1,16 @@
+{
+  "conversations": {
+    "total": 0,
+    "inbound": 0,
+    "outbound": 0,
+    "dateRange": "today"
+  },
+  "pinnedItems": [],
+  "notifications": {
+    "pendingApprovals": 0,
+    "failedRuns": 0,
+    "integrationErrors": 0
+  },
+  "recentSearches": [],
+  "connectedChannels": []
+}

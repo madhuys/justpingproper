@@ -1,0 +1,49 @@
+{
+  "providers": {
+    "google-drive": {
+      "id": "google-drive",
+      "name": "Google Drive",
+      "icon": "google-drive",
+      "description": "Browse and preview your Google Drive files",
+      "color": "#4285F4",
+      "oauthUrl": "https://accounts.google.com/o/oauth2/auth",
+      "scopes": ["drive.readonly"],
+      "features": {
+        "preview": true,
+        "search": true,
+        "share": true,
+        "versioning": true
+      }
+    },
+    "dropbox": {
+      "id": "dropbox",
+      "name": "Dropbox",
+      "icon": "dropbox",
+      "description": "Browse and preview your Dropbox files",
+      "color": "#0061FF",
+      "oauthUrl": "https://www.dropbox.com/oauth2/authorize",
+      "scopes": ["files.metadata.read", "files.content.read"],
+      "features": {
+        "preview": true,
+        "search": true,
+        "share": true,
+        "versioning": true
+      }
+    },
+    "onedrive": {
+      "id": "onedrive",
+      "name": "OneDrive",
+      "icon": "microsoft",
+      "description": "Browse and preview your OneDrive files",
+      "color": "#0078D4",
+      "oauthUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+      "scopes": ["files.read.all"],
+      "features": {
+        "preview": true,
+        "search": true,
+        "share": true,
+        "versioning": false
+      }
+    }
+  }
+}

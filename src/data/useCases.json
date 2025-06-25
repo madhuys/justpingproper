@@ -1,0 +1,62 @@
+[
+  {
+    "id": "conversational-commerce",
+    "label": "Conversational Commerce & Payments",
+    "value": "conversational-commerce",
+    "icon": "ShoppingCart"
+  },
+  {
+    "id": "customer-support",
+    "label": "Customer Support & Ticketing",
+    "value": "customer-support",
+    "icon": "Headphones"
+  },
+  {
+    "id": "sales-automation",
+    "label": "Sales Automation & Lead Nurturing",
+    "value": "sales-automation",
+    "icon": "TrendingUp"
+  },
+  {
+    "id": "recruitment",
+    "label": "Recruitment & Onboarding",
+    "value": "recruitment",
+    "icon": "Users"
+  },
+  {
+    "id": "team-collaboration",
+    "label": "Team Collaboration & Task Coordination",
+    "value": "team-collaboration",
+    "icon": "Users2"
+  },
+  {
+    "id": "knowledge-management",
+    "label": "Knowledge Management & Document Search",
+    "value": "knowledge-management",
+    "icon": "BookOpen"
+  },
+  {
+    "id": "analytics",
+    "label": "Analytics & Performance Reporting",
+    "value": "analytics",
+    "icon": "BarChart3"
+  },
+  {
+    "id": "workflow-automation",
+    "label": "Workflow Automation & Approval Flows",
+    "value": "workflow-automation",
+    "icon": "GitBranch"
+  },
+  {
+    "id": "training",
+    "label": "Training & Learning Modules",
+    "value": "training",
+    "icon": "GraduationCap"
+  },
+  {
+    "id": "multi-channel",
+    "label": "Multi-channel Engagement (WhatsApp, SMS, Email)",
+    "value": "multi-channel",
+    "icon": "MessageSquare"
+  }
+]

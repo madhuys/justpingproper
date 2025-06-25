@@ -1,0 +1,132 @@
+{
+  "page": {
+    "title": "Cloud Drives",
+    "description": "Connect and manage your cloud storage providers",
+    "emptyState": {
+      "title": "No cloud drives connected",
+      "description": "Connect a cloud storage provider to start browsing and managing your files",
+      "action": "Connect a drive"
+    }
+  },
+  "providers": {
+    "connect": "Connect",
+    "manage": "Manage",
+    "disconnect": "Disconnect",
+    "connected": "Connected",
+    "connecting": "Connecting...",
+    "disconnecting": "Disconnecting..."
+  },
+  "modal": {
+    "config": {
+      "title": {
+        "connect": "Connect to {{name}}",
+        "manage": "Manage {{name}} Connection"
+      },
+      "description": {
+        "connect": "Authorize JustPing to access your {{name}} files in read-only mode",
+        "connected": "Your {{name}} account is connected and ready to use"
+      },
+      "actions": {
+        "authorize": "Authorize",
+        "disconnect": "Disconnect",
+        "cancel": "Cancel",
+        "close": "Close"
+      },
+      "messages": {
+        "authorizing": "Opening authorization window...",
+        "success": "Successfully connected to {{name}}",
+        "error": "Failed to connect to {{name}}. Please try again.",
+        "disconnected": "Disconnected from {{name}}"
+      }
+    },
+    "preview": {
+      "title": "Preview",
+      "actions": {
+        "download": "Download",
+        "close": "Close",
+        "zoomIn": "Zoom In",
+        "zoomOut": "Zoom Out",
+        "fitToPage": "Fit to Page"
+      },
+      "errors": {
+        "unsupported": "Preview not available for this file type",
+        "loadFailed": "Failed to load preview"
+      }
+    }
+  },
+  "explorer": {
+    "toolbar": {
+      "search": {
+        "placeholder": "Search files and folders..."
+      },
+      "view": {
+        "list": "List view",
+        "card": "Card view",
+        "thumbnail": "Thumbnail view"
+      },
+      "sort": {
+        "name": "Name",
+        "date": "Date modified",
+        "size": "Size",
+        "type": "Type"
+      }
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "separator": "/"
+    },
+    "list": {
+      "columns": {
+        "name": "Name",
+        "type": "Type",
+        "modified": "Modified",
+        "size": "Size"
+      }
+    },
+    "emptyFolder": {
+      "title": "This folder is empty",
+      "description": "No files or folders here"
+    },
+    "loading": {
+      "files": "Loading files...",
+      "preview": "Loading preview...",
+      "search": "Searching..."
+    },
+    "errors": {
+      "loadFailed": "Failed to load files",
+      "accessDenied": "Access denied to this folder",
+      "notFound": "File or folder not found"
+    },
+    "fileTypes": {
+      "folder": "Folder",
+      "pdf": "PDF Document",
+      "docx": "Word Document",
+      "xlsx": "Excel Spreadsheet",
+      "pptx": "PowerPoint Presentation",
+      "image": "Image",
+      "video": "Video",
+      "audio": "Audio",
+      "text": "Text File",
+      "other": "File"
+    },
+    "actions": {
+      "open": "Open",
+      "preview": "Preview",
+      "download": "Download",
+      "refresh": "Refresh"
+    }
+  },
+  "errors": {
+    "CONNECTION_FAILED": "Failed to connect to {{provider}}. Please try again.",
+    "AUTH_EXPIRED": "Your session has expired. Please reconnect.",
+    "FILE_NOT_FOUND": "The requested file could not be found.",
+    "PREVIEW_FAILED": "Unable to preview this file. Try downloading instead.",
+    "NETWORK_ERROR": "Network error. Please check your connection.",
+    "GENERIC": "An error occurred. Please try again."
+  },
+  "success": {
+    "connected": "Successfully connected to {{provider}}",
+    "disconnected": "Disconnected from {{provider}}",
+    "downloaded": "File downloaded successfully"
+  }
+}

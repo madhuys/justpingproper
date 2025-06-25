@@ -1,0 +1,102 @@
+{
+  "header": {
+    "logo": {
+      "alt": "JustPing Logo"
+    },
+    "navigation": {
+      "dashboard": "Dashboard",
+      "agents": "Agents",
+      "contacts": "Contacts",
+      "campaigns": "Campaigns",
+      "analytics": "Analytics",
+      "team": "Team",
+      "settings": "Settings"
+    },
+    "userMenu": {
+      "profile": "Profile",
+      "settings": "Settings",
+      "help": "Help & Support",
+      "signOut": "Sign Out"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "markAllRead": "Mark all as read",
+      "viewAll": "View all notifications",
+      "empty": "No new notifications"
+    }
+  },
+  "sidebar": {
+    "main": {
+      "title": "Main",
+      "dashboard": "Dashboard",
+      "conversations": "Conversations",
+      "agents": "AI Agents"
+    },
+    "contacts": {
+      "title": "Contacts",
+      "allContacts": "All Contacts",
+      "segments": "Segments",
+      "import": "Import"
+    },
+    "campaigns": {
+      "title": "Campaigns",
+      "broadcasts": "Broadcasts",
+      "templates": "Templates",
+      "scheduled": "Scheduled"
+    },
+    "analytics": {
+      "title": "Analytics",
+      "overview": "Overview",
+      "performance": "Performance",
+      "reports": "Reports"
+    },
+    "settings": {
+      "title": "Settings",
+      "business": "Business",
+      "team": "Team",
+      "billing": "Billing",
+      "integrations": "Integrations"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "careers": "Careers",
+      "blog": "Blog",
+      "press": "Press"
+    },
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "enterprise": "Enterprise",
+      "whatsnew": "What's New"
+    },
+    "resources": {
+      "title": "Resources",
+      "documentation": "Documentation",
+      "apiReference": "API Reference",
+      "guides": "Guides",
+      "community": "Community"
+    },
+    "support": {
+      "title": "Support",
+      "helpCenter": "Help Center",
+      "contact": "Contact Us",
+      "status": "System Status",
+      "feedback": "Feedback"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "security": "Security",
+      "compliance": "Compliance"
+    },
+    "bottom": {
+      "copyright": "© 2024 JustPing. All rights reserved.",
+      "madeWith": "Made with ❤️ in India"
+    }
+  }
+}

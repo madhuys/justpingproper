@@ -1,0 +1,26 @@
+[
+  {
+    "id": "superadmin",
+    "name": "Super Admin",
+    "value": "superadmin",
+    "description": "Has unrestricted access to every feature and setting across the platform."
+  },
+  {
+    "id": "admin",
+    "name": "Admin",
+    "value": "admin",
+    "description": "Full control over all functions except adding or removing Super Admins."
+  },
+  {
+    "id": "limited-admin",
+    "name": "Limited Admin",
+    "value": "limited-admin",
+    "description": "Can manage most features but must obtain Admin approval for actions that exceed their assigned budget or cost limits."
+  },
+  {
+    "id": "billing-admin",
+    "name": "Billing Admin",
+    "value": "billing-admin",
+    "description": "Manages all financial settings—license types, credit purchases, invoices—and can be assigned alongside any other role."
+  }
+]

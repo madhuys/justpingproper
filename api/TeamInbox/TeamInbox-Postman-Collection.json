@@ -1,0 +1,466 @@
+{
+  "info": {
+    "name": "Just Ping - Team Inbox API",
+    "description": "API collection for the Team Inbox feature of the Just Ping multi-channel communication platform",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Conversations",
+      "description": "Endpoints for managing conversations",
+      "item": [
+        {
+          "name": "List Conversations",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/team-inbox/conversations?status=active&page=1&limit=20&sort_by=last_message_at&sort_direction=desc",
+              "host": ["{{baseUrl}}"],
+              "path": ["team-inbox", "conversations"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "active",
+                  "description": "Filter by conversation status: 'active', 'pending', 'closed'"
+                },
+                {
+                  "key": "campaign_id",
+                  "value": "",
+                  "description": "Filter by campaign ID",
+                  "disabled": true
+                },
+                {
+                  "key": "broadcast_id",
+                  "value": "",
+                  "description": "Filter by broadcast ID",
+                  "disabled": true
+                },
+                {
+                  "key": "search",
+                  "value": "",
+                  "description": "Search by contact name, phone, or message content",
+                  "disabled": true
+                },
+                {
+                  "key": "timeframe",
+                  "value": "",
+                  "description": "Filter by time period: '24h', '7d', '30d'",
+                  "disabled": true
+                },
+                {
+                  "key": "assigned_to",
+                  "value": "",
+                  "description": "Filter by assigned user ID",
+                  "disabled": true
+                },
+                {
+                  "key": "assigned_team",
+                  "value": "",
+                  "description": "Filter by assigned team ID",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number for pagination"
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Number of items per page"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "last_message_at",
+                  "description": "Field to sort by"
+                },
+                {
+                  "key": "sort_direction",
+                  "value": "desc",
+                  "description": "Sort direction: 'asc' or 'desc'"
+                }
+              ]
+            },
+            "description": "Retrieve a list of conversations with filtering options"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Conversation Details",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/team-inbox/conversations/{{conversationId}}?page=1&limit=50",
+              "host": ["{{baseUrl}}"],
+              "path": ["team-inbox", "conversations", "{{conversationId}}"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number for message pagination"
+                },
+                {
+                  "key": "limit",
+                  "value": "50",
+                  "description": "Number of messages per page"
+                }
+              ]
+            },
+            "description": "Retrieve detailed information about a conversation, including message history"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Conversation Status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"pending\",\n  \"note\": \"Waiting for customer response on pricing details\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/team-inbox/conversations/{{conversationId}}/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["team-inbox", "conversations", "{{conversationId}}", "status"]
+            },
+            "description": "Update the status of a conversation"
+          },
+          "response": []
+        },
+        {
+          "name": "Assign Conversation",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assigned_user_id\": \"{{userId}}\",\n  \"assigned_team_id\": \"{{teamId}}\",\n  \"note\": \"Assigning to technical team for product-specific questions\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/team-inbox/conversations/{{conversationId}}/assign",
+              "host": ["{{baseUrl}}"],
+              "path": ["team-inbox", "conversations", "{{conversationId}}", "assign"]
+            },
+            "description": "Assign a conversation to a user or team"
+          },
+          "response": []
+        },
+        {
+          "name": "Send Message",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"content\": \"Thank you for your interest! Our enterprise plan starts at ₹25,000 per month. Would you like to schedule a call to discuss further?\",\n  \"content_type\": \"text\",\n  \"is_internal\": false,\n  \"attachments\": []\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/team-inbox/conversations/{{conversationId}}/messages",
+              "host": ["{{baseUrl}}"],
+              "path": ["team-inbox", "conversations", "{{conversationId}}", "messages"]
+            },
+            "description": "Send a new message in a conversation"
+          },
+          "response": []
+        },
+        {
+          "name": "Send Internal Note",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"content\": \"Customer is considering the enterprise plan but may need approval from their management. Follow up next week if they don't respond.\",\n  \"mentioned_users\": [\"{{userId}}\"]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/team-inbox/conversations/{{conversationId}}/notes",
+              "host": ["{{baseUrl}}"],
+              "path": ["team-inbox", "conversations", "{{conversationId}}", "notes"]
+            },
+            "description": "Send an internal message that is only visible to business users"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Conversation Statistics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/team-inbox/conversations/statistics?start_date=2025-04-25&end_date=2025-05-01&team_id={{teamId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["team-inbox", "conversations", "statistics"],
+              "query": [
+                {
+                  "key": "start_date",
+                  "value": "2025-04-25",
+                  "description": "Start date for the statistics (format: YYYY-MM-DD)"
+                },
+                {
+                  "key": "end_date",
+                  "value": "2025-05-01",
+                  "description": "End date for the statistics (format: YYYY-MM-DD)"
+                },
+                {
+                  "key": "team_id",
+                  "value": "{{teamId}}",
+                  "description": "Filter by team ID"
+                }
+              ]
+            },
+            "description": "Get statistics about conversations for the business"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tags",
+      "description": "Endpoints for managing tags",
+      "item": [
+        {
+          "name": "Get All Tags",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/team-inbox/tags",
+              "host": ["{{baseUrl}}"],
+              "path": ["team-inbox", "tags"]
+            },
+            "description": "Get all tags for the business"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Tag",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"high-value\",\n  \"color\": \"#FF5733\",\n  \"description\": \"High-value customer or lead\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/team-inbox/tags",
+              "host": ["{{baseUrl}}"],
+              "path": ["team-inbox", "tags"]
+            },
+            "description": "Create a new tag"
+          },
+          "response": []
+        },
+        {
+          "name": "Add Tag to Conversation",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tag_id\": \"{{tagId}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/team-inbox/conversations/{{conversationId}}/tags",
+              "host": ["{{baseUrl}}"],
+              "path": ["team-inbox", "conversations", "{{conversationId}}", "tags"]
+            },
+            "description": "Add a tag to a conversation for easier categorization and filtering"
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Tag from Conversation",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/team-inbox/conversations/{{conversationId}}/tags/{{tagId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["team-inbox", "conversations", "{{conversationId}}", "tags", "{{tagId}}"]
+            },
+            "description": "Remove a tag from a conversation"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.justping.com/v1",
+      "type": "string",
+      "description": "Base URL for the API"
+    },
+    {
+      "key": "authToken",
+      "value": "your-auth-token",
+      "type": "string",
+      "description": "Authentication token"
+    },
+    {
+      "key": "conversationId",
+      "value": "550e8400-e29b-41d4-a716-446655440001",
+      "type": "string",
+      "description": "ID of a conversation"
+    },
+    {
+      "key": "userId",
+      "value": "550e8400-e29b-41d4-a716-446655440004",
+      "type": "string",
+      "description": "ID of a user"
+    },
+    {
+      "key": "teamId",
+      "value": "550e8400-e29b-41d4-a716-446655440005",
+      "type": "string",
+      "description": "ID of a team"
+    },
+    {
+      "key": "tagId",
+      "value": "550e8400-e29b-41d4-a716-446655440025",
+      "type": "string",
+      "description": "ID of a tag"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "header": {
+    "title": "My Profile",
+    "description": "Manage your personal information",
+    "editButton": "Edit Profile",
+    "saveButton": "Save Changes",
+    "cancelButton": "Cancel"
+  },
+  "avatar": {
+    "uploadLabel": "Upload Photo",
+    "changeLabel": "Change",
+    "cropLabel": "Crop",
+    "noPhotoLabel": "No Photo",
+    "recommendation": "Square format recommended (PNG or JPG)"
+  },
+  "fields": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "phoneNumber": "Phone Number",
+    "jobTitle": "Job Title",
+    "department": "Department",
+    "bio": "Bio",
+    "linkedinUrl": "LinkedIn Profile",
+    "timezone": "Timezone"
+  },
+  "placeholders": {
+    "phoneNumber": "+1 123-456-7890",
+    "bio": "Tell us about yourself...",
+    "linkedinUrl": "https://linkedin.com/in/yourprofile",
+    "department": "Select department",
+    "searchDepartments": "Search departments...",
+    "noDepartmentFound": "No department found."
+  },
+  "messages": {
+    "updateSuccess": "Profile updated successfully",
+    "updateError": "Failed to update profile"
+  }
+}

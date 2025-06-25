@@ -1,0 +1,35 @@
+{
+    "name": "Special Discount Notification",
+    "description": "Notification about special weekend discounts",
+    "business_channel_id": "550e8400-e29b-41d4-a716-446655440001",
+    "template_id": "550e8400-e29b-41d4-a716-446655440010",
+    "contact_group_id": "550e8400-e29b-41d4-a716-446655440020",
+    "variable_mapping": {
+        "contact_group": {
+            "customer_name": "first_name",
+            "discount_percentage": "loyalty_discount"
+        },
+        "template": {
+            "customer_name": "first_name",
+            "discount_percentage": "loyalty_discount"
+        },
+        "agent": {
+            "customer_name": "first_name",
+            "discount_percentage": "loyalty_discount"
+        }
+    },
+    "default_message": {
+        "type": "text",
+        "content": "Thank you for your interest in our offer! Our team will assist you shortly."
+    },
+    "agent_mapping": {
+        "know_more_button": "550e8400-e29b-41d4-a716-446655440040",
+        "unsubscribe_button": "550e8400-e29b-41d4-a716-446655440050"
+    },
+    "schedule_type": "scheduled",
+    "scheduled_start": "2025-03-28T09:00:00Z",
+    "metadata": {
+        "priority": "high",
+        "notes": "Special weekend offer"
+    }
+}

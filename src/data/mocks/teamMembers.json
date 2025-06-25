@@ -1,0 +1,44 @@
+{
+  "members": [
+    {
+      "id": "mock-user-1",
+      "fullName": "Sarah Johnson",
+      "email": "sarah.johnson@example.com",
+      "role": "admin",
+      "status": "active",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+      "joinedAt": "2024-01-15T10:30:00Z",
+      "onboardingComplete": true
+    },
+    {
+      "id": "mock-user-2",
+      "fullName": "Michael Chen",
+      "email": "michael.chen@example.com",
+      "role": "limited-admin",
+      "status": "active",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael",
+      "joinedAt": "2024-02-20T14:45:00Z",
+      "onboardingComplete": true
+    },
+    {
+      "id": "mock-user-3",
+      "fullName": "Emily Rodriguez",
+      "email": "emily.rodriguez@example.com",
+      "role": "billing-admin",
+      "status": "invited",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Emily",
+      "invitedAt": "2024-03-05T09:15:00Z",
+      "onboardingComplete": false
+    },
+    {
+      "id": "mock-user-4",
+      "fullName": "David Williams",
+      "email": "david.williams@example.com",
+      "role": "admin",
+      "status": "active",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=David",
+      "joinedAt": "2024-03-10T16:20:00Z",
+      "onboardingComplete": true
+    }
+  ]
+}

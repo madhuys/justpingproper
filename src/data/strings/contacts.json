@@ -1,0 +1,209 @@
+{
+  "breadcrumbs": {
+    "home": "Home",
+    "contacts": "Contacts",
+    "groups": "Groups",
+    "fields": "Fields",
+    "addContact": "Add Contact",
+    "bulkAdd": "Bulk Add"
+  },
+  "groups": {
+    "title": "Contact Groups",
+    "description": "Create and manage your contact groups",
+    "createForm": {
+      "title": "Create New Group",
+      "nameLabel": "Group Name",
+      "namePlaceholder": "Enter group name",
+      "nameError": "Only letters, numbers, _ and - allowed",
+      "descriptionLabel": "Group Description",
+      "descriptionPlaceholder": "Enter group description (optional)",
+      "createButton": "Create Group",
+      "clearButton": "Clear"
+    },
+    "search": {
+      "placeholder": "Search groups..."
+    },
+    "grid": {
+      "columns": {
+        "name": "Name",
+        "contactCount": "# Contacts",
+        "dateCreated": "Date Created",
+        "dateUpdated": "Date Updated",
+        "actions": "Actions"
+      },
+      "actions": {
+        "edit": "Edit",
+        "delete": "Delete",
+        "confirmDelete": "Are you sure you want to delete this group?",
+        "bulkDelete": "Delete Selected",
+        "confirmBulkDelete": "Are you sure you want to delete {count} groups?"
+      },
+      "empty": "No contact groups found",
+      "pagination": {
+        "rowsPerPage": "Rows per page",
+        "pageOf": "Page {current} of {total}"
+      }
+    }
+  },
+  "fields": {
+    "title": "Group Fields - {groupName}",
+    "description": "Define the contact schema for this group",
+    "lockedDefaults": {
+      "countryCode": {
+        "label": "Country Code",
+        "type": "hybrid dropdown + input",
+        "note": "Locked field"
+      },
+      "phoneNumber": {
+        "label": "Phone Number",
+        "type": "plain text field",
+        "note": "Locked field"
+      }
+    },
+    "copySchema": {
+      "button": "Copy from Another Group",
+      "placeholder": "Select a group to copy fields from",
+      "success": "Fields copied successfully"
+    },
+    "customFields": {
+      "title": "Custom Fields",
+      "columns": {
+        "label": "Label",
+        "type": "Type",
+        "validation": "Validation",
+        "required": "Required",
+        "order": "Order",
+        "actions": "Actions"
+      },
+      "types": {
+        "text": "Text",
+        "number": "Number",
+        "email": "Email",
+        "date": "Date",
+        "dropdown": "Dropdown"
+      },
+      "validations": {
+        "none": "None",
+        "validEmail": "Valid email",
+        "digits5to10": "5-10 digits",
+        "customRegex": "Custom regex",
+        "minLength": "Min length",
+        "maxLength": "Max length",
+        "dateRange": "Date range"
+      },
+      "actions": {
+        "edit": "Edit",
+        "delete": "Delete",
+        "confirmDelete": "Are you sure you want to delete this field?"
+      },
+      "empty": "No custom fields defined"
+    },
+    "addField": {
+      "button": "+ Add New Field",
+      "title": "Add New Field",
+      "labelLabel": "Label",
+      "labelPlaceholder": "Enter field label",
+      "labelSuggestions": [
+        "Employee ID",
+        "Email",
+        "Address",
+        "Date of Birth",
+        "First Name",
+        "Last Name",
+        "Department",
+        "Title",
+        "Company"
+      ],
+      "typeLabel": "Type",
+      "validationLabel": "Validation",
+      "requiredLabel": "Required",
+      "saveButton": "Save",
+      "cancelButton": "Cancel"
+    }
+  },
+  "addContact": {
+    "title": "Add Contact - {groupName}",
+    "description": "Add a new contact to this group",
+    "form": {
+      "saveClose": "Save & Close",
+      "saveAnother": "Save & Add Another",
+      "cancel": "Cancel",
+      "confirmCancel": "Are you sure you want to discard your changes?",
+      "success": "Contact added successfully",
+      "error": "Failed to add contact"
+    },
+    "validation": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email",
+      "invalidNumber": "Please enter a valid number",
+      "invalidDate": "Please enter a valid date",
+      "minLength": "Minimum {min} characters required",
+      "maxLength": "Maximum {max} characters allowed",
+      "customError": "Invalid format"
+    }
+  },
+  "bulkAdd": {
+    "title": "Bulk Add Contacts - {groupName}",
+    "description": "Import multiple contacts from Excel or CSV",
+    "steps": {
+      "upload": "Upload File",
+      "mapping": "Field Mapping",
+      "import": "Import"
+    },
+    "upload": {
+      "title": "Step 1: File Upload",
+      "dropzone": {
+        "text": "Drop your Excel or CSV file here",
+        "browse": "Browse...",
+        "accepted": "Accepts .xlsx, .csv"
+      },
+      "fileInfo": "Selected: {name} ({size})",
+      "buttons": {
+        "next": "Next",
+        "downloadTemplate": "Download Template"
+      }
+    },
+    "mapping": {
+      "title": "Step 2: Field Mapping",
+      "description": "Map your file columns to contact fields",
+      "search": "Search fields...",
+      "columns": {
+        "groupField": "Group Field",
+        "mappedColumn": "Mapped Column"
+      },
+      "unmapped": "—unmapped—",
+      "automatic": "—automatic—",
+      "simulate": "Simulate",
+      "preview": {
+        "title": "Preview (first 5 rows)",
+        "errors": "Type mismatches found"
+      },
+      "errors": {
+        "required": "Required fields not mapped: {fields}",
+        "typeMismatch": "Type mismatch in row {row}: {field}"
+      },
+      "buttons": {
+        "back": "Back",
+        "import": "Import",
+        "cancel": "Cancel"
+      }
+    },
+    "import": {
+      "progress": "Importing {current} of {total} records... {percent}%",
+      "success": "{imported} contacts added; {skipped} duplicates skipped",
+      "error": "Import failed: {message}",
+      "report": "Download Import Report",
+      "actions": {
+        "viewContacts": "View Contacts",
+        "downloadLog": "Download Import Log",
+        "undoImport": "Undo Import"
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "noData": "No data available"
+  }
+}

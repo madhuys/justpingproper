@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Team Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .email-container {
+            background-color: #ffffff;
+            max-width: 600px;
+            width: 100%;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .email-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .email-header img {
+            height: 50px;
+            margin-right: 20px;
+        }
+        
+        .email-body {
+            border: 1px solid #0D397A;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .email-body p {
+            margin: 0;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .email-body span {
+            font-weight: bold;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 15px 0;
+            font-size: 16px;
+            color: #ffffff !important;
+            background-color: #081491;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .email-footer {
+            margin-top: 20px;
+        }
+        
+        .email-footer a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class='email-container'>
+        <div class='email-header'>
+            <img src='logo' alt='JustPing Logo'>
+        </div>
+        <div class='email-body'>
+            <p>Dear <span>{{firstName}} {{lastName}},</span></p>
+            <p>Welcome to JustPing.ai!</p>
+            <p>This is a reminder that you have been added as a {{role}} to JustPing.ai.</p>
+            <p>To get started, you will need to first create your password to set up your account. Please click the link below to create your password:</p>
+            <a href='{{invitationLink}}' class='btn'>Create new password</a>
+            <p>If you have any questions or need assistance, feel free to reach out to us at <a href='mailto:support@justping.ai' style='color: #0056b3; text-decoration: none;'>support@justping.ai</a>. Our team is here to help you every step of the way.</p>
+            <p>Thank you for joining us. We look forward to helping you achieve your goals with JustPing.ai!</p>
+            <div class='email-footer'>
+                <p>Best regards,<br>Team JustPing.ai</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
