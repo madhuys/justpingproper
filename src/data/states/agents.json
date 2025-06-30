@@ -1,0 +1,18 @@
+{
+  "agents": {
+    "workflow": [],
+    "freeflow": []
+  },
+  "activeTab": "workflow",
+  "buildStatus": {
+    "isBuilding": false,
+    "agentId": null,
+    "agentType": null,
+    "progress": 0,
+    "message": ""
+  },
+  "wizardOpen": false,
+  "wizardType": null,
+  "testModalOpen": false,
+  "testAgentId": null
+}

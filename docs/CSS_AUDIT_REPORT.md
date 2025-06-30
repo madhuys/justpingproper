@@ -1,16 +1,16 @@
 # CSS Audit Report
 
-Generated on: 2025-06-23T00:57:19.109Z
+Generated on: 2025-06-28T02:10:11.048Z
 
 ## 📊 Summary
 
-- **Total CSS Classes Defined**: 96
-- **Total CSS Classes Used**: 20
+- **Total CSS Classes Defined**: 101
+- **Total CSS Classes Used**: 25
 - **Unused CSS Classes**: 57
-- **Undefined Classes Used**: 96
-- **CSS Variables Defined**: 25
-- **CSS Variables Used**: 5
-- **Unused CSS Variables**: 20
+- **Undefined Classes Used**: 119
+- **CSS Variables Defined**: 26
+- **CSS Variables Used**: 7
+- **Unused CSS Variables**: 19
 
 ## 🚫 Unused CSS Classes
 
@@ -87,10 +87,13 @@ The following classes are defined in globals.css but not used anywhere in the co
 
 ### container classes
 
-- `.container`
 - `.container-business-profile`
 - `.container-postauth-responsive`
 - `.container-transparent`
+
+### main classes
+
+- `.main-scroll-area`
 
 ### melt classes
 
@@ -148,16 +151,15 @@ The following CSS variables are defined but not used:
 
 - `--accent`
 - `--accent-foreground`
-- `--background`
 - `--container-shadow`
 - `--destructive`
 - `--destructive-foreground`
 - `--footer-height`
-- `--foreground`
 - `--header-height`
 - `--input`
 - `--muted`
 - `--muted-foreground`
+- `--muted-rgb`
 - `--popover`
 - `--popover-foreground`
 - `--primary`
@@ -171,33 +173,45 @@ The following CSS variables are defined but not used:
 
 The following classes are used in the code but not defined in globals.css (excluding Tailwind utilities):
 
+- `.''`
+- `.'aboutCompany'`
+- `.'bg-gray-300'`
 - `.'bg-green-500'`
-- `.'cursor-pointer`
+- `.'bg-primary'`
 - `.'max-h-0`
 - `.'max-h-screen`
-- `.-bottom-2`
+- `.'max-w-[1600px]`
+- `.'registeredAddress'`
+- `.'whitespace-pre-wrap'`
 - `.-ml-1`
-- `.-ml-8`
 - `.-mr-1`
 - `.-mx-1`
-- `.-mx-4`
 - `.-right-1`
 - `.-right-2`
 - `.-top-1`
 - `.-top-2`
 - `.-translate-y-1/2`
 - `.0`
+- `.1`
+- `.===`
 - `.>`
 - `.?`
 - `.@container/card-header`
+- `.align-middle`
 - `.aspect-square`
 - `.auto-rows-min`
+- `.caption-bottom`
 - `.drop-shadow-2xl`
 - `.fade-in-0`
-- `.from-blue-50`
+- `.from-black/50`
+- `.from-black/70`
 - `.from-blue-500`
 - `.from-transparent`
 - `.inline-flex`
+- `.line-clamp-1`
+- `.line-clamp-2`
+- `.list-disc`
+- `.list-inside`
 - `.mb-1`
 - `.mb-12`
 - `.mb-2`
@@ -205,13 +219,15 @@ The following classes are used in the code but not defined in globals.css (exclu
 - `.mb-4`
 - `.mb-6`
 - `.mb-8`
+- `.ml-0.5`
 - `.ml-1`
 - `.ml-2`
+- `.ml-4`
 - `.ml-6`
 - `.ml-auto`
 - `.mr-1`
 - `.mr-2`
-- `.mr-3`
+- `.mt-0`
 - `.mt-0.5`
 - `.mt-1`
 - `.mt-2`
@@ -219,31 +235,38 @@ The following classes are used in the code but not defined in globals.css (exclu
 - `.mt-4`
 - `.mt-6`
 - `.mt-8`
+- `.mt-auto`
 - `.mx-auto`
 - `.my-1`
 - `.parallax-bg`
 - `.parallax-overlay`
 - `.pb-2`
+- `.pb-3`
 - `.pb-4`
 - `.pb-6`
+- `.pb-8`
+- `.pl-10`
+- `.pl-5`
 - `.pl-8`
 - `.pl-9`
 - `.pr-1`
 - `.pr-10`
 - `.pr-12`
 - `.pr-2`
+- `.pr-4`
 - `.pr-9`
+- `.pt-0`
 - `.pt-1`
 - `.pt-2`
 - `.pt-4`
 - `.pt-6`
 - `.pt-8`
+- `.px-1`
 - `.px-1.5`
 - `.px-2`
 - `.px-3`
 - `.px-4`
 - `.px-6`
-- `.px-8`
 - `.py-1`
 - `.py-1.5`
 - `.py-12`
@@ -254,19 +277,21 @@ The following classes are used in the code but not defined in globals.css (exclu
 - `.py-6`
 - `.py-8`
 - `.scroll-my-1`
+- `.scrollbar-hide`
 - `.shrink-0`
 - `.size-2`
 - `.size-3.5`
 - `.size-4`
 - `.size-8`
 - `.size-full`
-- `.to-blue-100`
 - `.to-purple-500`
 - `.to-transparent`
 - `.touch-none`
+- `.via-transparent`
 - `.via-white/10`
 - `.via-white/20`
 - `.zoom-in-95`
+- `.||`
 
 ## 📋 Custom Utilities Analysis
 
@@ -282,6 +307,8 @@ The following classes are used in the code but not defined in globals.css (exclu
 - `.text-accent-foreground` - `color: var(--accent-foreground);`
 - `.bg-card` - `background-color: var(--card);`
 - `.text-card-foreground` - `color: var(--card-foreground);`
+- `.container` - `background-color: rgba(var(--card-rgb), 0.8);
+    ...`
 - `.container-onboarding` - `background-color: rgba(var(--card-rgb), 0.0);
     ...`
 - `.container-postauth-forms` - `width: 100%;
@@ -290,14 +317,9 @@ The following classes are used in the code but not defined in globals.css (exclu
 - `.onboarding-bg` - `background-image: url('/images/dark-bg.webp');`
 - `.notification-badge` - `background-color: #a5a8b0;
     color: #050a16;`
-- `.main-scroll-area` - `overflow-y: auto;
-    scroll-behavior: smooth;
-   ...`
 
 #### ❌ Unused Utilities
 
-- `.container` - `background-color: rgba(var(--card-rgb), 0.8);
-    ...`
 - `.container-postauth-responsive` - `width: 100%;
     min-height: 100vh;
     max-width:...`
@@ -308,6 +330,9 @@ The following classes are used in the code but not defined in globals.css (exclu
     min-height: 100vh;
     max-width:...`
 - `.shadow-container` - `box-shadow: var(--container-shadow);`
+- `.main-scroll-area` - `overflow-y: auto;
+    scroll-behavior: smooth;
+   ...`
 - `.progress-onboarding` - `background-color: var(--primary);`
 
 ## 🎯 Recommendations

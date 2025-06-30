@@ -1,0 +1,21 @@
+email_content,is_spam
+"Meeting scheduled for tomorrow at 2 PM in conference room B. Please bring the quarterly reports.",not_spam
+"CONGRATULATIONS! You've won $1,000,000! Click here NOW to claim your prize!!!",spam
+"Hi John, Just following up on our conversation yesterday about the project timeline.",not_spam
+"LIMITED TIME OFFER! Get 90% OFF on all medications! No prescription needed!",spam
+"Please find attached the invoice for last month's services. Payment is due by the 15th.",not_spam
+"Hot singles in your area are waiting to meet YOU! Sign up now for FREE!",spam
+"Reminder: Your dentist appointment is scheduled for Friday at 3:30 PM.",not_spam
+"URGENT: Your account will be suspended! Click here immediately to verify your information!",spam
+"Thanks for your order! Your package will be delivered within 3-5 business days.",not_spam
+"Make $5000 per week working from home! No experience necessary! Start today!",spam
+"Team lunch this Friday at noon. Let me know if you have any dietary restrictions.",not_spam
+"Your computer is infected with viruses! Download our software NOW to protect yourself!",spam
+"Q3 financial report is ready for review. Please provide feedback by end of day.",not_spam
+"Lose 30 pounds in 30 days with this one simple trick doctors hate!",spam
+"Your subscription renewal is coming up. Would you like to continue with the same plan?",not_spam
+"Act now! This investment opportunity won't last long! Guaranteed returns!",spam
+"Happy birthday! Hope you have a wonderful day. See you at the party tonight.",not_spam
+"You've been selected for a exclusive credit card offer! 0% APR! Apply now!",spam
+"Project update: We're on track to meet the deadline. Great work everyone!",not_spam
+"FINAL NOTICE: Claim your inheritance of $10 million before it's too late!",spam

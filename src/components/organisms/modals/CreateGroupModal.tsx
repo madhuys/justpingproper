@@ -68,7 +68,7 @@ export function CreateGroupModal({ isOpen, onClose, onCreateGroup }: CreateGroup
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-[500px]">
+      <DialogContent className="glassmorphic-modal sm:max-w-[500px]">
         <DialogHeader>
           <DialogTitle>{strings.title}</DialogTitle>
           <DialogDescription>

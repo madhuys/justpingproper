@@ -4,7 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useIntegrations } from '@/hooks/useIntegrations';
-import { IntegrationCard } from '@/components/pages/integrations/IntegrationCard';
+import { IntegrationCard } from '@/components/molecules/IntegrationCard';
 import { IntegrationConfigModal } from '@/components/organisms/modals/IntegrationConfigModal';
 import { PageHeader } from '@/components/atoms/PageHeader';
 import { Integration } from '@/lib/integrations/types';

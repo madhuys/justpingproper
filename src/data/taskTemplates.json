@@ -1,0 +1,73 @@
+[
+  {
+    "id": "customer-support",
+    "name": "Customer Support Flow",
+    "description": "Handle customer inquiries and support requests",
+    "icon": "HeadphonesIcon",
+    "defaultSteps": [
+      {
+        "prompt": "Hello! I'm here to help. How can I assist you today?",
+        "inputType": "text",
+        "validation": "none"
+      },
+      {
+        "prompt": "Could you please provide your name?",
+        "inputType": "text",
+        "validation": "name",
+        "fallback": "Please provide a valid name."
+      }
+    ]
+  },
+  {
+    "id": "interview",
+    "name": "Interview Flow",
+    "description": "Conduct structured interviews and assessments",
+    "icon": "UserCheck",
+    "defaultSteps": [
+      {
+        "prompt": "Welcome to the interview. Can you please introduce yourself?",
+        "inputType": "text",
+        "validation": "none"
+      }
+    ]
+  },
+  {
+    "id": "order-processing",
+    "name": "Order Processing",
+    "description": "Process orders and handle transactions",
+    "icon": "ShoppingCart",
+    "defaultSteps": [
+      {
+        "prompt": "Welcome! I'll help you process your order. What would you like to order?",
+        "inputType": "text",
+        "validation": "none"
+      }
+    ]
+  },
+  {
+    "id": "appointment",
+    "name": "Appointment Booking",
+    "description": "Schedule appointments and manage bookings",
+    "icon": "Calendar",
+    "defaultSteps": [
+      {
+        "prompt": "I'd be happy to help you schedule an appointment. What service are you looking for?",
+        "inputType": "choice",
+        "validation": "none"
+      }
+    ]
+  },
+  {
+    "id": "feedback",
+    "name": "Feedback Collection",
+    "description": "Collect customer feedback and reviews",
+    "icon": "MessageSquare",
+    "defaultSteps": [
+      {
+        "prompt": "We value your feedback! How was your experience with us?",
+        "inputType": "choice",
+        "validation": "none"
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+user_message,intent
+"What are your business hours?",hours_inquiry
+"I want to book an appointment for tomorrow",appointment_booking
+"How much does the premium plan cost?",pricing_inquiry
+"I need to speak to a human agent",human_agent_request
+"Can you help me track my order?",order_tracking
+"What's the weather like today?",weather_inquiry
+"I'd like to schedule a meeting for next week",appointment_booking
+"What payment methods do you accept?",payment_inquiry
+"This is urgent, I need help right now!",human_agent_request
+"Where is my package? Order #12345",order_tracking
+"Are you open on weekends?",hours_inquiry
+"How do I upgrade my subscription?",pricing_inquiry
+"Will it rain tomorrow in New York?",weather_inquiry
+"I want to cancel my appointment",appointment_booking
+"Do you have any discounts available?",pricing_inquiry
+"I've been waiting for 30 minutes, I want to talk to someone!",human_agent_request
+"My order hasn't arrived yet",order_tracking
+"What time do you close today?",hours_inquiry
+"Tell me about your enterprise pricing",pricing_inquiry
+"What's the temperature outside?",weather_inquiry

@@ -13,5 +13,49 @@
     "current": 0,
     "total": 0,
     "status": "idle"
+  },
+  "addContact": {
+    "formData": {
+      "countryCode": "+1",
+      "phoneNumber": ""
+    },
+    "errors": {},
+    "isDirty": false,
+    "saving": false
+  },
+  "bulkAdd": {
+    "currentStep": "upload",
+    "uploadedFile": null,
+    "fileHeaders": [],
+    "fileData": [],
+    "fieldMappings": [],
+    "mappingSearch": "",
+    "previewRows": [],
+    "mappingErrors": [],
+    "importProgress": {
+      "current": 0,
+      "total": 0,
+      "imported": 0,
+      "skipped": 0,
+      "errors": 0
+    },
+    "importStatus": "idle"
+  },
+  "fields": {
+    "groupInfo": null,
+    "customFields": [],
+    "groups": [],
+    "showAddDialog": false,
+    "editingField": null,
+    "fieldForm": {
+      "label": "",
+      "type": "text",
+      "validation": "none",
+      "validationParam": "",
+      "required": false,
+      "options": [""]
+    },
+    "labelSuggestions": [],
+    "showSuggestions": false
   }
 }

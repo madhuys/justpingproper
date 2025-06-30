@@ -30,7 +30,7 @@ export function ResendInviteModal({
 }: ResendInviteModalProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent>
+      <DialogContent className="glassmorphic-modal">
         <DialogHeader>
           <DialogTitle>Resend Invitation</DialogTitle>
           <DialogDescription>

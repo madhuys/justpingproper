@@ -1,0 +1,21 @@
+{
+  "id": "default",
+  "name": "Default Workflow",
+  "description": "A blank workflow template to start from scratch",
+  "nodes": [
+    {
+      "id": "1",
+      "type": "workflow",
+      "position": { "x": 400, "y": 50 },
+      "data": {
+        "label": "Start",
+        "type": "start",
+        "prompt": "Conversation begins here",
+        "flowDirection": "LR"
+      }
+    }
+  ],
+  "edges": [],
+  "viewport": { "x": 0, "y": 0, "zoom": 1 },
+  "flowDirection": "LR"
+}

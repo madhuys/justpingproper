@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes';
 import { Header } from '@/components/navigation/Header';
 import { Sidebar } from '@/components/navigation/Sidebar';
 import { Footer } from '@/components/navigation/Footer';
-import { LiveChatFAB } from '@/components/organisms/LiveChatFAB';
+import { OmniChatFAB } from '@/components/organisms/OmniChatFAB';
 
 export default function PostAuthFormsLayout({
   children,
@@ -165,8 +165,8 @@ export default function PostAuthFormsLayout({
         <Footer />
       </div>
       
-      {/* Live Chat FAB - outside all containers */}
-      <LiveChatFAB />
+      {/* OmniChat FAB - outside all containers */}
+      <OmniChatFAB />
     </div>
   );
 }

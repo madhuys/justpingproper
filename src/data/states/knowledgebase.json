@@ -1,0 +1,37 @@
+{
+  "indexes": {
+    "knowledge": [],
+    "classifier": []
+  },
+  "activeTab": "knowledge",
+  "createModal": {
+    "isOpen": false,
+    "type": null,
+    "step": 1,
+    "data": {
+      "name": "",
+      "description": "",
+      "selectedFiles": [],
+      "provider": "",
+      "model": "",
+      "datasetFile": null
+    }
+  },
+  "buildStatus": {
+    "isBuilding": false,
+    "buildType": null,
+    "indexId": null,
+    "progress": 0,
+    "message": ""
+  },
+  "search": {
+    "query": "",
+    "results": [],
+    "isSearching": false
+  },
+  "classification": {
+    "input": "",
+    "result": null,
+    "isClassifying": false
+  }
+}

@@ -7,6 +7,10 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Plus } from 'lucide-react';
 import { Loader } from '@/components/atoms/Loader';
 import { cn } from '@/lib/utils';
+// If you use react-hot-toast, use the following import:
+import { toast } from 'react-hot-toast';
+// If you use sonner, use the following import instead:
+// import { toast } from 'sonner';
 
 interface TeamMember {
   id: string;

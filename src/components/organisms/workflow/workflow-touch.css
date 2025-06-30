@@ -1,0 +1,262 @@
+/* Touch-friendly styles for workflow builder */
+
+/* Hide React Flow attribution */
+.react-flow__attribution {
+  display: none !important;
+}
+
+/* Ensure React Flow container is transparent */
+.react-flow__wrapper,
+.react-flow__pane,
+.react-flow__viewport {
+  background: transparent !important;
+}
+
+/* Ensure edge labels appear above edges but don't block interactions */
+.react-flow__edges {
+  z-index: 1 !important;
+}
+
+.react-flow__edge-path {
+  z-index: 1 !important;
+}
+
+.react-flow__edge-interaction {
+  z-index: 2 !important;
+}
+
+/* Node labels should be above edges */
+.react-flow__node {
+  z-index: 10 !important;
+}
+
+/* Fix handle positions when nodes scale on hover */
+.react-flow__node {
+  /* Ensure handles remain in correct position during scaling */
+  transform-origin: center center;
+}
+
+.react-flow__handle {
+  /* Keep handles in absolute position relative to node */
+  position: absolute !important;
+  /* Default sizes for better visibility */
+  width: 16px !important;
+  height: 16px !important;
+  border-width: 2px !important;
+}
+
+/* Handle transform adjustments based on position */
+.react-flow__handle-right {
+  transform: translate(50%, -50%) !important;
+}
+
+.react-flow__handle-left {
+  transform: translate(-50%, -50%) !important;
+}
+
+.react-flow__handle-top {
+  transform: translate(-50%, -50%) !important;
+}
+
+.react-flow__handle-bottom {
+  transform: translate(-50%, 50%) !important;
+}
+
+/* Prevent handle movement on node hover/scale */
+.react-flow__node:hover .react-flow__handle-right {
+  transform: translate(50%, -50%) scale(.952) !important;
+}
+
+.react-flow__node:hover .react-flow__handle-left {
+  transform: translate(-50%, -50%) scale(.952) !important;
+}
+
+.react-flow__node:hover .react-flow__handle-top {
+  transform: translate(-50%, -50%) scale(.952) !important;
+}
+
+.react-flow__node:hover .react-flow__handle-bottom {
+  transform: translate(-50%, 50%) scale(.952) !important;
+}
+
+/* Ensure handles stay in position during interactions */
+.react-flow__handle {
+  z-index: 10;
+}
+
+/* Detect touch devices */
+@media (pointer: coarse) {
+  /* Make handles larger for touch */
+  .react-flow__handle {
+    width: 24px !important;
+    height: 24px !important;
+    border-width: 3px !important;
+  }
+  
+  /* Compensate transform for larger handles */
+  .react-flow__handle[data-handlepos="right"] {
+    transform: translate(50%, -50%) !important;
+  }
+  
+  .react-flow__handle[data-handlepos="left"] {
+    transform: translate(-50%, -50%) !important;
+  }
+  
+  .react-flow__handle[data-handlepos="top"] {
+    transform: translate(-50%, -50%) !important;
+  }
+  
+  .react-flow__handle[data-handlepos="bottom"] {
+    transform: translate(-50%, 50%) !important;
+  }
+
+  /* Keep edges same size as regular mode - user requested */
+  .react-flow__edge-path {
+    stroke-width: 2 !important;
+  }
+
+  /* Keep interaction area reasonable, not too large */
+  .react-flow__edge-interaction {
+    stroke-width: 20 !important;
+  }
+
+  /* Larger node toolbar buttons */
+  .workflow-node-toolbar button {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    padding: 10px !important;
+  }
+
+  /* Larger control buttons */
+  .react-flow__controls-button {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  /* Larger minimap controls */
+  .react-flow__minimap {
+    width: 150px !important;
+    height: 120px !important;
+  }
+
+  /* Better spacing for touch in popovers */
+  .node-popover-content button {
+    min-height: 44px !important;
+    margin: 4px 0 !important;
+  }
+
+  /* Larger drag handle for sidebar items */
+  .workflow-sidebar-item {
+    min-height: 56px !important;
+    padding: 12px !important;
+  }
+}
+
+/* Additional touch optimizations */
+.touch-flow {
+  /* Prevent text selection on drag */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  /* Smooth touch scrolling */
+  -webkit-overflow-scrolling: touch;
+  
+  /* Enable proper touch handling */
+  touch-action: none;
+}
+
+/* Fix for React Flow touch interactions */
+.react-flow__renderer {
+  touch-action: none !important;
+}
+
+.react-flow__node {
+  touch-action: none !important;
+  cursor: move;
+}
+
+/* Ensure sidebar items are draggable on touch */
+.workflow-sidebar-item {
+  touch-action: none !important;
+  cursor: move;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Visual feedback for dragging state */
+.workflow-sidebar-item.dragging {
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+
+/* Touch device specific styles */
+@media (pointer: coarse) {
+  /* Enable node selection on tap */
+  .react-flow__node {
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Fixed width for nodes */
+  .react-flow__node-workflow {
+    width: 280px !important;
+    min-height: 100px !important;
+  }
+  
+  /* Fix node selection */
+  .react-flow__node.selected {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5) !important;
+  }
+  
+  /* Prevent accidental scrolling */
+  .react-flow__pane,
+  .react-flow__viewport,
+  .react-flow__wrapper {
+    touch-action: none !important;
+  }
+  
+  /* Better touch feedback */
+  .react-flow__node:active {
+    transform: scale(0.98);
+  }
+  
+  /* Make draggable nodes more obvious */
+  .react-flow__node {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+}
+
+/* Larger interaction areas for branch handles */
+@media (pointer: coarse) {
+  .branch-handle-label {
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+  }
+  
+  /* Even larger handles for better touch targets */
+  .react-flow__handle {
+    width: 32px !important;
+    height: 32px !important;
+    border-width: 4px !important;
+  }
+  
+  /* Adjust transforms for larger handles */
+  .react-flow__handle-right {
+    transform: translate(50%, -50%) !important;
+  }
+  
+  .react-flow__handle-left {
+    transform: translate(-50%, -50%) !important;
+  }
+  
+  .react-flow__handle-top {
+    transform: translate(-50%, -50%) !important;
+  }
+  
+  .react-flow__handle-bottom {
+    transform: translate(-50%, 50%) !important;
+  }
+}

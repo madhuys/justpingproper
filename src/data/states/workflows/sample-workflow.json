@@ -1,0 +1,106 @@
+{
+  "id": "sample-workflow",
+  "name": "Sample Customer Support Workflow",
+  "nodes": [
+    {
+      "id": "1",
+      "type": "workflow",
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "data": {
+        "label": "Start",
+        "type": "start",
+        "prompt": "Welcome to our support!",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "2",
+      "type": "workflow",
+      "position": {
+        "x": 300,
+        "y": 100
+      },
+      "data": {
+        "label": "Ask Issue Type",
+        "type": "input",
+        "inputType": "choice",
+        "prompt": "What can I help you with today?",
+        "variable": "issueType",
+        "choices": [
+          "Technical Support",
+          "Billing Question",
+          "Product Information",
+          "Other"
+        ],
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "3",
+      "type": "workflow",
+      "position": {
+        "x": 500,
+        "y": 50
+      },
+      "data": {
+        "label": "Handle Technical",
+        "type": "message",
+        "prompt": "I'll connect you with our technical team.",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "4",
+      "type": "workflow",
+      "position": {
+        "x": 500,
+        "y": 150
+      },
+      "data": {
+        "label": "Handle Billing",
+        "type": "message",
+        "prompt": "Let me help you with your billing question.",
+        "flowDirection": "LR"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1-2",
+      "source": "1",
+      "target": "2",
+      "type": "smoothstep",
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "e2-3",
+      "source": "2",
+      "sourceHandle": "choice-0",
+      "target": "3",
+      "type": "smoothstep",
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    },
+    {
+      "id": "e2-4",
+      "source": "2",
+      "sourceHandle": "choice-1",
+      "target": "4",
+      "type": "smoothstep",
+      "sourcePosition": "right",
+      "targetPosition": "left"
+    }
+  ],
+  "viewport": {
+    "x": 0,
+    "y": 0,
+    "zoom": 0.8
+  },
+  "flowDirection": "LR",
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z"
+}

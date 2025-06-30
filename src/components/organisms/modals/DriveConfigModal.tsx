@@ -192,7 +192,7 @@ export function DriveConfigModal({
   return (
     <>
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="sm:max-w-[500px]">
+        <DialogContent className="glassmorphic-modal sm:max-w-[500px]">
           <DialogHeader>
             <DialogTitle>{modalTitle}</DialogTitle>
             <DialogDescription>{modalDescription}</DialogDescription>

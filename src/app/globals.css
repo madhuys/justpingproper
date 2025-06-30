@@ -1,6 +1,49 @@
 @import "tailwindcss";
 @import "react-image-crop/dist/ReactCrop.css";
 @import "react-datepicker/dist/react-datepicker.css";
+@import "reactflow/dist/style.css";
+
+/* Glassmorphic styles for workflow nodes */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* React Flow specific styles */
+.react-flow {
+  background-color: var(--background);
+  height: 100%;
+  width: 100%;
+}
+
+.react-flow__node {
+  font-size: 12px;
+  color: var(--foreground);
+}
+
+.react-flow__handle {
+  background: var(--primary);
+  border: 2px solid var(--background);
+}
+
+.react-flow__handle-connecting {
+  background: var(--primary);
+}
+
+.react-flow__edge-path {
+  stroke: var(--primary);
+}
 
 /* Use system preference for initial render to prevent flash */
 @media (prefers-color-scheme: dark) {
@@ -66,6 +109,7 @@ html.dark body {
   --secondary: #f3f4f8;
   --secondary-foreground: #111827;
   --muted: #f3f4f8;
+  --muted-rgb: 243, 244, 248;
   --muted-foreground: #6b7280;
   --accent: #f3f4f8;
   --accent-foreground: #111827;
@@ -95,6 +139,7 @@ html.dark body {
   --secondary: #1a2332;
   --secondary-foreground: #a5a8b0;
   --muted: #1a2332;
+  --muted-rgb: 26, 35, 50;
   --muted-foreground: #7d828e;
   --accent: #1a2332;
   --accent-foreground: #a5a8b0;
@@ -659,6 +704,29 @@ html.dark body {
   }
 }
 
+/* Glassmorphic Modal Styles */
+  .glassmorphic-modal {
+    background-color: rgba(var(--card-rgb), 0.95) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    box-shadow: var(--container-shadow);
+  }
+
+  /* Light mode specific border colors for modals */
+  .glassmorphic-modal .border-b,
+  .glassmorphic-modal .border-t,
+  .glassmorphic-modal .border-l,
+  .glassmorphic-modal .border-r {
+    border-color: var(--border);
+  }
+
+  /* Primary blue borders in light mode for separators */
+  html:not(.dark) .glassmorphic-modal .border-b,
+  html:not(.dark) .glassmorphic-modal .border-t {
+    border-color: rgba(var(--primary-rgb), 0.2);
+  }
+
 /* Smooth morphing animations */
 @keyframes morph-in {
   0% {
@@ -731,3 +799,75 @@ html.dark body {
 }
 
 /* Enhanced morphing classes */
+
+/* React Flow Custom Styles */
+.react-flow__node.highlight {
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.5);
+}
+
+.react-flow__edge.temp {
+  stroke-dasharray: 5 5;
+  animation: dashdraw 0.5s linear infinite;
+}
+
+@keyframes dashdraw {
+  to {
+    stroke-dashoffset: -10;
+  }
+}
+
+/* React Flow transparent background */
+.react-flow {
+  background: transparent !important;
+}
+
+.react-flow__renderer {
+  background: transparent !important;
+}
+
+.react-flow__background {
+  background: transparent !important;
+}
+
+.react-flow__background-pattern {
+  stroke: currentColor;
+  stroke-opacity: 0.15;
+}
+
+/* Ensure edges are rendered above nodes */
+.react-flow__renderer {
+  /* Ensure proper layering of React Flow elements */
+}
+
+.react-flow__edgelabel-renderer {
+  z-index: 1000 !important;
+}
+
+.react-flow__edge-renderer {
+  z-index: 999 !important;
+}
+
+.react-flow__edges {
+  z-index: 999 !important;
+}
+
+.react-flow__edge {
+  z-index: 999 !important;
+}
+
+.react-flow__edge-path {
+  z-index: 999 !important;
+}
+
+.react-flow__nodes {
+  z-index: 1 !important;
+}
+
+.react-flow__node {
+  z-index: 1 !important;
+}
+
+/* Ensure handles are above nodes but below edges */
+.react-flow__handle {
+  z-index: 2 !important;
+}

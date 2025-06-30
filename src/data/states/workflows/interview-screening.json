@@ -1,0 +1,176 @@
+{
+  "id": "interview-screening",
+  "name": "Interview Screening Agent",
+  "description": "Conducts initial candidate screening with wit and personality",
+  "persona": "priya",
+  "tone": "witty",
+  "knowledgebase": null,
+  "integrations": ["linkedin"],
+  "nodes": [
+    {
+      "id": "1",
+      "type": "workflow",
+      "position": { "x": 50, "y": 200 },
+      "data": {
+        "label": "Start",
+        "type": "start",
+        "prompt": "Hey there! 👋 Ready to chat about your next career move? I promise this won't be your typical boring screening call!",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "2",
+      "type": "workflow",
+      "position": { "x": 410, "y": 200 },
+      "data": {
+        "label": "Get Name",
+        "type": "input",
+        "inputType": "text",
+        "prompt": "First things first - what should I call you? (And please, not 'Your Majesty' - we save that for the CEO 😄)",
+        "variable": "candidateName",
+        "validation": "name",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "3",
+      "type": "workflow",
+      "position": { "x": 770, "y": 200 },
+      "data": {
+        "label": "Role Interest",
+        "type": "input",
+        "inputType": "choice",
+        "prompt": "Awesome, {{candidateName}}! Which role caught your eye? (Choose wisely, this isn't Tinder!)",
+        "variable": "roleInterest",
+        "choices": [
+          "Senior Developer",
+          "Product Manager",
+          "UX Designer",
+          "DevOps Engineer",
+          "Not sure yet"
+        ],
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "4",
+      "type": "workflow",
+      "position": { "x": 1130, "y": 200 },
+      "data": {
+        "label": "Experience Check",
+        "type": "input",
+        "inputType": "text",
+        "prompt": "Tell me about your superpowers! What's your most impressive professional achievement? (Bragging is totally encouraged here)",
+        "variable": "experience",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "5",
+      "type": "workflow",
+      "position": { "x": 1490, "y": 200 },
+      "data": {
+        "label": "LinkedIn Check",
+        "type": "action",
+        "actionType": "linkedin",
+        "prompt": "Let me peek at your LinkedIn profile real quick... (Don't worry, I won't judge your 2015 profile pic)",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "6",
+      "type": "workflow",
+      "position": { "x": 1850, "y": 200 },
+      "data": {
+        "label": "Availability",
+        "type": "input",
+        "inputType": "choice",
+        "prompt": "When could you start if we decide we can't live without you?",
+        "variable": "availability",
+        "choices": [
+          "Immediately (I'm ready!)",
+          "2 weeks notice",
+          "1 month notice",
+          "Need to discuss"
+        ],
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "7",
+      "type": "workflow",
+      "position": { "x": 2210, "y": 200 },
+      "data": {
+        "label": "Resume Collection",
+        "type": "input",
+        "inputType": "text",
+        "prompt": "Drop your resume link here (Google Drive, Dropbox, or good old email attachment works):",
+        "variable": "resumeLink",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "8",
+      "type": "workflow",
+      "position": { "x": 2570, "y": 200 },
+      "data": {
+        "label": "End",
+        "type": "end",
+        "prompt": "You're all set, {{candidateName}}! 🎉 Our hiring team will review your info faster than you can say 'stock options'. We'll be in touch within 48 hours. May the odds be ever in your favor!",
+        "flowDirection": "LR"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1-2",
+      "source": "1",
+      "target": "2",
+      "type": "custom"
+    },
+    {
+      "id": "e2-3",
+      "source": "2",
+      "target": "3",
+      "type": "custom"
+    },
+    {
+      "id": "e3-4",
+      "source": "3",
+      "target": "4",
+      "type": "custom"
+    },
+    {
+      "id": "e4-5",
+      "source": "4",
+      "target": "5",
+      "type": "custom"
+    },
+    {
+      "id": "e5-6",
+      "source": "5",
+      "target": "6",
+      "type": "custom"
+    },
+    {
+      "id": "e6-7",
+      "source": "6",
+      "target": "7",
+      "type": "custom"
+    },
+    {
+      "id": "e7-8",
+      "source": "7",
+      "target": "8",
+      "type": "custom"
+    }
+  ],
+  "viewport": {
+    "x": 0,
+    "y": 0,
+    "zoom": 0.5
+  },
+  "flowDirection": "LR",
+  "createdAt": "2024-01-15T00:00:00.000Z",
+  "updatedAt": "2024-01-15T00:00:00.000Z"
+}

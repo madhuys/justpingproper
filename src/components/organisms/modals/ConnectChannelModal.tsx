@@ -151,7 +151,7 @@ export function ConnectChannelModal({ isOpen, onClose, channel, onConnect }: Con
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+      <DialogContent className="glassmorphic-modal max-w-2xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Connect {channel?.name}</DialogTitle>
           <DialogDescription>

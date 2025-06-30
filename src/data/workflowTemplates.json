@@ -1,0 +1,88 @@
+{
+  "templates": [
+    {
+      "id": "customer-support",
+      "name": "Customer Support",
+      "description": "Handle customer inquiries with knowledge base integration",
+      "icon": "HeadphonesIcon",
+      "category": "support",
+      "features": ["Knowledge base lookup", "Ticket creation", "Follow-up scheduling"],
+      "sampleWorkflow": "customer-support.json",
+      "recommendedPersona": "akshita",
+      "recommendedIntegrations": ["calendar", "hubspot", "zendesk"]
+    },
+    {
+      "id": "interview-screening",
+      "name": "Interview Screening",
+      "description": "Conduct initial candidate screening and qualification",
+      "icon": "UserCheck",
+      "category": "hr",
+      "features": ["Role qualification", "Availability check", "Resume collection"],
+      "sampleWorkflow": "interview-screening.json",
+      "recommendedPersona": "priya",
+      "recommendedIntegrations": ["linkedin", "calendar", "applicant-tracking"]
+    },
+    {
+      "id": "order-processing",
+      "name": "Order Processing",
+      "description": "Process orders, check inventory, and handle shipping",
+      "icon": "ShoppingCart",
+      "category": "sales",
+      "features": ["Order tracking", "Inventory check", "Shipping coordination"],
+      "sampleWorkflow": "order-processing.json",
+      "recommendedPersona": "vikram",
+      "recommendedIntegrations": ["inventory", "shipping", "payment"]
+    },
+    {
+      "id": "sales-qualification",
+      "name": "Lead Qualification",
+      "description": "Qualify and score sales leads based on criteria",
+      "icon": "Target",
+      "category": "sales",
+      "features": ["Lead scoring", "Budget qualification", "CRM integration"],
+      "sampleWorkflow": "sales-qualification.json",
+      "recommendedPersona": "ananya",
+      "recommendedIntegrations": ["salesforce", "hubspot", "calendar"]
+    },
+    {
+      "id": "it-helpdesk",
+      "name": "IT Helpdesk",
+      "description": "Provide technical support and troubleshooting",
+      "icon": "Monitor",
+      "category": "support",
+      "features": ["Issue diagnosis", "Knowledge base", "Ticket escalation"],
+      "sampleWorkflow": "it-helpdesk.json",
+      "recommendedPersona": "rohan",
+      "recommendedIntegrations": ["ticketing", "remote-access", "monitoring"]
+    },
+    {
+      "id": "custom",
+      "name": "Build from Scratch",
+      "description": "Create a custom workflow tailored to your needs",
+      "icon": "Plus",
+      "category": "custom",
+      "features": ["Full customization", "Any integration", "Flexible flow"],
+      "sampleWorkflow": null,
+      "recommendedPersona": null,
+      "recommendedIntegrations": []
+    }
+  ],
+  "categories": {
+    "support": {
+      "name": "Customer Support",
+      "description": "Templates for customer service and support"
+    },
+    "sales": {
+      "name": "Sales & Commerce",
+      "description": "Templates for sales and order management"
+    },
+    "hr": {
+      "name": "HR & Recruitment",
+      "description": "Templates for hiring and HR processes"
+    },
+    "custom": {
+      "name": "Custom",
+      "description": "Build your own workflow"
+    }
+  }
+}

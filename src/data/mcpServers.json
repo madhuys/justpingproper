@@ -1,0 +1,76 @@
+{
+  "servers": [
+    {
+      "id": "filesystem",
+      "name": "File System",
+      "description": "Read, write, and manage files and directories",
+      "tools": ["read_file", "write_file", "list_directory", "create_directory", "delete_file"]
+    },
+    {
+      "id": "web-browser",
+      "name": "Web Browser",
+      "description": "Browse web pages and extract information",
+      "tools": ["navigate", "click", "type", "screenshot", "extract_text"]
+    },
+    {
+      "id": "database",
+      "name": "Database",
+      "description": "Query and manage database operations",
+      "tools": ["query", "insert", "update", "delete", "create_table"]
+    },
+    {
+      "id": "code-executor",
+      "name": "Code Executor",
+      "description": "Execute code in various programming languages",
+      "tools": ["run_python", "run_javascript", "run_shell", "install_package"]
+    },
+    {
+      "id": "search",
+      "name": "Search Engine",
+      "description": "Search the web and retrieve information",
+      "tools": ["web_search", "image_search", "news_search", "scholar_search"]
+    },
+    {
+      "id": "email",
+      "name": "Email Service",
+      "description": "Send and manage emails",
+      "tools": ["send_email", "read_inbox", "search_emails", "create_draft"]
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "description": "Manage calendar events and schedules",
+      "tools": ["create_event", "update_event", "delete_event", "list_events"]
+    },
+    {
+      "id": "weather",
+      "name": "Weather Service",
+      "description": "Get weather information and forecasts",
+      "tools": ["current_weather", "forecast", "weather_alerts"]
+    },
+    {
+      "id": "maps",
+      "name": "Maps & Location",
+      "description": "Geographic and location-based services",
+      "tools": ["geocode", "reverse_geocode", "directions", "places_search"]
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "description": "Interact with Slack workspaces",
+      "tools": ["send_message", "read_channel", "create_channel", "upload_file"]
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "description": "Manage GitHub repositories and issues",
+      "tools": ["create_issue", "create_pr", "list_repos", "commit_file"]
+    },
+    {
+      "id": "jira",
+      "name": "Jira",
+      "description": "Manage Jira issues and projects",
+      "tools": ["create_issue", "update_issue", "search_issues", "add_comment"]
+    }
+  ]
+}

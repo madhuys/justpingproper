@@ -131,7 +131,7 @@ export function CreateKnowledgebaseModal({
       <>
         {/* Backdrop */}
         <div 
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
+          className="fixed inset-0 bg-black/50 z-50"
           onClick={handleClose}
         />
         
@@ -159,7 +159,7 @@ export function CreateKnowledgebaseModal({
 
   if (showSuccess) {
     return renderModal(
-      <Card className="w-full max-w-[500px]" onClick={(e) => e.stopPropagation()}>
+      <Card className="glassmorphic-modal w-full max-w-[500px]" onClick={(e) => e.stopPropagation()}>
         <CardHeader>
           <CardTitle>{content?.knowledgebaseModal?.title || 'Create Company Knowledgebase'}</CardTitle>
         </CardHeader>
@@ -179,7 +179,7 @@ export function CreateKnowledgebaseModal({
   }
 
   return renderModal(
-    <Card className="w-full max-w-[600px] max-h-[90vh] overflow-hidden flex flex-col" onClick={(e) => e.stopPropagation()}>
+    <Card className="glassmorphic-modal w-full max-w-[600px] max-h-[90vh] overflow-hidden flex flex-col" onClick={(e) => e.stopPropagation()}>
       <CardHeader>
         <CardTitle>{content?.knowledgebaseModal?.title || 'Create Company Knowledgebase'}</CardTitle>
         <CardDescription>

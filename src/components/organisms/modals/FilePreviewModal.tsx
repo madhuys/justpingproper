@@ -189,8 +189,8 @@ export function FilePreviewModal({ file, isOpen, onClose }: FilePreviewModalProp
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent 
         className={isExpanded 
-          ? "!w-screen !h-screen !max-w-full !rounded-none flex flex-col p-0 bg-background" 
-          : "!w-[85vw] !h-[85vh] !max-w-[85vw] !min-w-[80vw] !min-h-[80vh] flex flex-col p-0 bg-background"
+          ? "glassmorphic-modal !w-screen !h-screen !max-w-full !rounded-none flex flex-col p-0" 
+          : "glassmorphic-modal !w-[85vw] !h-[85vh] !max-w-[85vw] !min-w-[80vw] !min-h-[80vh] flex flex-col p-0"
         }
         showCloseButton={false}
       >

@@ -44,7 +44,7 @@ export function RemoveTeamMemberModal({
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="bg-card">
+      <DialogContent className="glassmorphic-modal bg-card">
         <DialogHeader>
           <DialogTitle>Remove Team Member</DialogTitle>
           <DialogDescription>

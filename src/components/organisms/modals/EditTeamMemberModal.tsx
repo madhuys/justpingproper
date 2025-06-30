@@ -61,7 +61,7 @@ export function EditTeamMemberModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent>
+      <DialogContent className="glassmorphic-modal">
         <DialogHeader>
           <DialogTitle>Edit Team Member</DialogTitle>
           <DialogDescription>

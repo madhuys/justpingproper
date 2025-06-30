@@ -1,0 +1,280 @@
+{
+  "page": {
+    "title": "AI Agents",
+    "description": "Build and manage conversational AI agents for customer engagement"
+  },
+  "tabs": {
+    "workflow": "Workflow Agents",
+    "freeflow": "Free-Flow Agents"
+  },
+  "emptyState": {
+    "workflow": {
+      "title": "No workflow agents yet",
+      "description": "Create your first workflow agent to automate structured conversations",
+      "action": "New Workflow Agent"
+    },
+    "freeflow": {
+      "title": "No free-flow agents yet", 
+      "description": "Create your first free-flow agent for dynamic conversations",
+      "action": "New Free-Flow Agent"
+    }
+  },
+  "actions": {
+    "newWorkflowAgent": "New Workflow Agent",
+    "newFreeflowAgent": "New Free-Flow Agent",
+    "test": "Test",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "create": "Create Agent",
+    "save": "Save Changes",
+    "next": "Next",
+    "back": "Back",
+    "endTest": "End Test"
+  },
+  "wizard": {
+    "workflow": {
+      "title": "Create Workflow Agent",
+      "steps": {
+        "template": "Select Template",
+        "script": "Build Script",
+        "integrations": "Configure Integrations",
+        "review": "Review & Create"
+      },
+      "template": {
+        "title": "Choose a Task Template",
+        "description": "Select a template to start building your workflow"
+      },
+      "script": {
+        "title": "Build Your Conversation Script",
+        "description": "Define each step of your agent's conversation flow",
+        "addStep": "Add Step",
+        "promptLabel": "Prompt Text",
+        "promptPlaceholder": "Enter the message your agent will say...",
+        "inputType": "Expected Input Type",
+        "inputTypes": {
+          "text": "Text Input",
+          "choice": "Multiple Choice",
+          "validation": "Validated Input"
+        },
+        "validation": "Validation Rules",
+        "validationTypes": {
+          "none": "No Validation",
+          "name": "Name Format",
+          "email": "Email Address",
+          "phone": "Phone Number",
+          "address": "Address Lookup"
+        },
+        "fallback": "Fallback Message",
+        "fallbackPlaceholder": "Message shown when validation fails..."
+      },
+      "integrations": {
+        "title": "Configure Integrations",
+        "description": "Connect your agent to knowledge bases and channels",
+        "knowledgeIndex": "Knowledge Index",
+        "knowledgeIndexPlaceholder": "Select a knowledge index...",
+        "mcpServers": "MCP Servers",
+        "mcpServersPlaceholder": "Select channels to deploy...",
+        "tools": "Enable Tools",
+        "toolOptions": {
+          "webSearch": "Web Search",
+          "crmLookup": "CRM Lookup", 
+          "ticketCreation": "Ticket Creation",
+          "onlineSearch": "Online Search"
+        },
+        "apiKey": "API Key",
+        "apiKeyPlaceholder": "Enter your API key..."
+      },
+      "review": {
+        "title": "Review Your Workflow Agent",
+        "description": "Review your configuration before creating the agent",
+        "template": "Template",
+        "steps": "Conversation Steps",
+        "integrations": "Integrations",
+        "knowledge": "Knowledge Index",
+        "channels": "Channels",
+        "tools": "Enabled Tools"
+      }
+    },
+    "freeflow": {
+      "title": "Create Free-Flow Agent",
+      "steps": {
+        "persona": "Build Persona",
+        "scope": "Scope & Tools",
+        "model": "Model & Channels",
+        "review": "Review & Create"
+      },
+      "persona": {
+        "title": "Build Your Agent's Persona",
+        "description": "Define your agent's personality and appearance",
+        "name": "Agent Name",
+        "namePlaceholder": "Enter agent name...",
+        "tone": "Tone & Style",
+        "toneOptions": {
+          "friendly": "Friendly",
+          "formal": "Formal",
+          "witty": "Witty",
+          "professional": "Professional"
+        },
+        "background": "Background Description",
+        "backgroundPlaceholder": "Describe your agent's background and expertise...",
+        "avatar": "Agent Avatar",
+        "uploadAvatar": "Upload Avatar",
+        "changeAvatar": "Change",
+        "cropAvatar": "Crop",
+        "noAvatar": "No photo"
+      },
+      "scope": {
+        "title": "Define Scope & Tools",
+        "description": "Set boundaries and capabilities for your agent",
+        "conversationScope": "Conversation Scope",
+        "scopePlaceholder": "e.g., Business support queries only...",
+        "knowledgeIndex": "Knowledge Index",
+        "knowledgeIndexPlaceholder": "Select a knowledge index...",
+        "allowedTools": "Allowed Tools",
+        "toolOptions": {
+          "webSearch": "Web Search",
+          "calendar": "Calendar Lookup",
+          "productLookup": "Product Lookup",
+          "weatherInfo": "Weather Information",
+          "calculator": "Calculator"
+        }
+      },
+      "model": {
+        "title": "Select Model & Channels",
+        "description": "Choose AI model and deployment channels",
+        "aiModel": "AI Model",
+        "modelOptions": {
+          "gpt4": "GPT-4",
+          "gpt35": "GPT-3.5 Turbo",
+          "claude": "Claude 2",
+          "llama": "Llama 2"
+        },
+        "mcpServers": "MCP Servers",
+        "mcpServersPlaceholder": "Select channels to deploy..."
+      },
+      "review": {
+        "title": "Review Your Free-Flow Agent",
+        "description": "Review your configuration before creating the agent",
+        "persona": "Agent Persona",
+        "name": "Name",
+        "tone": "Tone",
+        "scope": "Conversation Scope",
+        "knowledge": "Knowledge Index",
+        "model": "AI Model",
+        "channels": "Channels",
+        "tools": "Allowed Tools",
+        "systemPrompt": "System Prompt Preview"
+      }
+    }
+  },
+  "status": {
+    "ready": "Ready",
+    "building": "Building",
+    "failed": "Failed",
+    "buildingMessage": "Building agent {{name}}...",
+    "cancelBuild": "Cancel Build"
+  },
+  "testConsole": {
+    "title": "Test Agent: {{name}}",
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "thinking": "Agent is thinking...",
+    "error": "Failed to get response"
+  },
+  "notifications": {
+    "createStarted": "{{type}} Agent creation started",
+    "createSuccess": "Agent '{{name}}' is ready",
+    "createFailed": "Failed to create agent",
+    "updateSuccess": "Agent updated successfully",
+    "deleteSuccess": "Agent deleted successfully",
+    "deleteConfirm": "Are you sure you want to delete this agent?",
+    "buildCancelled": "Agent build cancelled"
+  },
+  "validation": {
+    "nameRequired": "Agent name is required",
+    "templateRequired": "Please select a template",
+    "stepsRequired": "At least one conversation step is required",
+    "promptRequired": "Prompt text is required",
+    "scopeRequired": "Conversation scope is required",
+    "modelRequired": "Please select an AI model"
+  },
+  "workflow": {
+    "builder": {
+      "title": "Workflow Builder",
+      "saveWorkflow": "Save Workflow",
+      "backToAgents": "Back to Agents",
+      "showConfig": "Show Config",
+      "hideConfig": "Hide Config",
+      "savedWorkflows": "Saved Workflows"
+    },
+    "nodeTypes": {
+      "start": "Start",
+      "input": "Collect Input",
+      "aiAnalyze": "AI Analyze",
+      "action": "Action",
+      "branch": "Branch",
+      "end": "End"
+    },
+    "nodeConfig": {
+      "title": "Node Configuration",
+      "basicSettings": "Basic Settings",
+      "inputSettings": "Input Settings",
+      "aiSettings": "AI Settings",
+      "actionSettings": "Action Settings",
+      "branchSettings": "Branch Settings"
+    },
+    "popularVariables": [
+      "name", "email", "phone", "address", "city", "state", "zipcode", "country",
+      "company", "jobTitle", "department", "website", "birthday", "age",
+      "orderNumber", "trackingNumber", "invoiceNumber", "accountNumber",
+      "productName", "quantity", "price", "date", "time", "reason",
+      "feedback", "rating", "comments", "preferences", "interests"
+    ],
+    "actionPresets": [
+      { "id": "sendEmail", "label": "Send Email", "icon": "Mail", "category": "communication" },
+      { "id": "sendWhatsApp", "label": "Send WhatsApp", "icon": "MessageSquare", "category": "communication" },
+      { "id": "sendSMS", "label": "Send SMS", "icon": "Phone", "category": "communication" },
+      { "id": "updateCalendar", "label": "Update Calendar", "icon": "CalendarPlus", "category": "integration" },
+      { "id": "updateCRM", "label": "Update CRM", "icon": "Database", "category": "integration" },
+      { "id": "webhook", "label": "Call Webhook", "icon": "Webhook", "category": "api" },
+      { "id": "notify", "label": "Send Notification", "icon": "BellRing", "category": "communication" },
+      { "id": "mcpTool", "label": "MCP Tool Call", "icon": "Tool", "category": "mcp" },
+      { "id": "apiCall", "label": "API Call", "icon": "Globe", "category": "api" }
+    ],
+    "validationTypes": {
+      "none": "None",
+      "email": "Email",
+      "phone": "Phone Number",
+      "url": "URL",
+      "number": "Number",
+      "date": "Date",
+      "time": "Time",
+      "alphanumeric": "Alphanumeric"
+    },
+    "controls": {
+      "flowDirection": {
+        "topBottom": "Top-Bottom",
+        "leftRight": "Left-Right"
+      },
+      "returnToStart": "Return to Start",
+      "zoomIn": "Zoom In",
+      "zoomOut": "Zoom Out",
+      "fitToView": "Fit to View",
+      "toggleGrid": "Toggle Grid",
+      "toggleSnap": "Toggle Snap to Grid",
+      "touchMode": "Touch Mode",
+      "align": "Align",
+      "alignLeft": "Align Left",
+      "alignCenterHorizontal": "Align Center Horizontal",
+      "alignRight": "Align Right",
+      "alignTop": "Align Top",
+      "alignCenterVertical": "Align Center Vertical",
+      "alignBottom": "Align Bottom",
+      "distributeHorizontally": "Distribute Horizontally",
+      "distributeVertically": "Distribute Vertically",
+      "autoArrange": "Auto Arrange",
+      "unsavedChanges": "Unsaved changes"
+    }
+  }
+}

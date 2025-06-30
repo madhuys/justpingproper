@@ -1,0 +1,203 @@
+{
+  "id": "customer-support",
+  "name": "Customer Support Agent",
+  "description": "Handles customer inquiries with knowledgebase integration",
+  "persona": "akshita",
+  "tone": "professional",
+  "knowledgebase": "support-articles",
+  "integrations": [
+    "calendar",
+    "hubspot"
+  ],
+  "nodes": [
+    {
+      "id": "1",
+      "type": "workflow",
+      "position": {
+        "x": 50,
+        "y": 200
+      },
+      "data": {
+        "label": "Start",
+        "type": "start",
+        "prompt": "Hello! Welcome to our support center. I'm here to help you with any questions or issues you may have.",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "2",
+      "type": "workflow",
+      "position": {
+        "x": 410,
+        "y": 200
+      },
+      "data": {
+        "label": "Verify Customer",
+        "type": "input",
+        "inputType": "text",
+        "prompt": "May I have your customer ID or email address to better assist you?",
+        "variable": "customerId",
+        "validation": "email",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "3",
+      "type": "workflow",
+      "position": {
+        "x": 770,
+        "y": 200
+      },
+      "data": {
+        "label": "Issue Category",
+        "type": "input",
+        "inputType": "choice",
+        "prompt": "What can I help you with today?",
+        "variable": "issueType",
+        "choices": [
+          "Technical Support",
+          "Billing Question",
+          "Product Information",
+          "Account Management",
+          "Other"
+        ],
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "4",
+      "type": "workflow",
+      "position": {
+        "x": 1130,
+        "y": 50
+      },
+      "data": {
+        "label": "KB Lookup",
+        "type": "action",
+        "actionType": "knowledgebase",
+        "prompt": "Let me search our knowledge base for information about {{issueType}}...",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "5",
+      "type": "workflow",
+      "position": {
+        "x": 1490,
+        "y": 50
+      },
+      "data": {
+        "label": "Provide Solution",
+        "type": "message",
+        "prompt": "Based on our knowledge base, here's what I found: {{kbResult}}. Would this help resolve your issue?",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "6",
+      "type": "workflow",
+      "position": {
+        "x": 1130,
+        "y": 350
+      },
+      "data": {
+        "label": "Create Ticket",
+        "type": "action",
+        "actionType": "hubspot",
+        "prompt": "I'll create a support ticket for you. One moment please...",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "7",
+      "type": "workflow",
+      "position": {
+        "x": 1490,
+        "y": 350
+      },
+      "data": {
+        "label": "Schedule Follow-up",
+        "type": "action",
+        "actionType": "calendar",
+        "prompt": "Would you like to schedule a follow-up call with our team?",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "8",
+      "type": "workflow",
+      "position": {
+        "x": 1850,
+        "y": 200
+      },
+      "data": {
+        "label": "End",
+        "type": "end",
+        "prompt": "Thank you for contacting support. Your ticket number is {{ticketId}}. Is there anything else I can help you with?",
+        "flowDirection": "LR"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1-2",
+      "source": "1",
+      "target": "2",
+      "type": "custom"
+    },
+    {
+      "id": "e2-3",
+      "source": "2",
+      "target": "3",
+      "type": "custom"
+    },
+    {
+      "id": "e3-4",
+      "source": "3",
+      "sourceHandle": "choice-0",
+      "target": "4",
+      "type": "custom",
+      "label": "Technical/Product"
+    },
+    {
+      "id": "e3-6",
+      "source": "3",
+      "sourceHandle": "choice-1",
+      "target": "6",
+      "type": "custom",
+      "label": "Other Issues"
+    },
+    {
+      "id": "e4-5",
+      "source": "4",
+      "target": "5",
+      "type": "custom"
+    },
+    {
+      "id": "e5-7",
+      "source": "5",
+      "target": "7",
+      "type": "custom"
+    },
+    {
+      "id": "e6-7",
+      "source": "6",
+      "target": "7",
+      "type": "custom"
+    },
+    {
+      "id": "e7-8",
+      "source": "7",
+      "target": "8",
+      "type": "custom"
+    }
+  ],
+  "viewport": {
+    "x": 0,
+    "y": 0,
+    "zoom": 0.6
+  },
+  "flowDirection": "LR",
+  "createdAt": "2024-01-15T00:00:00.000Z",
+  "updatedAt": "2024-01-15T00:00:00.000Z"
+}

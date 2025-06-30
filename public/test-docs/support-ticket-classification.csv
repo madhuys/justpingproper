@@ -1,0 +1,21 @@
+description,category
+"I can't log into my account. It says my password is wrong but I know it's correct.",account_access
+"How do I cancel my subscription? I can't find the option anywhere.",billing
+"The app crashes every time I try to upload a photo.",technical_issue
+"I was charged twice for the same order. Please refund the duplicate charge.",billing
+"My order hasn't arrived yet and it's been 2 weeks.",shipping
+"How do I reset my password? I forgot it.",account_access
+"The website is loading very slowly on my browser.",technical_issue
+"Can I change my subscription from monthly to yearly?",billing
+"My package was delivered to the wrong address.",shipping
+"I can't access my account after the recent update.",account_access
+"The payment page keeps giving me an error when I try to pay.",technical_issue
+"I want to update my credit card information.",billing
+"Where is my tracking number? I never received it.",shipping
+"My account was suspended for no reason. Please help.",account_access
+"The mobile app won't open on my phone.",technical_issue
+"I was overcharged on my last bill. Please review.",billing
+"The delivery driver left my package in the rain and it's damaged.",shipping
+"I need to change the email address associated with my account.",account_access
+"Getting error 404 when trying to access certain pages.",technical_issue
+"How do I get a refund for my canceled order?",billing

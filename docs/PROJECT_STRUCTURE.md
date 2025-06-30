@@ -1,16 +1,16 @@
 # JustPing Backend Project Structure Documentation
 
-> Generated on 2025-06-25 at 12:23:03
+> Generated on 2025-06-30 at 08:28:16
 
 ## 📊 Project Statistics
 
 | Metric | Value |
 |--------|-------|
-| **Total Files** | 530 |
-| **Total Lines of Code** | 80,036 |
-| **API Modules** | 45 |
+| **Total Files** | 615 |
+| **Total Lines of Code** | 94,370 |
+| **API Modules** | 46 |
 | **API Endpoints Detected** | 0 |
-| **Average Lines per File** | 151 |
+| **Average Lines per File** | 153 |
 
 ## 🏗️ Architecture Overview
 
@@ -26,28 +26,28 @@ This is a Node.js/Express backend API with the following key architectural compo
 
 | File | Lines | Size (KB) | Category |
 |------|-------|-----------|----------|
-| `package-lock.json` | 12766 | 463.8 | .json |
-| `api/Templates/service.js` | 2579 | 110.5 | .js |
-| `api/Broadcast/service.js` | 1828 | 65.5 | .js |
-| `AgentsFlow/webhookFlowManager.js` | 1199 | 40.0 | .js |
-| `AgentsFlow/aiService.js` | 972 | 34.9 | .js |
-| `api/Channel/service.js` | 962 | 35.4 | .js |
-| `AgentsFlow/strictAgentValidator.js` | 955 | 32.7 | .js |
-| `api/Agents/service.js` | 935 | 32.8 | .js |
-| `api/ConversationFlow/controller.js` | 921 | 28.5 | .js |
+| `package-lock.json` | 13285 | 471.3 | .json |
+| `api/Templates/service.js` | 2579 | 107.7 | .js |
+| `api/Broadcast/service.js` | 1828 | 63.5 | .js |
+| `src/app/(agentbuilder)/agents/workflow/create/page.tsx` | 1685 | 77.2 | .tsx |
+| `src/components/organisms/workflow/EnhancedWorkflowBuilderV2.tsx` | 1452 | 54.9 | .tsx |
+| `AgentsFlow/webhookFlowManager.js` | 1199 | 38.7 | .js |
+| `AgentsFlow/aiService.js` | 972 | 33.8 | .js |
+| `api/Channel/service.js` | 962 | 34.4 | .js |
+| `AgentsFlow/strictAgentValidator.js` | 955 | 31.6 | .js |
+| `api/Agents/service.js` | 935 | 31.8 | .js |
+| `api/ConversationFlow/controller.js` | 921 | 27.5 | .js |
+| `src/app/(agentbuilder)/agents/workflow/[id]/edit/page.tsx` | 872 | 35.3 | .tsx |
 | `api/Contacts/service.js` | 846 | 28.3 | .js |
 | `api/Contacts/repository.js` | 777 | 24.9 | .js |
-| `src/app/(dashboard)/contacts/groups/[groupId]/bulk-add/page.tsx` | 720 | 27.7 | .tsx |
-| `api/Contacts/controller.js` | 718 | 19.5 | .js |
-| `AgentsFlow/whatsAppServiceProviders.js` | 704 | 21.2 | .js |
-| `system/providers/Karix/broadcast.js` | 678 | 22.6 | .js |
+| `src/app/globals.css` | 744 | 18.0 | .css |
 
 ## 📈 Module Complexity Analysis
 
 | Module | Files | Lines | Avg Lines/File |
 |--------|-------|-------|----------------|
-| **src** | 210 | 24,111 | 115 |
-| **package-lock** | 1 | 12,766 | 12766 |
+| **src** | 275 | 37,734 | 137 |
+| **package-lock** | 1 | 13,285 | 13285 |
 | **AgentsFlow** | 17 | 7,373 | 434 |
 | **system** | 71 | 7,318 | 103 |
 | **Templates** | 5 | 3,085 | 617 |
@@ -66,11 +66,12 @@ This is a Node.js/Express backend API with the following key architectural compo
 | **Role** | 7 | 884 | 126 |
 | **Campaign** | 5 | 791 | 158 |
 | **MessageEvents** | 2 | 780 | 390 |
-| **docs** | 12 | 535 | 45 |
+| **docs** | 12 | 620 | 52 |
 | **change-log** | 1 | 304 | 304 |
 | **.claude** | 1 | 159 | 159 |
 | **start-dev** | 2 | 149 | 75 |
-| **package** | 1 | 93 | 93 |
+| **public** | 48 | 105 | 2 |
+| **package** | 1 | 94 | 94 |
 | **.env** | 1 | 76 | 76 |
 | **start** | 1 | 75 | 75 |
 | **start-simple** | 1 | 44 | 44 |
@@ -78,8 +79,8 @@ This is a Node.js/Express backend API with the following key architectural compo
 | **dev-start** | 1 | 35 | 35 |
 | **run-contact-worker** | 1 | 35 | 35 |
 | **test** | 1 | 35 | 35 |
+| **tsconfig** | 2 | 28 | 14 |
 | **purgecss.config** | 1 | 27 | 27 |
-| **tsconfig** | 2 | 27 | 14 |
 | **package-minimal** | 1 | 24 | 24 |
 | **components** | 1 | 18 | 18 |
 | **knexfile** | 1 | 15 | 15 |
@@ -88,9 +89,9 @@ This is a Node.js/Express backend API with the following key architectural compo
 | **knip** | 1 | 3 | 3 |
 | **README** | 1 | 0 | 0 |
 | **design screens** | 25 | 0 | 0 |
-| **public** | 37 | 0 | 0 |
 | **tempassets** | 8 | 0 | 0 |
 | **tree_structure** | 1 | 0 | 0 |
+| **uploads** | 9 | 0 | 0 |
 
 ## 🗂️ Project Structure Tree
 
@@ -217,11 +218,11 @@ justping-backend/
     ├── 📄 1.1 Create Password.jpg
     ├── 📄 1.2 Create password Successfully.jpg
     ├── 📄 1.3 Sign in.jpg
-    ├── 📄 1.4 AboutCompany.jpg
-    ├── 📄 1.5 AboutCompany 2.jpg
+    ├── 📄 1.4 About Company.jpg
+    ├── 📄 1.5 About Company 2.jpg
     ├── 📄 1.6 Admin details about company 3.jpg
-    ├── 📄 1.7 Add TeamMember(add).jpg
-    ├── 📄 1.8 Add TeamMember.jpg
+    ├── 📄 1.7 Add Team Member(add).jpg
+    ├── 📄 1.8 Add Team Member.jpg
     ├── 📄 1.9 welcome with dropdown.jpg
     ├── 📄 1.9b welcome with dropdown.jpg
     ├── 📄 2.3 Edit business Profile.png
@@ -241,7 +242,7 @@ justping-backend/
     ├── 📄 State=Selected.png
 └── 📄 dev-start.js (35 lines)
 └── 📁 docs/
-    ├── 📄 .project-cache.json (535 lines)
+    ├── 📄 .project-cache.json (620 lines)
     ├── 📖 AUDIT_REPORT.md
     ├── 📖 COMPONENT_ARCHITECTURE.md
     ├── 📖 CSS_AUDIT_REPORT.md
@@ -297,9 +298,9 @@ justping-backend/
     │   └── 🔄 migration-utils.js (259 lines)
 └── 📄 next-env.d.ts (4 lines)
 └── ⚡ next.config.mjs (37 lines)
-└── 📄 package-lock.json (12766 lines)
+└── 📄 package-lock.json (13285 lines)
 └── 📄 package-minimal.json (24 lines)
-└── 📄 package.json (93 lines)
+└── 📄 package.json (94 lines)
 └── ⚡ postcss.config.mjs (4 lines)
 └── 📁 public/
     ├── 📄 Frame 1000004901.png
@@ -317,6 +318,12 @@ justping-backend/
     │   ├── 📄 dark-bg.png
     │   ├── 📄 dark-bg.webp
     │   ├── 📄 light-bg.webp
+    │   ├── 📁 personas/
+    │   │   ├── 📄 akshitaiyer.mp4
+    │   │   ├── 📄 ananyasingh.mp4
+    │   │   ├── 📄 priyadesai.mp4
+    │   │   ├── 📄 rohangupta.mp4
+    │   │   ├── 📄 vikrampatil.mp4
     │   ├── 📄 supermad1983_white_background_scatterd_with_small_paint_spashes_6da1da80-ec3f-4718-a3fd-bbea6ec89927.png
     ├── 📁 logos/
     │   ├── 📄 logo-dark.png
@@ -330,6 +337,7 @@ justping-backend/
     ├── 📁 test-docs/
     │   ├── 📄 1mb.xlsx
     │   ├── 📄 915qP2I1KGL._AC_SX679_.jpg
+    │   ├── 📖 CLASSIFIER_DATASETS_README.md
     │   ├── 📄 Contextual Customer Intelligence-Insights Platform Apkar May 24.pdf
     │   ├── 📄 Draft MOU Instrive CMI Template 2025.docx
     │   ├── 📄 Gen-3 Alpha Turbo 1396960789, The camera pulls bac, Cropped - ChatGPT Im, M 5, cam_R -1, cam_Z -15.mp4
@@ -337,8 +345,13 @@ justping-backend/
     │   ├── 📄 Pitch Deck for Just Ping - dCommerce.pptx
     │   ├── 📄 akshitav2.mp4
     │   ├── 📄 akshitav3.mp4
+    │   ├── 📄 customer-sentiment-dataset.csv (21 lines)
     │   ├── 📄 download (1).jpg
+    │   ├── 📄 email-spam-detection.csv (21 lines)
+    │   ├── 📄 intent-classification-chatbot.csv (21 lines)
     │   ├── 📄 just_ping_marketing_20250623075600.pdf
+    │   ├── 📄 product-category-classification.csv (21 lines)
+    │   ├── 📄 support-ticket-classification.csv (21 lines)
     ├── 📄 textlogo.png
     ├── 📄 vercel.svg
     ├── 📄 window.svg
@@ -366,6 +379,15 @@ justping-backend/
 └── 📁 src/
     ├── 📁 app/
     │   ├── 📄 'use client';.tsx (242 lines)
+    │   ├── 📁 (agentbuilder)/
+    │   │   ├── 📁 agents/
+    │   │   │   ├── 📁 workflow/
+    │   │   │   │   └── 📁 [id]/
+    │   │   │   │       ├── 📁 edit/
+    │   │   │   │       │   └── 📄 page.tsx (872 lines)
+    │   │   │   │   └── 📁 create/
+    │   │   │   │       └── 📄 page.tsx (1685 lines)
+    │   │   ├── 📄 layout.tsx (63 lines)
     │   ├── 📁 (auth)/
     │   │   ├── 📁 forgot-password/
     │   │   │   ├── 📄 page.tsx (111 lines)
@@ -377,6 +399,8 @@ justping-backend/
     │   │   ├── 📁 reset-password/
     │   │   │   └── 📄 page.tsx (188 lines)
     │   ├── 📁 (dashboard)/
+    │   │   ├── 📁 agents/
+    │   │   │   ├── 📄 page.tsx (320 lines)
     │   │   ├── 📁 business/
     │   │   │   ├── 📄 page.tsx (62 lines)
     │   │   ├── 📁 business-profile/
@@ -385,12 +409,12 @@ justping-backend/
     │   │   │   ├── 📁 groups/
     │   │   │   │   ├── 📁 [groupId]/
     │   │   │   │   │   └── 📁 add/
-    │   │   │   │   │       ├── 📄 page.tsx (462 lines)
+    │   │   │   │   │       ├── 📄 page.tsx (260 lines)
     │   │   │   │   │   └── 📁 bulk-add/
-    │   │   │   │   │       ├── 📄 page.tsx (720 lines)
+    │   │   │   │   │       ├── 📄 page.tsx (346 lines)
     │   │   │   │   │   └── 📁 fields/
-    │   │   │   │   │       └── 📄 page.tsx (609 lines)
-    │   │   │   ├── 📄 page.tsx (450 lines)
+    │   │   │   │   │       └── 📄 page.tsx (325 lines)
+    │   │   │   ├── 📄 page.tsx (145 lines)
     │   │   ├── 📁 file-manager/
     │   │   │   ├── 📄 page.tsx (252 lines)
     │   │   ├── 📁 home/
@@ -398,7 +422,7 @@ justping-backend/
     │   │   ├── 📁 integrations/
     │   │   │   ├── 📄 page.tsx (119 lines)
     │   │   ├── 📁 knowledgebase/
-    │   │   │   ├── 📄 page.tsx (33 lines)
+    │   │   │   ├── 📄 page.tsx (354 lines)
     │   │   ├── 📄 layout.tsx (21 lines)
     │   │   ├── 📁 loading-test/
     │   │   │   ├── 📄 page.tsx (58 lines)
@@ -431,6 +455,8 @@ justping-backend/
     │   │   │   ├── 🛣️ route.ts (55 lines)
     │   │   ├── 📁 files/
     │   │   │   ├── 🛣️ route.ts (76 lines)
+    │   │   │   ├── 📁 upload/
+    │   │   │   │   └── 🛣️ route.ts (35 lines)
     │   │   ├── 📁 health/
     │   │   │   ├── 🛣️ route.ts (17 lines)
     │   │   ├── 📁 states/
@@ -444,6 +470,8 @@ justping-backend/
     │   │   │   │   ├── 🛣️ route.ts (178 lines)
     │   │   │   ├── 📁 search-history/
     │   │   │   │   ├── 🛣️ route.ts (55 lines)
+    │   │   │   ├── 📁 tempWorkflow/
+    │   │   │   │   ├── 🛣️ route.ts (30 lines)
     │   │   │   ├── 📁 ui-preferences/
     │   │   │   │   └── 🛣️ route.ts (41 lines)
     │   │   ├── 📁 team/
@@ -456,11 +484,14 @@ justping-backend/
     │   │   │   ├── 📁 profile/
     │   │   │   │   └── 🛣️ route.ts (57 lines)
     │   │   ├── 📁 users/
+    │   │   │   ├── 📁 [id]/
+    │   │   │   │   ├── 🛣️ route.ts (80 lines)
+    │   │   │   ├── 🛣️ route.ts (83 lines)
+    │   │   ├── 📁 workflows/
     │   │   │   └── 📁 [id]/
-    │   │   │       ├── 🛣️ route.ts (80 lines)
-    │   │   │   └── 🛣️ route.ts (83 lines)
-    │   ├── 📄 favicon.ico
-    │   ├── 📄 globals.css (630 lines)
+    │   │   │       ├── 🛣️ route.ts (69 lines)
+    │   │   │   └── 🛣️ route.ts (38 lines)
+    │   ├── 📄 globals.css (744 lines)
     │   ├── 📄 layout.tsx (102 lines)
     │   ├── 📁 loading/
     │   │   ├── 📄 page.tsx (10 lines)
@@ -482,7 +513,7 @@ justping-backend/
     │   │   ├── 📁 onboarding/
     │   │   │   ├── 📄 layout.tsx (36 lines)
     │   │   ├── 📁 postauth/
-    │   │   │   ├── 📄 layout.tsx (154 lines)
+    │   │   │   ├── 📄 layout.tsx (159 lines)
     │   │   ├── 📁 postauthforms/
     │   │   │   ├── 📄 layout.tsx (149 lines)
     │   │   ├── 📁 preauth/
@@ -495,6 +526,7 @@ justping-backend/
     │   │   ├── 📄 ChatFAB.tsx (38 lines)
     │   │   ├── 📄 ChatInput.tsx (235 lines)
     │   │   ├── 📄 ChatMessage.tsx (167 lines)
+    │   │   ├── 📄 ClassificationTester.tsx (98 lines)
     │   │   ├── 📄 DocumentManager.tsx (116 lines)
     │   │   ├── 📄 FileBreadcrumb.tsx (37 lines)
     │   │   ├── 📄 FileCard.tsx (72 lines)
@@ -507,48 +539,78 @@ justping-backend/
     │   │   ├── 📄 FileUploadArea.tsx (53 lines)
     │   │   ├── 📄 FileUploadCard.tsx (32 lines)
     │   │   ├── 📄 FormField.tsx (38 lines)
+    │   │   ├── 📄 GroupsActionBar.tsx (38 lines)
     │   │   ├── 📄 HomeGrid.tsx (130 lines)
     │   │   ├── 📄 ImageCarousel.tsx (67 lines)
     │   │   ├── 📄 NotificationSettings.tsx (45 lines)
     │   │   ├── 📄 OAuthButton.tsx (68 lines)
     │   │   ├── 📄 PreferenceSettings.tsx (77 lines)
+    │   │   ├── 📄 SearchTester.tsx (80 lines)
     │   │   ├── 📄 StepHeader.tsx (25 lines)
+    │   │   ├── 📄 StepIndicator.tsx (35 lines)
     │   │   ├── 📄 TeamMemberListCard.tsx (174 lines)
     │   │   ├── 📄 UserProfileFields.tsx (149 lines)
     │   ├── 📁 navigation/
     │   │   ├── 📄 Footer.tsx (157 lines)
-    │   │   ├── 📄 Header.tsx (167 lines)
+    │   │   ├── 📄 Header.tsx (168 lines)
     │   │   ├── 📄 Sidebar.tsx (166 lines)
     │   ├── 📁 organisms/
     │   │   ├── 📄 AudioPlayer.tsx (205 lines)
     │   │   ├── 📄 AuthForm.tsx (29 lines)
+    │   │   ├── 📄 BulkImportMapping.tsx (215 lines)
+    │   │   ├── 📄 BulkImportProgress.tsx (100 lines)
+    │   │   ├── 📄 BulkImportUpload.tsx (77 lines)
     │   │   ├── 📄 ChannelCard.tsx (129 lines)
     │   │   ├── 📄 ChatWidget.tsx (257 lines)
+    │   │   ├── 📄 ContactForm.tsx (181 lines)
     │   │   ├── 📄 ConversationsWidgetExpanded.tsx (363 lines)
+    │   │   ├── 📄 FieldEditorDialog.tsx (194 lines)
+    │   │   ├── 📄 FieldManager.tsx (118 lines)
     │   │   ├── 📄 FileExplorer.tsx (223 lines)
     │   │   ├── 📄 GlobalSearch.tsx (186 lines)
+    │   │   ├── 📄 GroupsTable.tsx (260 lines)
     │   │   ├── 📄 ImageGallery.tsx (181 lines)
     │   │   ├── 📄 ImageViewer.tsx (85 lines)
     │   │   ├── 📄 LiveChatFAB.tsx (18 lines)
     │   │   ├── 📄 NotificationsPanel.tsx (103 lines)
     │   │   ├── 📄 OfficeViewer.tsx (88 lines)
+    │   │   ├── 📄 OmniChatFAB.tsx (79 lines)
     │   │   ├── 📄 PdfViewer.tsx (102 lines)
     │   │   ├── 📄 QuickConnectPanel.tsx (68 lines)
+    │   │   ├── 📄 StatusBar.tsx (66 lines)
     │   │   ├── 📄 VideoPlayer.tsx (242 lines)
+    │   │   ├── 📄 WorkflowCreationChat.tsx (513 lines)
+    │   │   ├── 📄 WorkflowCreationFAB.tsx (24 lines)
     │   │   ├── 📁 modals/
-    │   │   │   ├── 📄 AddTeamMemberModal.tsx (247 lines)
+    │   │   │   ├── 📄 AddTeamMemberModal.tsx (251 lines)
+    │   │   │   ├── 📄 AgentTestModal.tsx (279 lines)
+    │   │   │   ├── 📄 ClassifierIndexModal.tsx (351 lines)
     │   │   │   ├── 📄 ConnectChannelModal.tsx (196 lines)
     │   │   │   ├── 📄 CreateGroupModal.tsx (128 lines)
     │   │   │   ├── 📄 CreateKnowledgebaseModal.tsx (299 lines)
     │   │   │   ├── 📄 DriveConfigModal.tsx (325 lines)
     │   │   │   ├── 📄 EditTeamMemberModal.tsx (104 lines)
+    │   │   │   ├── 📄 FileExplorerModal.tsx (515 lines)
     │   │   │   ├── 📄 FilePreviewModal.tsx (239 lines)
+    │   │   │   ├── 📄 FreeFlowAgentWizard.tsx (441 lines)
     │   │   │   ├── 📄 ImageCropperModal.tsx (187 lines)
     │   │   │   ├── 📄 IntegrationConfigModal.tsx (549 lines)
+    │   │   │   ├── 📄 KnowledgeIndexModal.tsx (292 lines)
     │   │   │   ├── 📄 RemoveTeamMemberModal.tsx (75 lines)
     │   │   │   ├── 📄 ResendInviteModal.tsx (61 lines)
+    │   │   │   ├── 📄 WorkflowAgentWizard.tsx (443 lines)
     │   │   ├── 📁 onboarding/
-    │   │   │   └── 📄 OnboardingForm.tsx (540 lines)
+    │   │   │   ├── 📄 OnboardingForm.tsx (540 lines)
+    │   │   ├── 📁 workflow/
+    │   │   │   └── 📄 CustomEdge.tsx (53 lines)
+    │   │   │   └── 📄 EnhancedWorkflowBuilder-old.tsx (262 lines)
+    │   │   │   └── 📄 EnhancedWorkflowBuilderV2.tsx (1452 lines)
+    │   │   │   └── 📄 EnhancedWorkflowNodeV2.tsx (508 lines)
+    │   │   │   └── 📄 FlowDirectionConnectionLine.tsx (46 lines)
+    │   │   │   └── 📄 NodeConfigDrawer.tsx (310 lines)
+    │   │   │   └── 📄 WorkflowNodeToolbar.tsx (62 lines)
+    │   │   │   └── 📄 WorkflowSidebarEnhanced.tsx (249 lines)
+    │   │   │   └── 📄 workflow-touch.css (194 lines)
     │   ├── 📁 pages/
     │   │   ├── 📁 integrations/
     │   │   │   └── 📄 IntegrationCard.tsx (163 lines)
@@ -561,6 +623,7 @@ justping-backend/
     │   │   └── 📄 alert.tsx (53 lines)
     │   │   └── 📄 avatar.tsx (47 lines)
     │   │   └── 📄 badge.tsx (31 lines)
+    │   │   └── 📄 base-node.tsx (24 lines)
     │   │   └── 📄 button.tsx (54 lines)
     │   │   └── 📄 card.tsx (87 lines)
     │   │   └── 📄 checkbox.tsx (26 lines)
@@ -571,6 +634,7 @@ justping-backend/
     │   │   └── 📄 dropdown-menu.tsx (241 lines)
     │   │   └── 📄 input.tsx (19 lines)
     │   │   └── 📄 label.tsx (20 lines)
+    │   │   └── 📄 node-header.tsx (115 lines)
     │   │   └── 📄 popover.tsx (27 lines)
     │   │   └── 📄 progress.tsx (27 lines)
     │   │   └── 📄 scroll-area.tsx (43 lines)
@@ -587,29 +651,48 @@ justping-backend/
     ├── 📁 contexts/
     │   ├── 📄 AuthContext.tsx (119 lines)
     ├── 📁 data/
+    │   ├── 📄 aiModels.json (26 lines)
     │   ├── 📄 channels.json (357 lines)
+    │   ├── 📄 classifierModels.json (27 lines)
     │   ├── 📄 companySizes.json (32 lines)
     │   ├── 📄 contactFieldTypes.json (88 lines)
     │   ├── 📄 countries.json (251 lines)
     │   ├── 📄 countryCodes.json (73 lines)
     │   ├── 📄 departments.json (8 lines)
+    │   ├── 📄 embeddingProviders.json (29 lines)
     │   ├── 📄 fileProviders.json (49 lines)
     │   ├── 📄 industries.json (149 lines)
+    │   ├── 📄 mcpServers.json (32 lines)
     │   ├── 📄 mockFileTree.json (149 lines)
     │   ├── 📁 mocks/
     │   │   ├── 📄 teamMembers.json (44 lines)
+    │   ├── 📄 personas.json (111 lines)
     │   ├── 📄 roles.json (52 lines)
     │   ├── 📁 states/
+    │   │   ├── 📄 agents.json (18 lines)
     │   │   ├── 📄 businessProfile.json (14 lines)
-    │   │   ├── 📄 contacts.json (17 lines)
+    │   │   ├── 📄 contacts.json (61 lines)
     │   │   ├── 📄 fileManagement.json (55 lines)
+    │   │   ├── 📁 flows/
+    │   │   │   ├── 📄 sample-flow.json (15 lines)
     │   │   ├── 📄 home.json (16 lines)
+    │   │   ├── 📄 knowledgebase.json (37 lines)
     │   │   ├── 📄 onboarding.json (79 lines)
     │   │   ├── 📄 settings.json (32 lines)
     │   │   ├── 📄 teamMembers.json (3 lines)
+    │   │   ├── 📄 tempWorkflow.json (32 lines)
     │   │   ├── 📄 ui-preferences.json (12 lines)
     │   │   ├── 📄 userProfile.json (13 lines)
+    │   │   ├── 📄 workflow.json (8 lines)
+    │   │   ├── 📁 workflows/
+    │   │   │   └── 📄 customer-support.json (176 lines)
+    │   │   │   └── 📄 interview-screening.json (176 lines)
+    │   │   │   └── 📄 it-helpdesk.json (252 lines)
+    │   │   │   └── 📄 order-processing.json (205 lines)
+    │   │   │   └── 📄 sales-qualification.json (227 lines)
+    │   │   │   └── 📄 sample-workflow.json (94 lines)
     │   ├── 📁 strings/
+    │   │   ├── 📄 agents.json (202 lines)
     │   │   ├── 📄 auth.json (77 lines)
     │   │   ├── 📄 businessProfile.json (97 lines)
     │   │   ├── 📄 contacts.json (209 lines)
@@ -617,23 +700,32 @@ justping-backend/
     │   │   ├── 📄 fileManagement.json (132 lines)
     │   │   ├── 📄 home.json (143 lines)
     │   │   ├── 📄 integrations.json (107 lines)
+    │   │   ├── 📄 knowledgebase.json (122 lines)
     │   │   ├── 📄 navigation.json (102 lines)
     │   │   ├── 📄 onboarding.json (45 lines)
     │   │   ├── 📄 profile.json (39 lines)
     │   │   ├── 📄 settings.json (109 lines)
     │   │   ├── 📄 users.json (29 lines)
     │   ├── 📄 systemRoles.json (26 lines)
+    │   ├── 📄 taskTemplates.json (73 lines)
     │   ├── 📄 useCases.json (62 lines)
+    │   ├── 📄 workflowTemplates.json (88 lines)
     ├── 📁 hooks/
+    │   ├── 📄 useAgents.ts (298 lines)
     │   ├── 📄 useAuthForm.ts (78 lines)
     │   ├── 📄 useBusinessProfile.ts (126 lines)
+    │   ├── 📄 useContactGroups.ts (165 lines)
+    │   ├── 📄 useContacts.ts (354 lines)
     │   ├── 📄 useContent.ts (67 lines)
+    │   ├── 📄 useFieldValidation.ts (85 lines)
     │   ├── 📄 useFileManager.ts (320 lines)
     │   ├── 📄 useIntegrations.ts (215 lines)
+    │   ├── 📄 useKnowledgebase.ts (283 lines)
     │   ├── 📄 useSettings.ts (117 lines)
     │   ├── 📄 useTeamMembers.ts (167 lines)
     │   ├── 📄 useUIPreferences.ts (96 lines)
     │   ├── 📄 useUserProfile.ts (108 lines)
+    │   ├── 📄 useWorkflowBuilder.ts (378 lines)
     ├── 📁 lib/
     │   ├── 📄 auth-utils.ts (25 lines)
     │   ├── 📄 file-utils.ts (69 lines)
@@ -753,7 +845,19 @@ justping-backend/
 └── 🧪 test.json (35 lines)
 └── 📄 tree_structure.txt
 └── ⚡ tsconfig.json (27 lines)
-└── ⚡ tsconfig.tsbuildinfo
+└── ⚡ tsconfig.tsbuildinfo (1 lines)
+└── 📁 uploads/
+    └── 📁 storage/
+        └── 📁 contacts/
+            └── 📄 1358d6b1-85bd-4840-a815-9e1e7de58603.xlsx
+            └── 📄 2eb88428-1e18-4f61-9f68-7fa5feeeb05c.xlsx
+            └── 📄 39d95a97-31a6-4b87-be64-ba49a8bd5091.xlsx
+            └── 📄 4261f13d-4dc7-405c-b49e-71de2cc6ce64.xlsx
+            └── 📄 5b04b272-2c93-45d2-91bc-50d89304d598.xlsx
+            └── 📄 73ef26f9-4dc4-4f3b-a12f-c50dbd067ade.xlsx
+            └── 📄 ccf4241d-b022-4cd7-ac1c-2e73c77e46c0.xlsx
+            └── 📄 d17340c8-fb2c-4018-9658-d53cd703ad65.xlsx
+            └── 📄 d6fff336-44cb-4514-acb0-6cf475978535.xlsx
 ```
 
 ## 📄 File Extensions Summary
@@ -761,30 +865,31 @@ justping-backend/
 | Extension | Files | Lines | Avg Lines/File |
 |-----------|-------|-------|----------------|
 | `.js` | 206 | 40,507 | 197 |
-| `.json` | 46 | 17,208 | 374 |
-| `.tsx` | 128 | 16,261 | 127 |
-| `.ts` | 45 | 4,456 | 99 |
-| `.css` | 1 | 630 | 630 |
+| `.tsx` | 163 | 25,847 | 159 |
+| `.json` | 66 | 19,807 | 300 |
+| `.ts` | 55 | 6,191 | 113 |
+| `.css` | 2 | 938 | 469 |
 | `.html` | 4 | 574 | 144 |
+| `.csv` | 5 | 105 | 21 |
 | `.yml` | 1 | 99 | 99 |
 | `.sh` | 1 | 88 | 88 |
 | `.local` | 1 | 76 | 76 |
 | `.cmd` | 1 | 61 | 61 |
 | `.mjs` | 2 | 41 | 21 |
 | `.bak` | 1 | 35 | 35 |
-| `.md` | 20 | 0 | 0 |
+| `.tsbuildinfo` | 1 | 1 | 1 |
+| `.md` | 21 | 0 | 0 |
 | `.jpg` | 14 | 0 | 0 |
 | `.png` | 38 | 0 | 0 |
 | `.svg` | 6 | 0 | 0 |
-| `.ico` | 2 | 0 | 0 |
+| `.ico` | 1 | 0 | 0 |
 | `.webp` | 2 | 0 | 0 |
-| `.xlsx` | 1 | 0 | 0 |
+| `.mp4` | 8 | 0 | 0 |
+| `.xlsx` | 10 | 0 | 0 |
 | `.pdf` | 3 | 0 | 0 |
 | `.docx` | 1 | 0 | 0 |
-| `.mp4` | 3 | 0 | 0 |
 | `.pptx` | 1 | 0 | 0 |
 | `.txt` | 1 | 0 | 0 |
-| `.tsbuildinfo` | 1 | 0 | 0 |
 
 ## 🔧 Development Notes
 

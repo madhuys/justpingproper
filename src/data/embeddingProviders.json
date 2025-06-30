@@ -1,0 +1,29 @@
+[
+  {
+    "id": "openai",
+    "name": "OpenAI Embeddings",
+    "models": [
+      { "id": "text-embedding-3-large", "name": "text-embedding-3-large" },
+      { "id": "text-embedding-3-small", "name": "text-embedding-3-small" },
+      { "id": "text-embedding-ada-002", "name": "text-embedding-ada-002" }
+    ]
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere Embed",
+    "models": [
+      { "id": "embed-english-v3.0", "name": "embed-english-v3.0" },
+      { "id": "embed-multilingual-v3.0", "name": "embed-multilingual-v3.0" },
+      { "id": "embed-english-light-v3.0", "name": "embed-english-light-v3.0" }
+    ]
+  },
+  {
+    "id": "hf-sentence-transformers",
+    "name": "HuggingFace Sentence Transformers",
+    "models": [
+      { "id": "all-MiniLM-L6-v2", "name": "all-MiniLM-L6-v2" },
+      { "id": "all-mpnet-base-v2", "name": "all-mpnet-base-v2" },
+      { "id": "multi-qa-MiniLM-L6-cos-v1", "name": "multi-qa-MiniLM-L6-cos-v1" }
+    ]
+  }
+]

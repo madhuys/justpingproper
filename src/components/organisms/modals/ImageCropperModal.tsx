@@ -129,7 +129,7 @@ export function ImageCropperModal({
   const modalContent = (
     <>
       <div 
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
+        className="fixed inset-0 bg-black/50 z-50"
         onClick={onClose}
       />
       
@@ -142,7 +142,7 @@ export function ImageCropperModal({
           bottom: '3rem',
         }}
       >
-        <Card className="w-full max-w-[800px] max-h-[90vh] overflow-hidden flex flex-col" onClick={(e) => e.stopPropagation()}>
+        <Card className="glassmorphic-modal w-full max-w-[800px] max-h-[90vh] overflow-hidden flex flex-col" onClick={(e) => e.stopPropagation()}>
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle>{title}</CardTitle>
             <Button

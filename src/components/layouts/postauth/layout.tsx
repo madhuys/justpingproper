@@ -5,7 +5,9 @@ import { useTheme } from 'next-themes';
 import { Header } from '@/components/navigation/Header';
 import { Sidebar } from '@/components/navigation/Sidebar';
 import { Footer } from '@/components/navigation/Footer';
-import { LiveChatFAB } from '@/components/organisms/LiveChatFAB';
+import { StatusBar } from '@/components/organisms/StatusBar';
+import { useKnowledgebase } from '@/hooks/useKnowledgebase';
+import { OmniChatFAB } from '@/components/organisms/OmniChatFAB';
 
 export default function PostAuthLayout({
   children,
@@ -13,9 +15,13 @@ export default function PostAuthLayout({
   children: React.ReactNode;
 }) {
   const { resolvedTheme } = useTheme();
+  const { buildStatus, cancelBuild } = useKnowledgebase();
   const [footerHeight, setFooterHeight] = useState(48); // Default 3rem = 48px
   const [viewportHeight, setViewportHeight] = useState(0);
   const [totalHeight, setTotalHeight] = useState(0);
+  
+  // Adjust footer height when StatusBar is visible
+  const effectiveFooterHeight = buildStatus.isBuilding ? footerHeight + 64 : footerHeight; // 64px for StatusBar
 
   useEffect(() => {
     // Get viewport height
@@ -153,7 +159,7 @@ export default function PostAuthLayout({
           top: '64px',    // Header height (4rem = 64px)
           left: '256px',  // Sidebar width (16rem = 256px)
           right: 0,
-          bottom: `${footerHeight}px`, // Footer height
+          bottom: `${effectiveFooterHeight}px`, // Footer height + StatusBar height
           zIndex: 10,
           overflow: 'hidden'
         }}
@@ -169,10 +175,12 @@ export default function PostAuthLayout({
         <Footer />
       </div>
       
-      {/* Live Chat FAB - outside all containers */}
-      <div style={{ position: 'fixed', bottom: '3rem', right: '1rem', zIndex: 9999 }}>
-        <LiveChatFAB />
-      </div>
+      
+      {/* StatusBar - appears above footer when building */}
+      <StatusBar buildStatus={buildStatus} onCancel={cancelBuild} />
+      
+      {/* OmniChat FAB - appears on all pages */}
+      <OmniChatFAB />
     </div>
   );
 }

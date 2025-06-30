@@ -1,0 +1,27 @@
+[
+  {
+    "id": "distilbert",
+    "name": "DistilBERT",
+    "description": "Lightweight version of BERT, 40% smaller and 60% faster"
+  },
+  {
+    "id": "roberta",
+    "name": "RoBERTa",
+    "description": "Robustly optimized BERT approach"
+  },
+  {
+    "id": "albert",
+    "name": "ALBERT",
+    "description": "A Lite BERT for self-supervised learning"
+  },
+  {
+    "id": "xlnet",
+    "name": "XLNet",
+    "description": "Generalized autoregressive pretraining"
+  },
+  {
+    "id": "custom",
+    "name": "Custom Model",
+    "description": "Upload your own fine-tuned model"
+  }
+]

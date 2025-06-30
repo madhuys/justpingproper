@@ -65,7 +65,7 @@ import {
   getAllProviders,
   WHATSAPP_CONSTRAINTS
 } from '@/lib/integrations/utils';
-import { WhatsAppProviderConfig } from '@/components/pages/integrations/WhatsAppProviderConfig';
+import { WhatsAppProviderConfig } from '@/components/organisms/WhatsAppProviderConfig';
 import integrationsStrings from '@/data/strings/integrations.json';
 
 interface IntegrationConfigModalProps {
@@ -502,7 +502,7 @@ export function IntegrationConfigModal({
   return (
     <>
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+        <DialogContent className="glassmorphic-modal max-w-2xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>{modalTitle}</DialogTitle>
             <DialogDescription>

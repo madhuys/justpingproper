@@ -1,0 +1,122 @@
+{
+  "page": {
+    "title": "Knowledgebase",
+    "description": "Build and manage AI-powered knowledge and classifier indexes from your content"
+  },
+  "tabs": {
+    "knowledge": "Knowledge Indexes",
+    "classifier": "Classifier Indexes"
+  },
+  "emptyState": {
+    "knowledge": {
+      "title": "No Knowledge Indexes",
+      "description": "Create your first knowledge index to enable semantic search across your documents",
+      "action": "New Knowledge Index"
+    },
+    "classifier": {
+      "title": "No Classifier Indexes",
+      "description": "Create your first classifier to automatically categorize and label your content",
+      "action": "New Classifier Index"
+    }
+  },
+  "actions": {
+    "newKnowledgeIndex": "New Knowledge Index",
+    "newClassifierIndex": "New Classifier Index",
+    "testSearch": "Test Search",
+    "testClassifier": "Test Classifier",
+    "cancel": "Cancel",
+    "create": "Create",
+    "back": "Back",
+    "next": "Next",
+    "createIndex": "Create Index",
+    "createClassifier": "Create Classifier"
+  },
+  "modals": {
+    "knowledgeIndex": {
+      "title": "Create Knowledge Index",
+      "steps": {
+        "selectFiles": "Select Files",
+        "configure": "Configure",
+        "confirm": "Confirm"
+      },
+      "fields": {
+        "name": "Index Name",
+        "namePlaceholder": "Enter index name",
+        "description": "Description",
+        "descriptionPlaceholder": "Describe this index (optional)",
+        "selectedFiles": "Selected Files",
+        "provider": "Embedding Provider",
+        "providerPlaceholder": "Select provider",
+        "model": "Embedding Model",
+        "modelPlaceholder": "Select model"
+      },
+      "validation": {
+        "nameRequired": "Index name is required",
+        "filesRequired": "Please select at least one file",
+        "providerRequired": "Please select an embedding provider",
+        "modelRequired": "Please select an embedding model"
+      }
+    },
+    "classifierIndex": {
+      "title": "Create Classifier Index",
+      "steps": {
+        "configure": "Configure",
+        "dataset": "Dataset",
+        "confirm": "Confirm"
+      },
+      "fields": {
+        "name": "Classifier Name",
+        "namePlaceholder": "Enter classifier name",
+        "description": "Description",
+        "descriptionPlaceholder": "Describe this classifier (optional)",
+        "model": "Classification Model",
+        "modelPlaceholder": "Select model",
+        "dataset": "Training Dataset",
+        "uploadDataset": "Upload Dataset",
+        "selectDataset": "Or select from files"
+      },
+      "validation": {
+        "nameRequired": "Classifier name is required",
+        "modelRequired": "Please select a classification model",
+        "datasetRequired": "Please upload or select a training dataset"
+      }
+    }
+  },
+  "statusBar": {
+    "building": "Building {{type}}: {{name}}",
+    "progress": "{{progress}}% complete",
+    "estimatedTime": "Estimated time remaining: {{time}}",
+    "cancel": "Cancel build"
+  },
+  "search": {
+    "placeholder": "Enter your search query...",
+    "button": "Search",
+    "results": "Search Results",
+    "noResults": "No results found for your query",
+    "searching": "Searching..."
+  },
+  "classification": {
+    "placeholder": "Enter text to classify...",
+    "button": "Classify",
+    "result": "Predicted Label",
+    "confidence": "Confidence",
+    "classifying": "Classifying..."
+  },
+  "notifications": {
+    "indexBuildStarted": "Index build started. This may take a few minutes.",
+    "classifierBuildStarted": "Classifier training started. This may take a few minutes.",
+    "indexReady": "Index '{{name}}' is ready",
+    "classifierReady": "Classifier '{{name}}' is ready",
+    "buildCancelled": "Build cancelled",
+    "buildFailed": "Build failed: {{error}}"
+  },
+  "index": {
+    "name": "Name",
+    "created": "Created",
+    "provider": "Provider",
+    "model": "Model",
+    "documents": "Documents",
+    "status": "Status",
+    "actions": "Actions"
+  }
+}

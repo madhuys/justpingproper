@@ -1,0 +1,227 @@
+{
+  "id": "sales-qualification",
+  "name": "Sales Lead Qualification",
+  "description": "Qualifies leads using sales playbook knowledge",
+  "persona": "ananya",
+  "tone": "reassuring",
+  "knowledgebase": "sales-playbook",
+  "integrations": ["salesforce"],
+  "nodes": [
+    {
+      "id": "1",
+      "type": "workflow",
+      "position": { "x": 50, "y": 200 },
+      "data": {
+        "label": "Start",
+        "type": "start",
+        "prompt": "Hello! Thank you for your interest in our solutions. I'd love to learn more about your needs to see how we can help.",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "2",
+      "type": "workflow",
+      "position": { "x": 410, "y": 200 },
+      "data": {
+        "label": "Get Name",
+        "type": "input",
+        "inputType": "text",
+        "prompt": "May I have your name, please?",
+        "variable": "leadName",
+        "validation": "name",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "3",
+      "type": "workflow",
+      "position": { "x": 770, "y": 200 },
+      "data": {
+        "label": "CRM Lookup",
+        "type": "action",
+        "actionType": "salesforce",
+        "prompt": "Let me check if we have your information on file...",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "4",
+      "type": "workflow",
+      "position": { "x": 1130, "y": 200 },
+      "data": {
+        "label": "Company Size",
+        "type": "input",
+        "inputType": "choice",
+        "prompt": "{{leadName}}, what's the size of your organization?",
+        "variable": "companySize",
+        "choices": [
+          "1-10 employees",
+          "11-50 employees",
+          "51-200 employees",
+          "201-500 employees",
+          "500+ employees"
+        ],
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "5",
+      "type": "workflow",
+      "position": { "x": 1490, "y": 200 },
+      "data": {
+        "label": "Sales Region",
+        "type": "input",
+        "inputType": "choice",
+        "prompt": "Which region are you located in?",
+        "variable": "region",
+        "choices": [
+          "North America",
+          "Europe",
+          "Asia Pacific",
+          "Latin America",
+          "Middle East & Africa"
+        ],
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "6",
+      "type": "workflow",
+      "position": { "x": 1850, "y": 200 },
+      "data": {
+        "label": "Pain Points",
+        "type": "input",
+        "inputType": "multiselect",
+        "prompt": "What challenges are you looking to solve?",
+        "variable": "painPoints",
+        "choices": [
+          "Cost reduction",
+          "Process automation",
+          "Better analytics",
+          "Scalability issues",
+          "Integration needs"
+        ],
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "7",
+      "type": "workflow",
+      "position": { "x": 2210, "y": 200 },
+      "data": {
+        "label": "KB Lookup",
+        "type": "action",
+        "actionType": "knowledgebase",
+        "prompt": "Based on your needs, let me find the best solution for you...",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "8",
+      "type": "workflow",
+      "position": { "x": 2570, "y": 200 },
+      "data": {
+        "label": "Budget Range",
+        "type": "input",
+        "inputType": "choice",
+        "prompt": "To provide the most suitable options, could you share your budget range?",
+        "variable": "budget",
+        "choices": [
+          "Under $10K",
+          "$10K - $50K",
+          "$50K - $100K",
+          "$100K - $500K",
+          "Over $500K"
+        ],
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "9",
+      "type": "workflow",
+      "position": { "x": 2930, "y": 200 },
+      "data": {
+        "label": "Update CRM",
+        "type": "action",
+        "actionType": "salesforce",
+        "prompt": "Great! I'm updating your profile with this information...",
+        "flowDirection": "LR"
+      }
+    },
+    {
+      "id": "10",
+      "type": "workflow",
+      "position": { "x": 3290, "y": 200 },
+      "data": {
+        "label": "End",
+        "type": "end",
+        "prompt": "Thank you, {{leadName}}! Based on your needs, you qualify for our {{recommendedTier}} solution. A specialist will contact you within 24 hours to discuss next steps. Your reference number is {{leadId}}.",
+        "flowDirection": "LR"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1-2",
+      "source": "1",
+      "target": "2",
+      "type": "custom"
+    },
+    {
+      "id": "e2-3",
+      "source": "2",
+      "target": "3",
+      "type": "custom"
+    },
+    {
+      "id": "e3-4",
+      "source": "3",
+      "target": "4",
+      "type": "custom"
+    },
+    {
+      "id": "e4-5",
+      "source": "4",
+      "target": "5",
+      "type": "custom"
+    },
+    {
+      "id": "e5-6",
+      "source": "5",
+      "target": "6",
+      "type": "custom"
+    },
+    {
+      "id": "e6-7",
+      "source": "6",
+      "target": "7",
+      "type": "custom"
+    },
+    {
+      "id": "e7-8",
+      "source": "7",
+      "target": "8",
+      "type": "custom"
+    },
+    {
+      "id": "e8-9",
+      "source": "8",
+      "target": "9",
+      "type": "custom"
+    },
+    {
+      "id": "e9-10",
+      "source": "9",
+      "target": "10",
+      "type": "custom"
+    }
+  ],
+  "viewport": {
+    "x": 0,
+    "y": 0,
+    "zoom": 0.4
+  },
+  "flowDirection": "LR",
+  "createdAt": "2024-01-15T00:00:00.000Z",
+  "updatedAt": "2024-01-15T00:00:00.000Z"
+}
