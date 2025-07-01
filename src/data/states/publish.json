@@ -1,0 +1,18 @@
+{
+  "publishedAgents": [],
+  "selectedAgent": null,
+  "filters": {
+    "search": "",
+    "type": "all",
+    "status": "all"
+  },
+  "loading": false,
+  "error": null,
+  "publishModal": {
+    "isOpen": false,
+    "agent": null,
+    "selectedChannels": [],
+    "selectedTeams": [],
+    "isUpdating": false
+  }
+}

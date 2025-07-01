@@ -1,0 +1,116 @@
+{
+  "publish": {
+    "title": "Agent Publishing",
+    "subtitle": "Publish agents to channels and manage team access",
+    "tabs": {
+      "workflow": "Workflow Agents",
+      "freeflow": "Free-Flow Agents",
+      "all": "All Agents"
+    },
+    "filters": {
+      "all": "All Agents",
+      "published": "Published",
+      "unpublished": "Unpublished",
+      "search": "Search agents..."
+    },
+    "table": {
+      "name": "Agent Name",
+      "type": "Type",
+      "status": "Status",
+      "channels": "Channels",
+      "teams": "Team Access",
+      "createdAt": "Created",
+      "lastPublished": "Last Published",
+      "actions": "Actions"
+    },
+    "status": {
+      "published": "Published",
+      "unpublished": "Unpublished",
+      "publishing": "Publishing...",
+      "unpublishing": "Unpublishing..."
+    },
+    "actions": {
+      "publish": "Publish",
+      "unpublish": "Unpublish",
+      "update": "Update Publication",
+      "viewDetails": "View Details",
+      "testAgent": "Test Agent"
+    },
+    "publishModal": {
+      "title": "Publish Agent",
+      "updateTitle": "Update Agent Publication",
+      "description": "Select channels and teams for this agent",
+      "channels": {
+        "title": "Select Channels",
+        "description": "Choose which channels this agent will be available on",
+        "whatsapp": "WhatsApp",
+        "instagram": "Instagram", 
+        "facebook": "Facebook Messenger",
+        "telegram": "Telegram",
+        "webchat": "Web Chat",
+        "sms": "SMS"
+      },
+      "whatsappConfig": {
+        "title": "WhatsApp Configuration",
+        "provider": "Select Provider",
+        "phoneNumber": "Phone Number",
+        "apiKey": "API Key",
+        "webhookUrl": "Webhook URL"
+      },
+      "teams": {
+        "title": "Team Access",
+        "description": "Select teams that can access this agent's inbox",
+        "placeholder": "Select teams...",
+        "all": "All Teams",
+        "specific": "Specific Teams"
+      },
+      "advanced": {
+        "title": "Advanced Settings",
+        "autoAssign": "Auto-assign conversations",
+        "priority": "Default priority",
+        "tags": "Default tags"
+      },
+      "actions": {
+        "publish": "Publish Agent",
+        "update": "Update Publication",
+        "cancel": "Cancel"
+      }
+    },
+    "unpublishModal": {
+      "title": "Unpublish Agent",
+      "description": "Are you sure you want to unpublish this agent?",
+      "warning": "This will remove the agent from all channels and archive associated conversations.",
+      "archiveInbox": "Archive team inbox",
+      "keepInbox": "Keep inbox for historical data",
+      "submit": "Unpublish Agent",
+      "cancel": "Cancel"
+    },
+    "details": {
+      "title": "Agent Details",
+      "general": "General Information",
+      "channels": "Published Channels",
+      "teams": "Team Access",
+      "statistics": "Usage Statistics"
+    },
+    "statistics": {
+      "conversations": "Total Conversations",
+      "activeConversations": "Active Conversations",
+      "avgResponseTime": "Avg Response Time",
+      "satisfactionRate": "Satisfaction Rate"
+    },
+    "messages": {
+      "publishSuccess": "Agent published to {{channels}} channel(s)",
+      "unpublishSuccess": "Agent unpublished successfully",
+      "updateSuccess": "Agent publication updated",
+      "publishError": "Failed to publish agent",
+      "unpublishError": "Failed to unpublish agent",
+      "noChannels": "Please select at least one channel",
+      "noTeams": "Please select at least one team"
+    },
+    "empty": {
+      "title": "No agents to publish",
+      "description": "Create workflow or free-flow agents to publish them to channels",
+      "action": "Create Agent"
+    }
+  }
+}

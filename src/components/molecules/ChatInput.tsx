@@ -119,7 +119,7 @@ export function ChatInput({
   };
 
   return (
-    <div className="border-t bg-background/50 backdrop-blur-sm">
+    <div className="border-t bg-transparent">
       {/* Recording indicator */}
       {isRecording && (
         <div className="px-4 py-2 bg-destructive/10 border-b">

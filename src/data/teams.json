@@ -1,0 +1,101 @@
+[
+  {
+    "id": "team-001",
+    "businessId": "business-001",
+    "name": "Customer Support",
+    "description": "Handles all customer inquiries and support tickets",
+    "avatar": "/avatars/team-support.png",
+    "status": "active",
+    "memberCount": 8,
+    "members": [
+      {
+        "userId": "user-001",
+        "role": "team_lead",
+        "joinedAt": "2024-01-15T08:00:00Z"
+      },
+      {
+        "userId": "user-002", 
+        "role": "supervisor",
+        "joinedAt": "2024-01-16T09:30:00Z"
+      },
+      {
+        "userId": "user-003",
+        "role": "agent",
+        "joinedAt": "2024-01-17T10:00:00Z"
+      }
+    ],
+    "settings": {
+      "autoAssignment": true,
+      "assignmentStrategy": "round_robin",
+      "workingHours": {
+        "enabled": true,
+        "timezone": "Asia/Kolkata",
+        "schedule": {
+          "monday": { "start": "09:00", "end": "18:00" },
+          "tuesday": { "start": "09:00", "end": "18:00" },
+          "wednesday": { "start": "09:00", "end": "18:00" },
+          "thursday": { "start": "09:00", "end": "18:00" },
+          "friday": { "start": "09:00", "end": "18:00" },
+          "saturday": { "start": "10:00", "end": "14:00" },
+          "sunday": { "closed": true }
+        }
+      }
+    },
+    "createdAt": "2024-01-15T08:00:00Z",
+    "createdBy": "user-admin",
+    "updatedAt": "2024-02-20T14:30:00Z"
+  },
+  {
+    "id": "team-002",
+    "businessId": "business-001",
+    "name": "Sales Team",
+    "description": "Manages sales inquiries and lead qualification",
+    "avatar": "/avatars/team-sales.png",
+    "status": "active",
+    "memberCount": 5,
+    "members": [
+      {
+        "userId": "user-004",
+        "role": "team_lead",
+        "joinedAt": "2024-01-20T08:00:00Z"
+      },
+      {
+        "userId": "user-005",
+        "role": "agent",
+        "joinedAt": "2024-01-21T09:00:00Z"
+      }
+    ],
+    "settings": {
+      "autoAssignment": true,
+      "assignmentStrategy": "load_balanced",
+      "workingHours": {
+        "enabled": false
+      }
+    },
+    "createdAt": "2024-01-20T08:00:00Z",
+    "createdBy": "user-admin",
+    "updatedAt": "2024-02-15T10:00:00Z"
+  },
+  {
+    "id": "team-003", 
+    "businessId": "business-001",
+    "name": "Technical Support",
+    "description": "Handles technical issues and escalations",
+    "status": "active",
+    "memberCount": 3,
+    "members": [
+      {
+        "userId": "user-006",
+        "role": "supervisor",
+        "joinedAt": "2024-02-01T08:00:00Z"
+      }
+    ],
+    "settings": {
+      "autoAssignment": false,
+      "assignmentStrategy": "manual"
+    },
+    "createdAt": "2024-02-01T08:00:00Z",
+    "createdBy": "user-admin",
+    "updatedAt": "2024-02-01T08:00:00Z"
+  }
+]

@@ -22,9 +22,13 @@ import {
   Webhook,
   BellRing,
   CalendarPlus,
-  Database
+  Database,
+  Search,
+  BookOpen
 } from 'lucide-react';
+import { Checkbox } from '@/components/ui/checkbox';
 import mcpServersData from '@/data/mcpServers.json';
+import knowledgebaseState from '@/data/states/knowledgebase.json';
 
 interface WorkflowNodeActionConfigProps {
   actionType: string;
@@ -33,7 +37,17 @@ interface WorkflowNodeActionConfigProps {
   onActionConfigChange: (config: Record<string, any>) => void;
 }
 
+const searchProviders = [
+  { id: 'google', label: 'Google', description: 'Google Search API' },
+  { id: 'bing', label: 'Bing', description: 'Microsoft Bing Search' },
+  { id: 'perplexity', label: 'Perplexity', description: 'Perplexity AI Search' },
+  { id: 'duckduckgo', label: 'DuckDuckGo', description: 'Privacy-focused search' },
+  { id: 'serpapi', label: 'SerpAPI', description: 'Multiple search engines' },
+];
+
 const actionTypes = [
+  { id: 'searchKnowledgebase', label: 'Search Knowledgebase', icon: BookOpen, description: 'Search across knowledge indexes' },
+  { id: 'searchWeb', label: 'Search Web', icon: Search, description: 'Search the web for information' },
   { id: 'mcpTool', label: 'MCP Tool', icon: Settings, description: 'Use Model Context Protocol tools' },
   { id: 'apiCall', label: 'API Call', icon: Globe, description: 'Make HTTP API requests' },
   { id: 'sendEmail', label: 'Send Email', icon: Mail, description: 'Send email messages' },
@@ -92,6 +106,162 @@ export function WorkflowNodeActionConfig({
       </div>
 
       {/* Action-specific Configuration */}
+      {actionType === 'searchKnowledgebase' && (
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Label>Select Knowledge Indexes</Label>
+            <div className="border rounded-md p-3 max-h-48 overflow-y-auto space-y-2">
+              {knowledgebaseState.indexes.knowledge.map((index) => (
+                <div key={index.id} className="flex items-start gap-2">
+                  <Checkbox
+                    id={index.id}
+                    checked={(actionConfig.knowledgeIndexes || []).includes(index.id)}
+                    onCheckedChange={(checked) => {
+                      const current = actionConfig.knowledgeIndexes || [];
+                      const updated = checked 
+                        ? [...current, index.id]
+                        : current.filter((id: string) => id !== index.id);
+                      updateConfig('knowledgeIndexes', updated);
+                    }}
+                  />
+                  <Label 
+                    htmlFor={index.id} 
+                    className="flex-1 cursor-pointer font-normal"
+                  >
+                    <div>
+                      <div className="font-medium">{index.name}</div>
+                      {index.description && (
+                        <div className="text-xs text-muted-foreground">{index.description}</div>
+                      )}
+                      <div className="text-xs text-muted-foreground">
+                        {index.documentCount} documents • {index.provider}
+                      </div>
+                    </div>
+                  </Label>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label>Search Query</Label>
+            <Textarea
+              value={actionConfig.searchQuery || ''}
+              onChange={(e) => updateConfig('searchQuery', e.target.value)}
+              placeholder="Search for {{topic}} in the knowledge base"
+              className="w-full"
+              rows={2}
+            />
+            <p className="text-xs text-muted-foreground">
+              Use variables like {`{{variable}}`} to make dynamic searches
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <Label>Max Results</Label>
+            <Input
+              type="number"
+              value={actionConfig.maxResults || 5}
+              onChange={(e) => updateConfig('maxResults', parseInt(e.target.value) || 5)}
+              min={1}
+              max={20}
+              className="w-full"
+            />
+          </div>
+        </div>
+      )}
+
+      {actionType === 'searchWeb' && (
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Label>Search Provider</Label>
+            <Select 
+              value={actionConfig.searchProvider || 'google'} 
+              onValueChange={(value) => updateConfig('searchProvider', value)}
+            >
+              <SelectTrigger className="w-full">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {searchProviders.map((provider) => (
+                  <SelectItem key={provider.id} value={provider.id}>
+                    <div className="flex flex-col">
+                      <span>{provider.label}</span>
+                      <span className="text-xs text-muted-foreground">{provider.description}</span>
+                    </div>
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label>Keyword Parsing Logic</Label>
+            <Textarea
+              value={actionConfig.keywordPrompt || 'Extract the main search keywords from: {{query}}'}
+              onChange={(e) => updateConfig('keywordPrompt', e.target.value)}
+              placeholder="Describe how to extract keywords from the user's query"
+              className="w-full"
+              rows={3}
+            />
+            <p className="text-xs text-muted-foreground">
+              This prompt will be used to extract search keywords from the conversation
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <Label>Search Query Template</Label>
+            <Input
+              value={actionConfig.searchTemplate || '{{keywords}}'}
+              onChange={(e) => updateConfig('searchTemplate', e.target.value)}
+              placeholder="{{keywords}} site:example.com"
+              className="w-full"
+            />
+            <p className="text-xs text-muted-foreground">
+              Template for the final search query. Use {`{{keywords}}`} for extracted keywords
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <Label>Max Results</Label>
+            <Input
+              type="number"
+              value={actionConfig.maxResults || 10}
+              onChange={(e) => updateConfig('maxResults', parseInt(e.target.value) || 10)}
+              min={1}
+              max={50}
+              className="w-full"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label>Search Options</Label>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <Checkbox
+                  id="safeSearch"
+                  checked={actionConfig.safeSearch !== false}
+                  onCheckedChange={(checked) => updateConfig('safeSearch', checked)}
+                />
+                <Label htmlFor="safeSearch" className="cursor-pointer font-normal">
+                  Enable safe search
+                </Label>
+              </div>
+              <div className="flex items-center gap-2">
+                <Checkbox
+                  id="includeSnippets"
+                  checked={actionConfig.includeSnippets !== false}
+                  onCheckedChange={(checked) => updateConfig('includeSnippets', checked)}
+                />
+                <Label htmlFor="includeSnippets" className="cursor-pointer font-normal">
+                  Include result snippets
+                </Label>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {actionType === 'mcpTool' && (
         <div className="space-y-4">
           <div className="space-y-2">
@@ -394,7 +564,7 @@ export function WorkflowNodeActionConfig({
       )}
 
       {/* Tool Calling Configuration for AI Models */}
-      {(actionType === 'mcpTool' || actionType === 'apiCall') && (
+      {(actionType === 'mcpTool' || actionType === 'apiCall' || actionType === 'searchKnowledgebase' || actionType === 'searchWeb') && (
         <div className="mt-4 p-3 bg-muted/50 rounded-md space-y-2">
           <div className="flex items-center gap-2">
             <Settings className="h-4 w-4 text-muted-foreground" />

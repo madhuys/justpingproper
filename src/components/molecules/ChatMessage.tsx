@@ -62,9 +62,12 @@ export function ChatMessage({
               </AvatarFallback>
             </>
           ) : (
-            <AvatarFallback className="bg-muted">
-              <Bot className="h-4 w-4 text-muted-foreground" />
-            </AvatarFallback>
+            <>
+              {avatar && <AvatarImage src={avatar} alt="Agent" />}
+              <AvatarFallback className="bg-muted">
+                <Bot className="h-4 w-4 text-muted-foreground" />
+              </AvatarFallback>
+            </>
           )}
         </Avatar>
       </div>

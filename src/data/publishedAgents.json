@@ -1,0 +1,93 @@
+[
+  {
+    "id": "pub-001",
+    "agentId": "agent-001",
+    "agentName": "Customer Support Bot",
+    "agentType": "workflow",
+    "status": "published",
+    "channels": [
+      {
+        "type": "whatsapp",
+        "provider": "twilio",
+        "config": {
+          "phoneNumber": "+1234567890",
+          "webhookUrl": "https://api.justping.com/webhooks/whatsapp/pub-001"
+        }
+      },
+      {
+        "type": "webchat",
+        "config": {
+          "widgetId": "widget-001",
+          "domain": "support.justping.com"
+        }
+      }
+    ],
+    "teamAccess": ["team-001", "team-003"],
+    "inboxId": "inbox-001",
+    "statistics": {
+      "totalConversations": 1543,
+      "activeConversations": 23,
+      "avgResponseTime": "2.5s",
+      "satisfactionRate": 0.92
+    },
+    "createdAt": "2024-01-15T09:00:00Z",
+    "publishedAt": "2024-02-01T10:00:00Z",
+    "publishedBy": "user-admin",
+    "lastUpdatedAt": "2024-02-15T14:30:00Z"
+  },
+  {
+    "id": "pub-002",
+    "agentId": "agent-002",
+    "agentName": "Sales Qualification Bot",
+    "agentType": "workflow",
+    "status": "published",
+    "channels": [
+      {
+        "type": "whatsapp",
+        "provider": "gupshup",
+        "config": {
+          "appName": "SalesBot",
+          "apiKey": "gup_****_****"
+        }
+      },
+      {
+        "type": "instagram",
+        "config": {
+          "pageId": "123456789",
+          "accessToken": "EAA****"
+        }
+      }
+    ],
+    "teamAccess": ["team-002"],
+    "inboxId": "inbox-002",
+    "statistics": {
+      "totalConversations": 892,
+      "activeConversations": 15,
+      "avgResponseTime": "1.8s",
+      "satisfactionRate": 0.88
+    },
+    "createdAt": "2024-01-20T10:00:00Z",
+    "publishedAt": "2024-02-05T11:00:00Z",
+    "publishedBy": "user-admin",
+    "lastUpdatedAt": "2024-02-20T09:15:00Z"
+  },
+  {
+    "id": "pub-003",
+    "agentId": "freeflow-001",
+    "agentName": "General Assistant",
+    "agentType": "freeflow",
+    "status": "unpublished",
+    "channels": [],
+    "teamAccess": [],
+    "statistics": {
+      "totalConversations": 0,
+      "activeConversations": 0,
+      "avgResponseTime": "0s",
+      "satisfactionRate": 0
+    },
+    "createdAt": "2024-02-10T14:00:00Z",
+    "publishedAt": null,
+    "publishedBy": null,
+    "lastUpdatedAt": "2024-02-22T16:00:00Z"
+  }
+]

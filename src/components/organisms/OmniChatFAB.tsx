@@ -7,7 +7,7 @@ import { WorkflowCreationChat } from '@/components/organisms/WorkflowCreationCha
 import { WorkflowNodeEditorChat } from '@/components/organisms/WorkflowNodeEditorChat';
 import { useRouter, usePathname } from 'next/navigation';
 
-export type ChatContext = 'live' | 'workflow' | 'agent' | 'node-editor' | null;
+export type ChatContext = 'live' | 'workflow' | 'freeflow' | 'agent' | 'node-editor' | null;
 
 interface OmniChatFABProps {
   defaultContext?: ChatContext;
@@ -40,16 +40,33 @@ export function OmniChatFAB({ defaultContext = 'live' }: OmniChatFABProps) {
 
   const handleWorkflowComplete = (config: any) => {
     setIsOpen(false);
-    // Navigate to workflow builder with configuration
-    const params = new URLSearchParams({
-      template: config.template || '',
-      persona: config.persona || '',
-      tone: config.tone || '',
-      knowledgeIndexes: (config.knowledgeIndexes || []).join(','),
-      integrations: (config.integrations || []).join(',')
-    });
     
-    router.push(`/agents/workflow/create?${params.toString()}`);
+    if (config.agentType === 'freeflow') {
+      // Navigate to freeflow playground with configuration
+      const params = new URLSearchParams({
+        name: config.name || '',
+        mandate: config.mandate || '',
+        persona: config.persona || '',
+        tone: config.tone || '',
+        aiModel: config.aiModel || '',
+        knowledgeIndexes: (config.knowledgeIndexes || []).join(','),
+        tools: (config.tools || []).join(','),
+        integrations: (config.integrations || []).join(',')
+      });
+      
+      router.push(`/agents/freeflow?${params.toString()}`);
+    } else {
+      // Navigate to workflow builder with configuration
+      const params = new URLSearchParams({
+        template: config.template || '',
+        persona: config.persona || '',
+        tone: config.tone || '',
+        knowledgeIndexes: (config.knowledgeIndexes || []).join(','),
+        integrations: (config.integrations || []).join(',')
+      });
+      
+      router.push(`/agents/workflow/create?${params.toString()}`);
+    }
   };
 
   // Expose a global method to trigger specific contexts
@@ -78,11 +95,12 @@ export function OmniChatFAB({ defaultContext = 'live' }: OmniChatFABProps) {
   // Render appropriate chat widget based on context
   return (
     <div className="fixed bottom-8 right-8 z-50">
-      {activeContext === 'workflow' && (
+      {(activeContext === 'workflow' || activeContext === 'freeflow') && (
         <WorkflowCreationChat
           isOpen={isOpen}
           onCloseAction={handleClose}
           onCompleteAction={handleWorkflowComplete}
+          agentType={activeContext}
         />
       )}
       {activeContext === 'live' && (

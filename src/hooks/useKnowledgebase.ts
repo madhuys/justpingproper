@@ -159,29 +159,33 @@ export function useKnowledgebase() {
             const updated = prev.map(idx => 
               idx.id === indexId ? { ...idx, status: 'ready' } : idx
             );
-            const index = updated.find(idx => idx.id === indexId);
-            
-            // Show success toast
+            return updated;
+          });
+          
+          // Get the index name for toast notification
+          const index = knowledgeIndexes.find(idx => idx.id === indexId);
+          // Show success toast outside of setState
+          setTimeout(() => {
             toast.success(
               knowledgebaseStrings.notifications.indexReady.replace('{{name}}', index?.name || '')
             );
-            
-            return updated;
-          });
+          }, 0);
         } else {
           setClassifierIndexes(prev => {
             const updated = prev.map(idx => 
               idx.id === indexId ? { ...idx, status: 'ready' } : idx
             );
-            const index = updated.find(idx => idx.id === indexId);
-            
-            // Show success toast
+            return updated;
+          });
+          
+          // Get the index name for toast notification
+          const index = classifierIndexes.find(idx => idx.id === indexId);
+          // Show success toast outside of setState
+          setTimeout(() => {
             toast.success(
               knowledgebaseStrings.notifications.classifierReady.replace('{{name}}', index?.name || '')
             );
-            
-            return updated;
-          });
+          }, 0);
         }
 
         // Clear build status
@@ -196,7 +200,7 @@ export function useKnowledgebase() {
         setBuildStatus(prev => ({ ...prev, progress }));
       }
     }, 500);
-  }, []);
+  }, [knowledgeIndexes, classifierIndexes]);
 
   // Cancel build
   const cancelBuild = useCallback(() => {

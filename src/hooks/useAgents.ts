@@ -314,8 +314,8 @@ export function useAgents() {
     testAgentId,
     buildStatus,
     taskTemplates,
-    mcpServers,
-    aiModels,
+    mcpServers: mcpServers.servers,
+    aiModels: aiModels.models,
     knowledgeIndexes: knowledgeIndexes.filter(idx => idx.status === 'ready'),
     
     // Actions

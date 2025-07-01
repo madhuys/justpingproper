@@ -1,0 +1,86 @@
+{
+  "teams": {
+    "title": "Teams",
+    "subtitle": "Manage teams and user assignments",
+    "empty": {
+      "title": "No teams yet",
+      "description": "Create your first team to organize users and manage access",
+      "action": "Create Team"
+    },
+    "table": {
+      "name": "Team Name",
+      "description": "Description",
+      "members": "Members",
+      "createdAt": "Created",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "actions": {
+      "create": "Create Team",
+      "edit": "Edit Team",
+      "delete": "Delete Team",
+      "viewMembers": "View Members",
+      "addMembers": "Add Members",
+      "removeMember": "Remove Member"
+    },
+    "form": {
+      "name": {
+        "label": "Team Name",
+        "placeholder": "Enter team name",
+        "error": "Team name is required"
+      },
+      "description": {
+        "label": "Description",
+        "placeholder": "Enter team description (optional)"
+      },
+      "avatar": {
+        "label": "Team Avatar",
+        "upload": "Upload Avatar",
+        "remove": "Remove Avatar"
+      },
+      "members": {
+        "label": "Team Members",
+        "placeholder": "Select team members",
+        "search": "Search users..."
+      }
+    },
+    "createModal": {
+      "title": "Create New Team",
+      "description": "Create a team to organize users and manage permissions",
+      "submit": "Create Team",
+      "cancel": "Cancel"
+    },
+    "editModal": {
+      "title": "Edit Team",
+      "description": "Update team information and membership",
+      "submit": "Save Changes",
+      "cancel": "Cancel"
+    },
+    "deleteModal": {
+      "title": "Delete Team",
+      "description": "Are you sure you want to delete this team? This action cannot be undone.",
+      "warning": "Warning: This team has active team inboxes and assignments that will be affected.",
+      "submit": "Delete Team",
+      "cancel": "Cancel"
+    },
+    "memberAssignment": {
+      "title": "Manage Team Members",
+      "add": "Add Members",
+      "remove": "Remove Selected",
+      "search": "Search members...",
+      "selected": "{{count}} selected"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "messages": {
+      "createSuccess": "Team created successfully",
+      "updateSuccess": "Team updated successfully",
+      "deleteSuccess": "Team deleted successfully",
+      "addMembersSuccess": "Members added successfully",
+      "removeMemberSuccess": "Member removed successfully",
+      "error": "An error occurred. Please try again."
+    }
+  }
+}

@@ -16,12 +16,17 @@ import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
 import workflowTemplates from '@/data/workflowTemplates.json';
 import personas from '@/data/personas.json';
+import aiModels from '@/data/aiModels.json';
+import knowledgebaseState from '@/data/states/knowledgebase.json';
+import mcpServers from '@/data/mcpServers.json';
+import agentCreationOptions from '@/data/states/agentCreationOptions.json';
 import toast from 'react-hot-toast';
 
 interface WorkflowCreationChatProps {
   isOpen: boolean;
   onCloseAction: () => void;
   onCompleteAction: (config: any) => void;
+  agentType?: 'workflow' | 'freeflow';
 }
 
 interface ExtendedChatMessage {
@@ -37,12 +42,12 @@ interface ExtendedChatMessage {
   personaVideo?: any;
 }
 
-export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction }: WorkflowCreationChatProps) {
+export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction, agentType = 'workflow' }: WorkflowCreationChatProps) {
   const { resolvedTheme } = useTheme();
   const [isExpanded, setIsExpanded] = useState(false);
   const [messages, setMessages] = useState<ExtendedChatMessage[]>([]);
   const [currentStep, setCurrentStep] = useState('welcome');
-  const [config, setConfig] = useState<any>({});
+  const [config, setConfig] = useState<any>({ agentType });
   const [isTyping, setIsTyping] = useState(false);
   const [selectedChoices, setSelectedChoices] = useState<string[]>([]);
   const [pendingAction, setPendingAction] = useState<any>(null);
@@ -54,23 +59,14 @@ export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction }
   const hasStarted = useRef(false);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
 
-  // Mock data
-  const knowledgeIndexes = [
-    { label: 'Support Articles Index', value: 'support-articles' },
-    { label: 'Product Specs Index', value: 'product-specs' },
-    { label: 'Sales Playbook Index', value: 'sales-playbook' },
-    { label: 'IT Documentation Index', value: 'it-documentation' },
-    { label: 'Product Catalog Index', value: 'product-catalog' }
-  ];
+  // Use actual knowledge indexes from state and shared options
+  const knowledgeIndexes = knowledgebaseState.indexes.knowledge.map((index: any) => ({
+    label: index.name || '',
+    value: index.id || ''
+  }));
 
-  const integrations = [
-    'Google Calendar',
-    'HubSpot CRM',
-    'Zendesk',
-    'Salesforce',
-    'LinkedIn Recruiter',
-    'Slack'
-  ];
+  const integrations = agentCreationOptions.integrations;
+  const tools = agentCreationOptions.tools;
 
   useEffect(() => {
     if (isOpen && !hasStarted.current) {
@@ -87,17 +83,25 @@ export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction }
   const startConversation = () => {
     setMessages([]);
     setCurrentStep('welcome');
-    setConfig({});
+    setConfig({ agentType });
     setSelectedPersona(null);
     setPlayingVideo(null);
     setShowPersonaVideo(false);
     
     // Use setTimeout to ensure state is cleared before adding message
     setTimeout(() => {
-      addBotMessage(
-        "Welcome to Agent Builder! What's the main purpose of this agent?",
-        ['Customer Support', 'Interview Screening', 'Order Processing', 'Lead Qualification', 'IT Helpdesk', 'Build from Scratch']
-      );
+      if (agentType === 'freeflow') {
+        addBotMessage(
+          "Welcome to Agent Builder! Let's create a free-flow agent. First, what's the main purpose or mandate for your assistant?",
+          agentCreationOptions.purposes.freeflow
+        );
+        setCurrentStep('mandate');
+      } else {
+        addBotMessage(
+          "Welcome to Agent Builder! What's the main purpose of this agent?",
+          agentCreationOptions.purposes.workflow
+        );
+      }
     }, 100);
   };
 
@@ -176,6 +180,21 @@ export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction }
       case 'welcome':
         handleTemplateSelection(action);
         break;
+      case 'mandate':
+        if (agentType === 'freeflow') {
+          // Handle button selection for mandate
+          setConfig((prev: any) => ({ ...prev, mandate: action }));
+          setCurrentStep('selectPersona');
+          
+          setTimeout(() => {
+            const personaButtons = personas.personas.map(p => p.name);
+            addBotMessage(
+              'Great! Now, choose a persona for your agent:',
+              personaButtons
+            );
+          }, 500);
+        }
+        break;
       case 'useKnowledgeIndex':
         handleKnowledgeIndexChoice(action);
         break;
@@ -184,6 +203,66 @@ export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction }
         break;
       case 'viewWorkflow':
         handleViewWorkflow();
+        break;
+      case 'agentName':
+        if (action === 'Skip') {
+          setConfig((prev: any) => ({ ...prev, name: '' }));
+          finalizeAgent();
+        }
+        break;
+      case 'confirmAgent':
+        if (action === 'Yes, perfect!') {
+          setCurrentStep('agentName');
+          setTimeout(() => {
+            addBotMessage(
+              'Great! Would you like to give your agent a name? You can type a name or skip.',
+              ['Skip']
+            );
+          }, 500);
+        } else {
+          // Go back to description
+          setCurrentStep('agentDescription');
+          setTimeout(() => {
+            addBotMessage(
+              'No problem! Please describe what you want this agent to do again.'
+            );
+          }, 500);
+        }
+        break;
+      case 'confirmBuild':
+        buildFreeflowAgent();
+        break;
+      case 'selectKnowledgeIndexes':
+        if (action === 'Skip') {
+          setConfig((prev: any) => ({ ...prev, knowledgeIndexes: [] }));
+          setSelectedChoices([]);
+          
+          // Continue to integrations
+          setCurrentStep('selectIntegrations');
+          setTimeout(() => {
+            addBotMessage(
+              'Select integrations/MCP servers for your agent or skip:',
+              ['Skip'],
+              undefined,
+              mcpServers.servers.map(s => s.name)
+            );
+          }, 500);
+        }
+        break;
+      case 'selectIntegrations':
+        if (action === 'Skip') {
+          setConfig((prev: any) => ({ ...prev, integrations: [] }));
+          setSelectedChoices([]);
+          
+          // Show final confirmation
+          setCurrentStep('confirmBuild');
+          setTimeout(() => {
+            addBotMessage(
+              `Perfect! I'll create a free-flow agent with:\n- Mandate: ${config.mandate}\n- Persona: ${personas.personas.find(p => p.id === config.persona)?.name}\n- Name: ${config.name || 'Unnamed'}\n- Model: ${config.aiModel}\n\nReady to create?`,
+              ['Create Agent']
+            );
+          }, 500);
+        }
         break;
     }
   };
@@ -236,27 +315,51 @@ export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction }
   };
 
   const handleKnowledgeIndexSubmit = () => {
-    if (selectedChoices.length === 0) {
-      toast.error('Please select at least one knowledge index');
-      return;
+    if (agentType === 'freeflow') {
+      // For freeflow, knowledge indexes are optional
+      addUserMessage(selectedChoices.length > 0 ? selectedChoices.join(', ') : 'None selected');
+      // Convert names to IDs
+      const selectedIndexes = selectedChoices.map(choice => 
+        knowledgebaseState.indexes.knowledge.find((k: any) => k.name === choice)?.id
+      ).filter(Boolean);
+      
+      setConfig((prev: any) => ({ ...prev, knowledgeIndexes: selectedIndexes }));
+      setSelectedChoices([]);
+      
+      // Continue to integrations
+      setCurrentStep('selectIntegrations');
+      setTimeout(() => {
+        addBotMessage(
+          'Select integrations/MCP servers for your agent:',
+          undefined,
+          undefined,
+          mcpServers.servers.map(s => s.name)
+        );
+      }, 500);
+    } else {
+      // Original workflow logic
+      if (selectedChoices.length === 0) {
+        toast.error('Please select at least one knowledge index');
+        return;
+      }
+      
+      addUserMessage(selectedChoices.join(', '));
+      const selectedIndexes = selectedChoices.map(choice => 
+        knowledgeIndexes.find(k => k.label === choice)?.value
+      ).filter(Boolean);
+      
+      setConfig((prev: any) => ({ ...prev, knowledgeIndexes: selectedIndexes }));
+      setSelectedChoices([]);
+      
+      setCurrentStep('selectPersona');
+      setTimeout(() => {
+        const personaButtons = personas.personas.map(p => p.name);
+        addBotMessage(
+          'Choose a persona for your agent responses:',
+          personaButtons
+        );
+      }, 500);
     }
-    
-    addUserMessage(selectedChoices.join(', '));
-    const selectedIndexes = selectedChoices.map(choice => 
-      knowledgeIndexes.find(k => k.label === choice)?.value
-    ).filter(Boolean);
-    
-    setConfig((prev: any) => ({ ...prev, knowledgeIndexes: selectedIndexes }));
-    setSelectedChoices([]);
-    
-    setCurrentStep('selectPersona');
-    setTimeout(() => {
-      const personaButtons = personas.personas.map(p => p.name);
-      addBotMessage(
-        'Choose a persona for your agent responses:',
-        personaButtons
-      );
-    }, 500);
   };
 
   const handlePersonaSelection = (personaName: string) => {
@@ -295,13 +398,20 @@ export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction }
       
       // Continue to next step after video/intro
       setTimeout(() => {
-        setCurrentStep('selectIntegrations');
-        addBotMessage(
-          'Which connected integrations should this agent use?',
-          undefined,
-          undefined,
-          integrations
-        );
+        if (agentType === 'freeflow') {
+          setCurrentStep('agentDescription');
+          addBotMessage(
+            'Please briefly describe what you want this agent to do. Be specific about its tasks and capabilities.'
+          );
+        } else {
+          setCurrentStep('selectIntegrations');
+          addBotMessage(
+            'Which connected integrations should this agent use?',
+            undefined,
+            undefined,
+            integrations
+          );
+        }
       }, 2000);
     }, 500);
   };
@@ -310,16 +420,54 @@ export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction }
     if (currentStep === 'selectKnowledgeIndexes') {
       handleKnowledgeIndexSubmit();
     } else if (currentStep === 'selectIntegrations') {
-      if (selectedChoices.length === 0) {
-        toast.error('Please select at least one option');
-        return;
+      if (agentType === 'freeflow') {
+        // For freeflow, integrations are optional
+        addUserMessage(selectedChoices.length > 0 ? selectedChoices.join(', ') : 'None selected');
+        // Convert MCP server names to IDs
+        const selectedMcpIds = selectedChoices.map(name => 
+          mcpServers.servers.find(s => s.name === name)?.id
+        ).filter(Boolean);
+        setConfig((prev: any) => ({ ...prev, integrations: selectedMcpIds }));
+        setSelectedChoices([]);
+        
+        // Ask for agent description after integrations
+        setCurrentStep('agentDescription');
+        setTimeout(() => {
+          addBotMessage(
+            'Please briefly describe what you want this agent to do. Be specific about its tasks and capabilities.'
+          );
+        }, 500);
+      } else {
+        if (selectedChoices.length === 0) {
+          toast.error('Please select at least one option');
+          return;
+        }
+        
+        addUserMessage(selectedChoices.join(', '));
+        setConfig((prev: any) => ({ ...prev, integrations: selectedChoices }));
+        setSelectedChoices([]);
+        
+        buildWorkflow();
       }
-      
+    } else if (currentStep === 'selectTools') {
       addUserMessage(selectedChoices.join(', '));
-      setConfig((prev: any) => ({ ...prev, integrations: selectedChoices }));
+      // Convert tool names back to IDs
+      const selectedToolIds = selectedChoices.map(name => 
+        tools.find(t => t.name === name)?.id
+      ).filter(Boolean);
+      setConfig((prev: any) => ({ ...prev, tools: selectedToolIds }));
       setSelectedChoices([]);
       
-      buildWorkflow();
+      // Continue to knowledge indexes
+      setCurrentStep('selectKnowledgeIndexes');
+      setTimeout(() => {
+        addBotMessage(
+          'Would you like to enable knowledge search? Select knowledge indexes or skip:',
+          ['Skip'],
+          undefined,
+          knowledgebaseState.indexes.knowledge.map((k: any) => k.name)
+        );
+      }, 500);
     }
   };
 
@@ -338,6 +486,23 @@ export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction }
     }, 2000);
   };
 
+  const finalizeAgent = () => {
+    setCurrentStep('building');
+    setTimeout(() => {
+      addBotMessage('Perfect! Creating your free-flow agent now... ✨');
+    }, 500);
+    
+    setTimeout(() => {
+      onCompleteAction(config);
+      onCloseAction();
+      toast.success('Opening Free-Flow Agent Playground...');
+    }, 2000);
+  };
+  
+  const buildFreeflowAgent = () => {
+    finalizeAgent();
+  };
+
   const handleViewWorkflow = () => {
     onCompleteAction(config);
     onCloseAction();
@@ -345,8 +510,47 @@ export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction }
   };
 
   const handleSendMessage = (text: string) => {
-    // Handle free text input if needed
+    // Handle free text input
     addUserMessage(text);
+    
+    if (agentType === 'freeflow') {
+      switch (currentStep) {
+        case 'mandate':
+          // Store the mandate
+          setConfig((prev: any) => ({ ...prev, mandate: text }));
+          setCurrentStep('selectPersona');
+          
+          setTimeout(() => {
+            const personaButtons = personas.personas.map(p => p.name);
+            addBotMessage(
+              'Great! Now, choose a persona for your agent:',
+              personaButtons
+            );
+          }, 500);
+          break;
+          
+        case 'agentDescription':
+          // Store the description
+          setConfig((prev: any) => ({ ...prev, description: text }));
+          setCurrentStep('confirmAgent');
+          
+          // Generate confirmation message based on description
+          setTimeout(() => {
+            const persona = personas.personas.find(p => p.id === config.persona);
+            addBotMessage(
+              `Got it! Let me confirm what I'll create:\n\n🤖 **${persona?.name || 'AI'} Agent**\n\n📋 **Tasks:**\n- ${text}\n\n🎯 **Purpose:** ${config.mandate}\n\n🧰 **Tools:** ${config.tools?.length || 0} selected\n📚 **Knowledge:** ${config.knowledgeIndexes?.length || 0} indexes\n🔌 **Integrations:** ${config.integrations?.length || 0} connected\n\nDoes this look correct?`,
+              ['Yes, perfect!', 'No, let me change something']
+            );
+          }, 500);
+          break;
+          
+        case 'agentName':
+          // Store the name
+          setConfig((prev: any) => ({ ...prev, name: text }));
+          finalizeAgent();
+          break;
+      }
+    }
   };
 
   const renderSpecialInput = (message: ExtendedChatMessage) => {
@@ -458,6 +662,42 @@ export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction }
       );
     }
 
+    if (message.dropdown) {
+      return (
+        <div className="mt-3 space-y-3">
+          <Select
+            onValueChange={(value) => {
+              addUserMessage(message.dropdown?.find(d => d.value === value)?.label || value);
+              setConfig((prev: any) => ({ ...prev, aiModel: value }));
+              
+              // Continue to next step
+              setCurrentStep('selectTools');
+              setTimeout(() => {
+                addBotMessage(
+                  'Select the tools your agent should have access to:',
+                  undefined,
+                  undefined,
+                  tools.map(t => t.name)
+                );
+              }, 500);
+            }}
+            disabled={!waitingForInput}
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="Select an AI model..." />
+            </SelectTrigger>
+            <SelectContent>
+              {message.dropdown.map(item => (
+                <SelectItem key={item.value} value={item.value}>
+                  {item.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+      );
+    }
+
     return null;
   };
 
@@ -490,7 +730,7 @@ export function WorkflowCreationChat({ isOpen, onCloseAction, onCompleteAction }
           <div className="flex items-center gap-2">
             <Bot className="h-5 w-5" />
             <h3 className="text-base font-semibold text-white">
-              Agent Creation Assistant
+              {agentType === 'freeflow' ? 'Free-Flow Agent Assistant' : 'Workflow Agent Assistant'}
             </h3>
           </div>
           <div className="flex items-center gap-1">

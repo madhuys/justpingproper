@@ -1,0 +1,105 @@
+{
+  "templates": [],
+  "providers": [
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "icon": "whatsapp",
+      "requiresApproval": true,
+      "limits": {
+        "header": {
+          "text": 60,
+          "media": {
+            "image": 1048576,
+            "video": 16777216,
+            "document": 104857600
+          }
+        },
+        "body": 1024,
+        "footer": 60,
+        "buttons": {
+          "quickReply": 3,
+          "callToAction": 2
+        }
+      },
+      "supportedHeaderTypes": ["text", "image", "video", "document"],
+      "requiresCategory": true
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram DM",
+      "icon": "instagram",
+      "requiresApproval": false,
+      "limits": {
+        "body": 1000,
+        "buttons": {
+          "total": 3
+        }
+      },
+      "supportedHeaderTypes": []
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "icon": "telegram",
+      "requiresApproval": false,
+      "limits": {
+        "body": 4096,
+        "buttons": {
+          "total": 10
+        }
+      },
+      "supportedHeaderTypes": ["text", "image", "video", "document"]
+    },
+    {
+      "id": "messenger",
+      "name": "Facebook Messenger",
+      "icon": "messenger",
+      "requiresApproval": false,
+      "limits": {
+        "body": 640,
+        "buttons": {
+          "total": 3
+        }
+      },
+      "supportedHeaderTypes": ["image"],
+      "requiresMessageTag": true
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "requiresApproval": false,
+      "limits": {
+        "body": 300
+      },
+      "supportedHeaderTypes": [],
+      "comingSoon": true
+    }
+  ],
+  "languages": [
+    { "code": "en", "name": "English" },
+    { "code": "es", "name": "Spanish" },
+    { "code": "fr", "name": "French" },
+    { "code": "de", "name": "German" },
+    { "code": "pt", "name": "Portuguese" },
+    { "code": "it", "name": "Italian" },
+    { "code": "nl", "name": "Dutch" },
+    { "code": "hi", "name": "Hindi" },
+    { "code": "ar", "name": "Arabic" },
+    { "code": "zh", "name": "Chinese" },
+    { "code": "ja", "name": "Japanese" },
+    { "code": "ko", "name": "Korean" }
+  ],
+  "categories": [
+    { "id": "marketing", "name": "Marketing" },
+    { "id": "utility", "name": "Utility" },
+    { "id": "authentication", "name": "Authentication" }
+  ],
+  "messageTags": [
+    { "id": "confirmed_event_update", "name": "Confirmed Event Update" },
+    { "id": "post_purchase_update", "name": "Post-Purchase Update" },
+    { "id": "account_update", "name": "Account Update" },
+    { "id": "human_agent", "name": "Human Agent" }
+  ]
+}

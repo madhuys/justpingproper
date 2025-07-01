@@ -1,0 +1,218 @@
+{
+  "teamInbox": {
+    "title": "Team Inbox",
+    "subtitle": "Manage conversations across all channels",
+    "selector": {
+      "title": "Select Inbox",
+      "placeholder": "Choose a team inbox...",
+      "all": "All Inboxes",
+      "myInboxes": "My Inboxes"
+    },
+    "filters": {
+      "title": "Filters",
+      "state": {
+        "label": "Status",
+        "all": "All",
+        "open": "Open",
+        "inProgress": "In Progress",
+        "closed": "Closed",
+        "custom": "Custom States"
+      },
+      "channel": {
+        "label": "Channel",
+        "all": "All Channels",
+        "whatsapp": "WhatsApp",
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "telegram": "Telegram",
+        "webchat": "Web Chat",
+        "sms": "SMS"
+      },
+      "assignee": {
+        "label": "Assigned To",
+        "all": "All",
+        "unassigned": "Unassigned",
+        "me": "Assigned to Me"
+      },
+      "priority": {
+        "label": "Priority",
+        "all": "All",
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low"
+      },
+      "date": {
+        "label": "Date Range",
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "lastWeek": "Last 7 Days",
+        "lastMonth": "Last 30 Days",
+        "custom": "Custom Range"
+      }
+    },
+    "conversationList": {
+      "search": "Search conversations...",
+      "sort": {
+        "label": "Sort By",
+        "newest": "Newest First",
+        "oldest": "Oldest First",
+        "priority": "Priority",
+        "unread": "Unread First"
+      },
+      "empty": {
+        "title": "No conversations",
+        "description": "Conversations will appear here when customers contact you"
+      },
+      "loading": "Loading conversations..."
+    },
+    "conversationItem": {
+      "unread": "Unread",
+      "typing": "Typing...",
+      "lastSeen": "Last seen {{time}}",
+      "bot": "Bot",
+      "human": "Human"
+    },
+    "chat": {
+      "header": {
+        "assignTo": "Assign to",
+        "unassigned": "Unassigned",
+        "selectAgent": "Select agent...",
+        "moreActions": "More Actions"
+      },
+      "whatsappTimer": {
+        "title": "Session Timer",
+        "description": "WhatsApp 24-hour window",
+        "expired": "Session Expired",
+        "expiring": "Expires in {{time}}",
+        "tooltip": "After 24 hours, you can only send template messages"
+      },
+      "input": {
+        "placeholder": "Type a message...",
+        "placeholderExpired": "Session expired. Use templates only.",
+        "attachments": "Attachments",
+        "templates": "Templates",
+        "quickReplies": "Quick Replies",
+        "emoji": "Emoji",
+        "send": "Send"
+      },
+      "messages": {
+        "delivered": "Delivered",
+        "read": "Read",
+        "failed": "Failed to send",
+        "sending": "Sending...",
+        "agentJoined": "{{agent}} joined the conversation",
+        "agentLeft": "{{agent}} left the conversation",
+        "transferred": "Conversation transferred to {{agent}}",
+        "systemMessage": "System",
+        "botHandoff": "Conversation transferred from bot"
+      },
+      "actions": {
+        "resolve": "Mark as Resolved",
+        "reopen": "Reopen Conversation",
+        "transfer": "Transfer",
+        "block": "Block Customer",
+        "unblock": "Unblock Customer",
+        "delete": "Delete Conversation",
+        "export": "Export Chat"
+      }
+    },
+    "contextPanel": {
+      "tabs": {
+        "details": "Details",
+        "notes": "Notes",
+        "history": "History",
+        "data": "Captured Data"
+      },
+      "details": {
+        "title": "Customer Details",
+        "name": "Name",
+        "phone": "Phone",
+        "email": "Email",
+        "location": "Location",
+        "tags": "Tags",
+        "customFields": "Custom Fields",
+        "edit": "Edit Details"
+      },
+      "notes": {
+        "title": "Notes",
+        "placeholder": "Add a note...",
+        "add": "Add Note",
+        "private": "Private Note",
+        "shared": "Shared Note",
+        "by": "by {{author}}",
+        "on": "on {{date}}"
+      },
+      "history": {
+        "title": "Activity History",
+        "stateChanged": "Status changed to {{state}}",
+        "assigned": "Assigned to {{agent}}",
+        "noteAdded": "Note added",
+        "tagAdded": "Tag '{{tag}}' added",
+        "tagRemoved": "Tag '{{tag}}' removed",
+        "customerBlocked": "Customer blocked",
+        "customerUnblocked": "Customer unblocked"
+      },
+      "capturedData": {
+        "title": "Captured Data",
+        "description": "Information collected by the agent",
+        "field": "Field",
+        "value": "Value",
+        "capturedAt": "Captured At",
+        "empty": "No data captured yet",
+        "export": "Export Data"
+      },
+      "actions": {
+        "changeState": "Change Status",
+        "addTag": "Add Tag",
+        "removeTag": "Remove Tag",
+        "assignTo": "Assign To",
+        "addToContact": "Add to Contacts",
+        "viewContact": "View Contact"
+      }
+    },
+    "states": {
+      "title": "Conversation States",
+      "default": {
+        "open": "Open",
+        "inProgress": "In Progress",
+        "closed": "Closed"
+      },
+      "custom": {
+        "add": "Add Custom State",
+        "edit": "Edit State",
+        "delete": "Delete State",
+        "name": "State Name",
+        "color": "Color",
+        "icon": "Icon"
+      }
+    },
+    "statistics": {
+      "title": "Inbox Statistics",
+      "totalConversations": "Total Conversations",
+      "openConversations": "Open",
+      "avgResponseTime": "Avg Response Time",
+      "avgResolutionTime": "Avg Resolution Time",
+      "satisfactionScore": "Satisfaction Score"
+    },
+    "settings": {
+      "title": "Inbox Settings",
+      "autoAssignment": "Auto Assignment",
+      "roundRobin": "Round Robin",
+      "loadBalanced": "Load Balanced",
+      "manual": "Manual Assignment",
+      "workingHours": "Working Hours",
+      "notifications": "Notifications",
+      "customStates": "Custom States"
+    },
+    "messages": {
+      "assignSuccess": "Conversation assigned successfully",
+      "stateChangeSuccess": "Status updated successfully",
+      "sendSuccess": "Message sent",
+      "sendError": "Failed to send message",
+      "loadError": "Failed to load conversations",
+      "sessionExpired": "WhatsApp session expired. You can only send template messages now.",
+      "customerBlocked": "Customer has been blocked",
+      "customerUnblocked": "Customer has been unblocked"
+    }
+  }
+}

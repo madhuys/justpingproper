@@ -1,0 +1,77 @@
+{
+  "purposes": {
+    "workflow": [
+      "Customer Support",
+      "Interview Screening", 
+      "Order Processing",
+      "Lead Qualification",
+      "IT Helpdesk",
+      "Build from Scratch"
+    ],
+    "freeflow": [
+      "Website Q&A",
+      "Customer Support",
+      "Personal Assistant",
+      "Research Helper",
+      "Code Assistant",
+      "Writing Helper"
+    ]
+  },
+  "tools": [
+    {
+      "id": "read_file",
+      "name": "Read File",
+      "description": "Read file contents"
+    },
+    {
+      "id": "write_file", 
+      "name": "Write File",
+      "description": "Write to files"
+    },
+    {
+      "id": "web_search",
+      "name": "Web Search", 
+      "description": "Search the web"
+    },
+    {
+      "id": "calculator",
+      "name": "Calculator",
+      "description": "Perform calculations"
+    },
+    {
+      "id": "code_interpreter",
+      "name": "Code Interpreter",
+      "description": "Execute code"
+    }
+  ],
+  "integrations": [
+    "Google Calendar",
+    "HubSpot CRM",
+    "Zendesk",
+    "Salesforce",
+    "LinkedIn Recruiter",
+    "Slack"
+  ],
+  "webSearchProviders": [
+    {
+      "id": "google",
+      "label": "Google"
+    },
+    {
+      "id": "bing",
+      "label": "Bing"
+    },
+    {
+      "id": "perplexity",
+      "label": "Perplexity"
+    },
+    {
+      "id": "duckduckgo",
+      "label": "DuckDuckGo"
+    },
+    {
+      "id": "serpapi",
+      "label": "SerpAPI"
+    }
+  ]
+}

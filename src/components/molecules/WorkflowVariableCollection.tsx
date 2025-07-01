@@ -136,14 +136,14 @@ export function WorkflowVariableCollection({
             <div className="space-y-2">
               <Label className="text-xs">Validation (Optional)</Label>
               <Select
-                value={variableValidations[index] || ''}
-                onValueChange={(value) => handleUpdateValidation(index, value)}
+                value={variableValidations[index] || 'none'}
+                onValueChange={(value) => handleUpdateValidation(index, value === 'none' ? '' : value)}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="No validation" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">None</SelectItem>
+                  <SelectItem value="none">None</SelectItem>
                   <SelectItem value="email">Email</SelectItem>
                   <SelectItem value="phone">Phone Number</SelectItem>
                   <SelectItem value="url">URL</SelectItem>

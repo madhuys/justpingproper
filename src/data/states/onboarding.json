@@ -65,15 +65,16 @@
   "useCases": [
     "recruitment",
     "customer-support",
-    "conversational-commerce"
+    "conversational-commerce",
+    "workflow-automation"
   ],
   "companyInfo": {
     "companyName": "test",
     "website": "",
     "companySize": "11-50",
-    "industry": "",
+    "industry": "Alternative Dispute Resolution",
     "country": "India"
   },
   "currentStep": 3,
-  "updatedAt": "2025-06-30T04:04:43.960Z"
+  "updatedAt": "2025-07-01T12:04:18.473Z"
 }

@@ -1,0 +1,63 @@
+{
+  "teamInboxes": [
+    {
+      "id": "sales-inbox",
+      "name": "Sales Team Inbox",
+      "description": "Handle sales inquiries and lead qualification",
+      "status": "active",
+      "members": 5,
+      "avgResponseTime": "5 mins"
+    },
+    {
+      "id": "support-inbox",
+      "name": "Customer Support Inbox",
+      "description": "Technical support and customer service",
+      "status": "active", 
+      "members": 8,
+      "avgResponseTime": "3 mins"
+    },
+    {
+      "id": "billing-inbox",
+      "name": "Billing Team Inbox",
+      "description": "Handle billing and payment related queries",
+      "status": "active",
+      "members": 3,
+      "avgResponseTime": "10 mins"
+    },
+    {
+      "id": "technical-inbox",
+      "name": "Technical Team Inbox",
+      "description": "Advanced technical support and integrations",
+      "status": "active",
+      "members": 6,
+      "avgResponseTime": "15 mins"
+    }
+  ],
+  "states": [
+    {
+      "id": "resolved",
+      "name": "Resolved",
+      "description": "Issue has been resolved successfully"
+    },
+    {
+      "id": "escalated",
+      "name": "Escalated",
+      "description": "Issue requires higher level support"
+    },
+    {
+      "id": "pending",
+      "name": "Pending Customer",
+      "description": "Waiting for customer response"
+    },
+    {
+      "id": "transferred",
+      "name": "Transferred",
+      "description": "Transferred to another team"
+    },
+    {
+      "id": "closed",
+      "name": "Closed",
+      "description": "Conversation has been closed"
+    }
+  ]
+}

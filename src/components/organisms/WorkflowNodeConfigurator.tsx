@@ -11,7 +11,8 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { GitBranch, Plus, Minus } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { GitBranch, Plus, Minus, MessageSquare } from 'lucide-react';
 import agentsStrings from '@/data/strings/agents.json';
 
 interface WorkflowNodeConfiguratorProps {
@@ -162,6 +163,105 @@ export function WorkflowNodeConfigurator({
               }
             }}
           />
+        )}
+
+        {/* Team Inbox Node Configuration */}
+        {(selectedNode.data.type === 'allocateToTeamInbox' || selectedNode.data.type === 'takeoverFromTeamInbox') && (
+          <Card className="p-4 space-y-4">
+            <div className="flex items-center gap-2 mb-2">
+              <MessageSquare className="h-4 w-4 text-primary" />
+              <h3 className="font-medium">Team Inbox Configuration</h3>
+            </div>
+            
+            <div className="space-y-2">
+              <Label>Select Team Inbox</Label>
+              <Select
+                value={selectedNode.data.teamInboxId || ''}
+                onValueChange={(value) => {
+                  // This will be handled by the parent component
+                  const event = new CustomEvent('updateTeamInbox', { 
+                    detail: { teamInboxId: value } 
+                  });
+                  window.dispatchEvent(event);
+                }}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Choose a team inbox..." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="sales-inbox">Sales Team Inbox</SelectItem>
+                  <SelectItem value="support-inbox">Customer Support Inbox</SelectItem>
+                  <SelectItem value="billing-inbox">Billing Team Inbox</SelectItem>
+                  <SelectItem value="technical-inbox">Technical Team Inbox</SelectItem>
+                </SelectContent>
+              </Select>
+              <p className="text-xs text-muted-foreground">
+                {selectedNode.data.type === 'allocateToTeamInbox' 
+                  ? 'Direct the conversation to this team inbox for manual handling'
+                  : 'Resume workflow when this team inbox sets a specific state'}
+              </p>
+            </div>
+
+            {selectedNode.data.type === 'allocateToTeamInbox' && (
+              <div className="space-y-2">
+                <Label>Initial Ticket State</Label>
+                <Select
+                  value={selectedNode.data.teamInboxState || ''}
+                  onValueChange={(value) => {
+                    // This will be handled by the parent component
+                    const event = new CustomEvent('updateTeamInboxState', { 
+                      detail: { teamInboxState: value } 
+                    });
+                    window.dispatchEvent(event);
+                  }}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Set initial state..." />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="new">New</SelectItem>
+                    <SelectItem value="pending">Pending</SelectItem>
+                    <SelectItem value="in_progress">In Progress</SelectItem>
+                    <SelectItem value="waiting_customer">Waiting for Customer</SelectItem>
+                    <SelectItem value="escalated">Escalated</SelectItem>
+                  </SelectContent>
+                </Select>
+                <p className="text-xs text-muted-foreground">
+                  The initial state of the ticket when allocated to the team inbox
+                </p>
+              </div>
+            )}
+
+            {selectedNode.data.type === 'takeoverFromTeamInbox' && (
+              <div className="space-y-2">
+                <Label>Trigger State</Label>
+                <Select
+                  value={selectedNode.data.teamInboxState || ''}
+                  onValueChange={(value) => {
+                    // This will be handled by the parent component
+                    const event = new CustomEvent('updateTeamInboxState', { 
+                      detail: { teamInboxState: value } 
+                    });
+                    window.dispatchEvent(event);
+                  }}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Choose trigger state..." />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="resolved">Resolved</SelectItem>
+                    <SelectItem value="escalated">Escalated</SelectItem>
+                    <SelectItem value="pending">Pending Customer</SelectItem>
+                    <SelectItem value="transferred">Transferred</SelectItem>
+                    <SelectItem value="closed">Closed</SelectItem>
+                  </SelectContent>
+                </Select>
+                <p className="text-xs text-muted-foreground">
+                  Workflow will resume when the team inbox sets this state
+                </p>
+              </div>
+            )}
+          </Card>
         )}
 
         {/* Branch Node Configuration */}

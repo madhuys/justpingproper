@@ -1,0 +1,181 @@
+{
+  "templates": {
+    "title": "Message Templates",
+    "subtitle": "Create and manage message templates for broadcasts",
+    "dashboard": {
+      "title": "Templates",
+      "createButton": "Create Template",
+      "searchPlaceholder": "Search templates...",
+      "filters": {
+        "provider": "Provider",
+        "status": "Status",
+        "language": "Language",
+        "all": "All"
+      },
+      "table": {
+        "columns": {
+          "name": "Template Name",
+          "provider": "Provider",
+          "language": "Language",
+          "status": "Status",
+          "versions": "Version",
+          "updated": "Last Updated",
+          "actions": "Actions"
+        },
+        "actions": {
+          "edit": "Edit",
+          "duplicate": "Duplicate",
+          "archive": "Archive",
+          "view": "View",
+          "delete": "Delete"
+        }
+      },
+      "empty": {
+        "title": "No templates yet",
+        "description": "Create your first message template to get started with broadcasts"
+      },
+      "status": {
+        "draft": "Draft",
+        "submitted": "Submitted",
+        "approved": "Approved", 
+        "rejected": "Rejected",
+        "archived": "Archived"
+      }
+    },
+    "builder": {
+      "title": "Template Builder",
+      "metadata": {
+        "title": "Template Details",
+        "name": {
+          "label": "Template Name",
+          "placeholder": "Enter template name",
+          "error": "Template name is required"
+        },
+        "language": {
+          "label": "Language",
+          "placeholder": "Select language",
+          "error": "Language is required"
+        },
+        "description": {
+          "label": "Description",
+          "placeholder": "Optional description for internal use"
+        },
+        "category": {
+          "label": "Category",
+          "placeholder": "Select category",
+          "marketing": "Marketing",
+          "utility": "Utility",
+          "authentication": "Authentication"
+        }
+      },
+      "editor": {
+        "title": "Message Content",
+        "header": {
+          "label": "Header",
+          "placeholder": "Enter header text or upload media",
+          "types": {
+            "text": "Text",
+            "image": "Image",
+            "video": "Video",
+            "document": "Document"
+          },
+          "mediaUpload": "Upload Media",
+          "mediaLimit": {
+            "image": "Max 1MB",
+            "video": "Max 16MB",
+            "document": "Max 100MB"
+          }
+        },
+        "body": {
+          "label": "Body",
+          "placeholder": "Enter your message content. Use {{1}}, {{2}} for variables",
+          "charCount": "{{count}} / {{max}} characters",
+          "error": "Body content is required"
+        },
+        "footer": {
+          "label": "Footer",
+          "placeholder": "Optional footer text"
+        },
+        "buttons": {
+          "label": "Buttons",
+          "add": "Add Button",
+          "remove": "Remove",
+          "types": {
+            "quickReply": "Quick Reply",
+            "callToAction": "Call to Action",
+            "url": "URL",
+            "phone": "Phone"
+          },
+          "placeholder": {
+            "text": "Button text",
+            "url": "https://example.com",
+            "phone": "+1234567890"
+          },
+          "max": "Maximum {{count}} buttons allowed"
+        }
+      },
+      "preview": {
+        "title": "Preview",
+        "variables": {
+          "title": "Test Variables",
+          "placeholder": "Variable {{num}}",
+          "addRow": "Add Test Data"
+        },
+        "device": {
+          "mobile": "Mobile",
+          "desktop": "Desktop"
+        }
+      },
+      "compliance": {
+        "title": "Compliance Check",
+        "passed": "All checks passed",
+        "failed": "Fix {{count}} issues",
+        "issues": {
+          "missingCategory": "Category is required for WhatsApp",
+          "charLimit": "Body exceeds character limit",
+          "invalidPlaceholders": "Invalid placeholder format",
+          "duplicatePlaceholders": "Duplicate placeholders found",
+          "mediaSize": "Media file too large",
+          "buttonLimit": "Too many buttons",
+          "missingMessageTag": "Message tag required for Messenger"
+        }
+      },
+      "actions": {
+        "saveDraft": "Save Draft",
+        "submit": "Submit for Approval",
+        "activate": "Activate",
+        "cancel": "Cancel",
+        "back": "Back to Templates"
+      },
+      "messages": {
+        "saveSuccess": "Template saved successfully",
+        "submitSuccess": "Template submitted for approval",
+        "activateSuccess": "Template activated successfully",
+        "error": "Failed to save template",
+        "duplicateName": "Template name already exists"
+      },
+      "version": {
+        "label": "Version",
+        "new": "Creating new version",
+        "history": "Version History",
+        "viewPrevious": "View Previous Versions"
+      }
+    },
+    "providers": {
+      "whatsapp": "WhatsApp",
+      "instagram": "Instagram DM",
+      "telegram": "Telegram",
+      "messenger": "Facebook Messenger",
+      "linkedin": "LinkedIn (Coming Soon)"
+    },
+    "cost": {
+      "banner": "Each send consumes 1 JP credit plus provider conversation fees (if applicable)."
+    },
+    "approvalStatus": {
+      "polling": "Checking approval status...",
+      "approved": "Template approved by {{provider}}",
+      "rejected": "Template rejected: {{reason}}",
+      "pending": "Awaiting approval from {{provider}}"
+    }
+  }
+}

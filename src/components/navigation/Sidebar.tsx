@@ -19,7 +19,9 @@ import {
   UserCircle,
   Home,
   BookOpen,
-  FolderOpen
+  FolderOpen,
+  Send,
+  Shield
 } from 'lucide-react';
 
 export function Sidebar() {
@@ -71,6 +73,18 @@ export function Sidebar() {
       title: 'Agents',
       href: '/agents',
       icon: Bot
+    },
+    {
+      id: 'publish',
+      title: 'Publish',
+      href: '/agents/publish',
+      icon: Send
+    },
+    {
+      id: 'templates',
+      title: 'Templates',
+      href: '/templates',
+      icon: FileText
     },
     {
       id: 'knowledgebase',

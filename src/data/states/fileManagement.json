@@ -3,10 +3,10 @@
     "connectedProviders": {
       "google-drive": {
         "id": "google-drive",
-        "accessToken": "mock_access_google-drive_1751180406137",
-        "refreshToken": "mock_refresh_google-drive_1751180406137",
-        "connectedAt": "2025-06-29T07:00:06.137Z",
-        "expiresAt": "2025-06-29T08:00:06.137Z"
+        "accessToken": "mock_access_google-drive_1751374432413",
+        "refreshToken": "mock_refresh_google-drive_1751374432413",
+        "connectedAt": "2025-07-01T12:53:52.413Z",
+        "expiresAt": "2025-07-01T13:53:52.413Z"
       }
     },
     "currentProvider": null,

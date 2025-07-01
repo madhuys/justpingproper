@@ -1,0 +1,233 @@
+{
+  "inbox-001": [
+    {
+      "id": "conv-001",
+      "inboxId": "inbox-001",
+      "channel": "whatsapp",
+      "customerId": "cust-001",
+      "customerName": "John Doe",
+      "customerPhone": "+919876543210",
+      "customerAvatar": "/avatars/customer-001.jpg",
+      "status": "open",
+      "priority": "high",
+      "assignedTo": null,
+      "tags": ["vip", "urgent"],
+      "lastMessage": {
+        "text": "I need help with my order",
+        "timestamp": "2024-02-25T10:30:00Z",
+        "sender": "customer"
+      },
+      "unreadCount": 2,
+      "whatsappSessionExpiry": "2025-12-26T10:30:00Z",
+      "messages": [
+        {
+          "id": "msg-001",
+          "text": "Hello! I need help with my order #12345",
+          "sender": "customer",
+          "timestamp": "2024-02-25T10:25:00Z",
+          "status": "read"
+        },
+        {
+          "id": "msg-002", 
+          "text": "Hi! I'd be happy to help you with your order. Let me check the details.",
+          "sender": "bot",
+          "timestamp": "2024-02-25T10:25:30Z",
+          "status": "delivered"
+        },
+        {
+          "id": "msg-003",
+          "text": "It's been 3 days and I haven't received it yet",
+          "sender": "customer",
+          "timestamp": "2024-02-25T10:26:00Z",
+          "status": "read"
+        },
+        {
+          "id": "msg-004",
+          "text": "I need help with my order",
+          "sender": "customer",
+          "timestamp": "2024-02-25T10:30:00Z",
+          "status": "unread"
+        }
+      ],
+      "capturedData": {
+        "orderNumber": "12345",
+        "issueType": "Delivery Delay",
+        "customerEmail": "john.doe@example.com"
+      },
+      "notes": [],
+      "createdAt": "2024-02-25T10:25:00Z",
+      "updatedAt": "2024-02-25T10:30:00Z"
+    },
+    {
+      "id": "conv-002",
+      "inboxId": "inbox-001",
+      "channel": "webchat",
+      "customerId": "cust-002",
+      "customerName": "Jane Smith",
+      "customerEmail": "jane.smith@example.com",
+      "customerAvatar": "/avatars/customer-002.jpg",
+      "status": "inProgress",
+      "priority": "medium",
+      "assignedTo": "user-003",
+      "assignedToName": "Mike Wilson",
+      "tags": ["product-inquiry"],
+      "lastMessage": {
+        "text": "Thank you for the information!",
+        "timestamp": "2024-02-25T09:45:00Z",
+        "sender": "customer"
+      },
+      "unreadCount": 0,
+      "messages": [
+        {
+          "id": "msg-005",
+          "text": "Hi, I'm interested in your premium plan",
+          "sender": "customer",
+          "timestamp": "2024-02-25T09:30:00Z",
+          "status": "read"
+        },
+        {
+          "id": "msg-006",
+          "text": "Hello Jane! Our premium plan includes unlimited agents and priority support.",
+          "sender": "agent",
+          "senderName": "Mike Wilson",
+          "timestamp": "2024-02-25T09:32:00Z",
+          "status": "delivered"
+        },
+        {
+          "id": "msg-007",
+          "text": "That sounds great! What's the pricing?",
+          "sender": "customer",
+          "timestamp": "2024-02-25T09:35:00Z",
+          "status": "read"
+        },
+        {
+          "id": "msg-008",
+          "text": "Our premium plan starts at $99/month. Would you like to schedule a demo?",
+          "sender": "agent",
+          "senderName": "Mike Wilson",
+          "timestamp": "2024-02-25T09:40:00Z",
+          "status": "delivered"
+        },
+        {
+          "id": "msg-009",
+          "text": "Thank you for the information!",
+          "sender": "customer",
+          "timestamp": "2024-02-25T09:45:00Z",
+          "status": "read"
+        }
+      ],
+      "capturedData": {
+        "interest": "Premium Plan",
+        "budget": "$100-150/month"
+      },
+      "notes": [
+        {
+          "id": "note-001",
+          "text": "Customer is interested in premium features. Schedule follow-up call.",
+          "author": "Mike Wilson",
+          "authorId": "user-003",
+          "type": "private",
+          "createdAt": "2024-02-25T09:46:00Z"
+        }
+      ],
+      "createdAt": "2024-02-25T09:30:00Z",
+      "updatedAt": "2024-02-25T09:46:00Z"
+    },
+    {
+      "id": "conv-003",
+      "inboxId": "inbox-001",
+      "channel": "whatsapp",
+      "customerId": "cust-003",
+      "customerName": "+918765432109",
+      "customerPhone": "+918765432109",
+      "status": "closed",
+      "priority": "low",
+      "assignedTo": "user-002",
+      "assignedToName": "Sarah Johnson",
+      "tags": ["resolved", "refund"],
+      "lastMessage": {
+        "text": "Thank you for your help!",
+        "timestamp": "2024-02-24T16:20:00Z",
+        "sender": "customer"
+      },
+      "unreadCount": 0,
+      "whatsappSessionExpiry": "2025-12-25T16:20:00Z",
+      "messages": [
+        {
+          "id": "msg-010",
+          "text": "I want to request a refund",
+          "sender": "customer",
+          "timestamp": "2024-02-24T15:00:00Z",
+          "status": "read"
+        },
+        {
+          "id": "msg-011",
+          "text": "I can help you with that. Can you provide your order number?",
+          "sender": "agent",
+          "senderName": "Sarah Johnson",
+          "timestamp": "2024-02-24T15:05:00Z",
+          "status": "delivered"
+        }
+      ],
+      "capturedData": {
+        "orderNumber": "ORD-98765",
+        "refundAmount": "$45.99",
+        "refundReason": "Product not as described"
+      },
+      "createdAt": "2024-02-24T15:00:00Z",
+      "updatedAt": "2024-02-24T16:20:00Z",
+      "closedAt": "2024-02-24T16:20:00Z"
+    }
+  ],
+  "inbox-002": [
+    {
+      "id": "conv-004",
+      "inboxId": "inbox-002",
+      "channel": "instagram",
+      "customerId": "cust-004",
+      "customerName": "@fashionista_23",
+      "customerHandle": "@fashionista_23",
+      "customerAvatar": "/avatars/customer-004.jpg",
+      "status": "open",
+      "priority": "high",
+      "assignedTo": null,
+      "tags": ["lead", "hot"],
+      "lastMessage": {
+        "text": "Do you offer bulk discounts?",
+        "timestamp": "2024-02-25T11:00:00Z",
+        "sender": "customer"
+      },
+      "unreadCount": 1,
+      "messages": [
+        {
+          "id": "msg-012",
+          "text": "Hi! I saw your products on Instagram. They look amazing!",
+          "sender": "customer",
+          "timestamp": "2024-02-25T10:50:00Z",
+          "status": "read"
+        },
+        {
+          "id": "msg-013",
+          "text": "Thank you! We're glad you like our products. How can I help you today?",
+          "sender": "bot",
+          "timestamp": "2024-02-25T10:50:30Z",
+          "status": "delivered"
+        },
+        {
+          "id": "msg-014",
+          "text": "Do you offer bulk discounts?",
+          "sender": "customer",
+          "timestamp": "2024-02-25T11:00:00Z",
+          "status": "unread"
+        }
+      ],
+      "capturedData": {
+        "source": "Instagram",
+        "interest": "Bulk Purchase"
+      },
+      "notes": [],
+      "createdAt": "2024-02-25T10:50:00Z",
+      "updatedAt": "2024-02-25T11:00:00Z"
+    }
+  ]
+}

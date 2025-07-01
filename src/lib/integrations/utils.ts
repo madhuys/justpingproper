@@ -42,7 +42,13 @@ export const getIntegrationIcon = (iconName: string) => {
     'Layout': Icons.Layout,
     'ShoppingCart': Icons.ShoppingCart,
     'Box': Icons.Box,
-    'Linkedin': Icons.Linkedin
+    'Linkedin': Icons.Linkedin,
+    // Lowercase mappings for templates
+    'whatsapp': Icons.MessageCircle,
+    'instagram': Icons.Instagram,
+    'telegram': Icons.Send,
+    'messenger': Icons.Facebook,
+    'linkedin': Icons.Linkedin
   };
   
   return iconMap[iconName] || Icons.MessageCircle;

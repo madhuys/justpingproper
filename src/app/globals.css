@@ -579,6 +579,48 @@ html.dark body {
   .sidebar-glass-dark .text-primary-foreground {
     color: #fff !important;
   }
+  
+  /* Team Inbox Panel Constraints */
+  .team-inbox-left-panel[data-panel] {
+    min-width: 300px;
+    max-width: 600px;
+  }
+  
+  .team-inbox-right-panel[data-panel] {
+    min-width: 360px;
+    max-width: 600px;
+  }
+  
+  
+  /* Team Inbox Resizable Handle Visibility */
+  [data-panel-resize-handle] {
+    background-color: var(--border);
+    width: 2px;
+    transition: background-color 0.2s;
+  }
+  
+  [data-panel-resize-handle]:hover {
+    background-color: var(--primary);
+    width: 4px;
+  }
+  
+  [data-panel-resize-handle]:active {
+    background-color: var(--primary);
+    width: 4px;
+  }
+  
+  /* Ensure resizable panels respect constraints */
+  .team-inbox-left-panel > div:first-child,
+  .team-inbox-right-panel > div:first-child {
+    min-width: 280px !important;
+    max-width: 600px !important;
+  }
+  
+  /* Fix for input overlapping issues */
+  .team-inbox-chat-input {
+    position: relative;
+    z-index: 10;
+  }
 } /* <-- Close @layer utilities here */
 
 /* Shared dropdown item styles - outside of @layer for Tailwind v4 */
@@ -835,9 +877,6 @@ html.dark body {
 }
 
 /* Ensure edges are rendered above nodes */
-.react-flow__renderer {
-  /* Ensure proper layering of React Flow elements */
-}
 
 .react-flow__edgelabel-renderer {
   z-index: 1000 !important;

@@ -109,7 +109,7 @@ export function FreeFlowAgentWizard({ isOpen, onClose, onCreateAgent }: FreeFlow
       background,
       avatar,
       conversationScope,
-      knowledgeIndexId,
+      knowledgeIndexId: knowledgeIndexId === 'none' ? '' : knowledgeIndexId,
       allowedTools,
       aiModelId,
       mcpServerIds: selectedMcpServers
@@ -255,7 +255,7 @@ export function FreeFlowAgentWizard({ isOpen, onClose, onCreateAgent }: FreeFlow
                   <SelectValue placeholder={agentsStrings.wizard.freeflow.scope.knowledgeIndexPlaceholder} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">None</SelectItem>
+                  <SelectItem value="none">None</SelectItem>
                   {knowledgeIndexes.map(index => (
                     <SelectItem key={index.id} value={index.id}>
                       {index.name}

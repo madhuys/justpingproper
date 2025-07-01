@@ -1,0 +1,131 @@
+{
+  "modules": [
+    {
+      "id": "users",
+      "name": "User Management",
+      "permissions": ["create", "read", "update", "delete"]
+    },
+    {
+      "id": "teams",
+      "name": "Team Management",
+      "permissions": ["create", "read", "update", "delete"]
+    },
+    {
+      "id": "businessProfile",
+      "name": "Business Profile",
+      "permissions": ["read", "update"]
+    },
+    {
+      "id": "agents",
+      "name": "AI Agents",
+      "permissions": ["create", "read", "update", "delete", "publish"]
+    },
+    {
+      "id": "fileManager",
+      "name": "File Manager",
+      "permissions": ["create", "read", "update", "delete"]
+    },
+    {
+      "id": "knowledgebase",
+      "name": "Knowledge Base",
+      "permissions": ["create", "read", "update", "delete"]
+    },
+    {
+      "id": "integrations",
+      "name": "Integrations",
+      "permissions": ["create", "read", "update", "delete"]
+    },
+    {
+      "id": "teamInbox",
+      "name": "Team Inbox",
+      "permissions": ["read", "update", "manage"]
+    },
+    {
+      "id": "contacts",
+      "name": "Contacts",
+      "permissions": ["create", "read", "update", "delete"]
+    },
+    {
+      "id": "billing",
+      "name": "Billing",
+      "permissions": ["read", "update", "manage"]
+    },
+    {
+      "id": "campaigns",
+      "name": "Campaigns",
+      "permissions": ["create", "read", "update", "delete"]
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "permissions": ["read", "update"]
+    },
+    {
+      "id": "publish",
+      "name": "Agent Publishing",
+      "permissions": ["read", "publish", "unpublish"]
+    }
+  ],
+  "defaultPermissions": {
+    "superadmin": {
+      "users": ["create", "read", "update", "delete"],
+      "teams": ["create", "read", "update", "delete"],
+      "businessProfile": ["read", "update"],
+      "agents": ["create", "read", "update", "delete", "publish"],
+      "fileManager": ["create", "read", "update", "delete"],
+      "knowledgebase": ["create", "read", "update", "delete"],
+      "integrations": ["create", "read", "update", "delete"],
+      "teamInbox": ["read", "update", "manage"],
+      "contacts": ["create", "read", "update", "delete"],
+      "billing": ["read", "update", "manage"],
+      "campaigns": ["create", "read", "update", "delete"],
+      "settings": ["read", "update"],
+      "publish": ["read", "publish", "unpublish"]
+    },
+    "admin": {
+      "users": ["create", "read", "update"],
+      "teams": ["create", "read", "update", "delete"],
+      "businessProfile": ["read", "update"],
+      "agents": ["create", "read", "update", "delete", "publish"],
+      "fileManager": ["create", "read", "update", "delete"],
+      "knowledgebase": ["create", "read", "update", "delete"],
+      "integrations": ["create", "read", "update", "delete"],
+      "teamInbox": ["read", "update", "manage"],
+      "contacts": ["create", "read", "update", "delete"],
+      "billing": ["read"],
+      "campaigns": ["create", "read", "update", "delete"],
+      "settings": ["read", "update"],
+      "publish": ["read", "publish", "unpublish"]
+    },
+    "limited-admin": {
+      "users": ["read"],
+      "teams": ["read"],
+      "businessProfile": ["read"],
+      "agents": ["create", "read", "update"],
+      "fileManager": ["create", "read", "update"],
+      "knowledgebase": ["create", "read", "update"],
+      "integrations": ["read"],
+      "teamInbox": ["read", "update"],
+      "contacts": ["create", "read", "update"],
+      "billing": ["read"],
+      "campaigns": ["create", "read", "update"],
+      "settings": ["read"],
+      "publish": ["read"]
+    },
+    "billing-admin": {
+      "users": ["read"],
+      "teams": ["read"],
+      "businessProfile": ["read"],
+      "agents": ["read"],
+      "fileManager": ["read"],
+      "knowledgebase": ["read"],
+      "integrations": ["read"],
+      "teamInbox": ["read"],
+      "contacts": ["read"],
+      "billing": ["read", "update", "manage"],
+      "campaigns": ["read"],
+      "settings": ["read"],
+      "publish": ["read"]
+    }
+  }
+}

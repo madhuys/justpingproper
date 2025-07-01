@@ -1,0 +1,19 @@
+{
+  "selectedInbox": null,
+  "conversations": [],
+  "selectedConversation": null,
+  "filters": {
+    "search": "",
+    "state": "all",
+    "channel": "all",
+    "assignee": "all",
+    "priority": "all",
+    "dateRange": "today"
+  },
+  "sort": "newest",
+  "customStates": [],
+  "loading": false,
+  "error": null,
+  "typing": {},
+  "onlineAgents": []
+}

@@ -36,7 +36,9 @@ const nodeTypes = [
   {
     category: 'Actions',
     items: [
-      { type: 'action', label: 'Perform Action', icon: Zap, description: 'Execute an action' }
+      { type: 'action', label: 'Perform Action', icon: Zap, description: 'Execute an action' },
+      { type: 'allocateToTeamInbox', label: 'Allocate to Team Inbox', icon: MessageSquare, description: 'Direct conversation to a team inbox' },
+      { type: 'takeoverFromTeamInbox', label: 'Takeover from Team Inbox', icon: MessageSquare, description: 'Resume flow after team inbox sets state' }
     ]
   }
 ];

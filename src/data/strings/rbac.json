@@ -1,0 +1,74 @@
+{
+  "rbac": {
+    "title": "Role Access Control",
+    "subtitle": "Configure module access for each role",
+    "description": "Control which roles can access specific modules in the system",
+    "matrix": {
+      "title": "Permission Matrix",
+      "roles": "Roles",
+      "modules": "Modules",
+      "selectAll": "Select All",
+      "deselectAll": "Deselect All"
+    },
+    "roles": {
+      "superadmin": {
+        "name": "Super Admin",
+        "description": "Full system access with no restrictions"
+      },
+      "admin": {
+        "name": "Admin", 
+        "description": "Full control except adding/removing Super Admins"
+      },
+      "limited-admin": {
+        "name": "Limited Admin",
+        "description": "Requires approval for actions exceeding budget limits"
+      },
+      "billing-admin": {
+        "name": "Billing Admin",
+        "description": "Manages financial settings and billing"
+      }
+    },
+    "modules": {
+      "users": "User Management",
+      "businessProfile": "Business Profile",
+      "agents": "AI Agents",
+      "fileManager": "File Manager",
+      "knowledgebase": "Knowledge Base",
+      "integrations": "Integrations",
+      "teamInbox": "Team Inbox",
+      "contacts": "Contacts",
+      "billing": "Billing",
+      "campaigns": "Campaigns",
+      "settings": "Settings",
+      "teams": "Teams",
+      "publish": "Agent Publishing"
+    },
+    "permissions": {
+      "create": "Create",
+      "read": "View",
+      "update": "Edit",
+      "delete": "Delete",
+      "publish": "Publish",
+      "manage": "Manage"
+    },
+    "actions": {
+      "save": "Save Changes",
+      "reset": "Reset to Default",
+      "cancel": "Cancel",
+      "apply": "Apply Changes"
+    },
+    "messages": {
+      "saveSuccess": "Permissions updated successfully",
+      "saveError": "Failed to save permissions",
+      "resetSuccess": "Permissions reset to default",
+      "loading": "Loading permission matrix...",
+      "unsavedChanges": "You have unsaved changes. Are you sure you want to leave?"
+    },
+    "tooltips": {
+      "superadmin": "Super Admins always have full access",
+      "inherited": "Permission inherited from parent module",
+      "custom": "Custom permission setting",
+      "denied": "Access denied for this role"
+    }
+  }
+}

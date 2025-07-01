@@ -393,10 +393,10 @@ function FlowComponent({
     
     // Basic rule: One edge per handle can only originate one single connector line
     // Check if this specific source handle already has an outgoing connection
-    const handleId = connection.sourceHandle || 'default';
+    const handleId = connection.sourceHandle || 'output';
     const existingFromThisHandle = edges.some(edge => 
       edge.source === connection.source && 
-      (edge.sourceHandle || 'default') === handleId
+      (edge.sourceHandle || 'output') === handleId
     );
     
     if (existingFromThisHandle) {
@@ -646,7 +646,7 @@ function FlowComponent({
       const sourceHandle = connectionHandleId || 'output';
       const existingOutgoingEdge = edges.find(edge => 
         edge.source === connectionNodeId && 
-        edge.sourceHandle === sourceHandle
+        (edge.sourceHandle || 'output') === sourceHandle
       );
       
       // If there's already an outgoing connection from this handle, don't show popover

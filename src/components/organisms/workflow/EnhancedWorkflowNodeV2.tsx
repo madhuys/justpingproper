@@ -33,13 +33,15 @@ import {
   Webhook,
   Plus,
   Settings,
-  Sparkles
+  Sparkles,
+  Search,
+  BookOpen
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export interface WorkflowNodeData {
   label: string;
-  type: 'start' | 'message' | 'input' | 'action' | 'end' | 'branch';
+  type: 'start' | 'message' | 'input' | 'action' | 'end' | 'branch' | 'allocateToTeamInbox' | 'takeoverFromTeamInbox';
   inputType?: 'text' | 'multiselect' | 'choice';
   validationType?: string;
   prompt?: string;
@@ -59,6 +61,10 @@ export interface WorkflowNodeData {
   hasError?: boolean;
   errorMessage?: string;
   branchCount?: number; // For branch node: 2-4 branches
+  // Team Inbox specific fields
+  teamInboxId?: string;
+  teamInboxName?: string;
+  teamInboxState?: string;
   // File attachments
   files?: {
     id: string;
@@ -94,6 +100,8 @@ const iconMap = {
   action: Zap,
   end: CheckCircle,
   branch: GitBranch,
+  allocateToTeamInbox: Send,
+  takeoverFromTeamInbox: BellRing,
   text: FileText,
   multiselect: Hash,
   email: Mail,
@@ -111,7 +119,9 @@ const iconMap = {
   webhook: Webhook,
   notify: BellRing,
   mcpTool: Settings,
-  apiCall: Globe
+  apiCall: Globe,
+  searchKnowledgebase: BookOpen,
+  searchWeb: Search
 };
 
 const getValidationIcon = (validationType?: string) => {
@@ -237,6 +247,8 @@ export function EnhancedWorkflowNodeV2({ data, selected, id }: NodeProps<Workflo
         case 'end': return 'from-red-500/20 to-red-600/20 border-red-500/40';
         case 'action': return 'from-purple-500/20 to-purple-600/20 border-purple-500/40';
         case 'input': return 'from-blue-500/20 to-blue-600/20 border-blue-500/40';
+        case 'allocateToTeamInbox': return 'from-teal-500/20 to-teal-600/20 border-teal-500/40';
+        case 'takeoverFromTeamInbox': return 'from-indigo-500/20 to-indigo-600/20 border-indigo-500/40';
         default: return 'from-gray-500/20 to-gray-600/20 border-gray-500/40';
       }
     }
@@ -250,6 +262,8 @@ export function EnhancedWorkflowNodeV2({ data, selected, id }: NodeProps<Workflo
       case 'end': return 'from-red-500/10 to-red-600/10 border-red-500/30';
       case 'action': return 'from-purple-500/10 to-purple-600/10 border-purple-500/30';
       case 'input': return 'from-blue-500/10 to-blue-600/10 border-blue-500/30';
+      case 'allocateToTeamInbox': return 'from-teal-500/10 to-teal-600/10 border-teal-500/30';
+      case 'takeoverFromTeamInbox': return 'from-indigo-500/10 to-indigo-600/10 border-indigo-500/30';
       default: return 'from-gray-500/10 to-gray-600/10 border-gray-500/30';
     }
   };
@@ -331,7 +345,9 @@ export function EnhancedWorkflowNodeV2({ data, selected, id }: NodeProps<Workflo
              data.type === 'input' ? `Collect ${data.inputType === 'choice' ? 'Choice' : data.inputType === 'multiselect' ? 'Multi-Select' : 'Text'} Input` :
              data.type === 'action' ? 'Action' :
              data.type === 'message' ? 'Send Message' : 
-             data.type === 'branch' ? `Branch (${data.branchCount || 2} paths)` : 'Node'}
+             data.type === 'branch' ? `Branch (${data.branchCount || 2} paths)` :
+             data.type === 'allocateToTeamInbox' ? 'Allocate to Team Inbox' :
+             data.type === 'takeoverFromTeamInbox' ? 'Takeover from Team Inbox' : 'Node'}
           </NodeHeaderTitle>
           <NodeHeaderActions>
             {data.type !== 'start' && data.type !== 'end' && (
@@ -445,6 +461,37 @@ export function EnhancedWorkflowNodeV2({ data, selected, id }: NodeProps<Workflo
                   </div>
                 )}
               </>
+            )}
+            
+            {/* Team Inbox Information */}
+            {(data.type === 'allocateToTeamInbox' || data.type === 'takeoverFromTeamInbox') && (
+              <div className="space-y-2">
+                {data.teamInboxId && (
+                  <div className="text-xs">
+                    <span className="text-muted-foreground">Team Inbox: </span>
+                    <span className="font-medium">
+                      {data.teamInboxId === 'sales-inbox' ? 'Sales Team' :
+                       data.teamInboxId === 'support-inbox' ? 'Customer Support' :
+                       data.teamInboxId === 'billing-inbox' ? 'Billing Team' :
+                       data.teamInboxId === 'technical-inbox' ? 'Technical Team' :
+                       data.teamInboxId}
+                    </span>
+                  </div>
+                )}
+                {data.teamInboxState && (
+                  <div className="text-xs">
+                    <span className="text-muted-foreground">
+                      {data.type === 'allocateToTeamInbox' ? 'Initial State: ' : 'Trigger State: '}
+                    </span>
+                    <span className={cn(
+                      "font-medium px-2 py-0.5 rounded",
+                      isDarkMode ? "bg-primary/10" : "bg-primary/20"
+                    )}>
+                      {data.teamInboxState}
+                    </span>
+                  </div>
+                )}
+              </div>
             )}
             
             {/* AI Model (if not default) */}

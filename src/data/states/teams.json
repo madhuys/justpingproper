@@ -1,0 +1,10 @@
+{
+  "teams": [],
+  "selectedTeam": null,
+  "filters": {
+    "search": "",
+    "status": "all"
+  },
+  "loading": false,
+  "error": null
+}

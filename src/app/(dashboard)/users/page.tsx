@@ -10,7 +10,7 @@ import { EditTeamMemberModal } from '@/components/organisms/modals/EditTeamMembe
 import { RemoveTeamMemberModal } from '@/components/organisms/modals/RemoveTeamMemberModal';
 import { ResendInviteModal } from '@/components/organisms/modals/ResendInviteModal';
 import { Card, CardContent } from '@/components/ui/card';
-import { UserPlus, User } from 'lucide-react';
+import { UserPlus, User, Users } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { useTeamMembers, TeamMember } from '@/hooks/useTeamMembers';
@@ -131,7 +131,16 @@ export default function UsersPage() {
                 
                 <Button 
                   variant="outline"
-                  onClick={() => toast.success(strings.messages.matrixComingSoon)}
+                  onClick={() => router.push('/users/teams')}
+                  className="flex items-center gap-2"
+                >
+                  <Users className="h-4 w-4" />
+                  Manage Teams
+                </Button>
+                
+                <Button 
+                  variant="outline"
+                  onClick={() => router.push('/settings/rbac')}
                   className="flex items-center gap-2"
                 >
                   {strings.actions.viewMatrix}

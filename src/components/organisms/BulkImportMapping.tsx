@@ -110,14 +110,14 @@ export function BulkImportMapping({
                     </TableCell>
                     <TableCell>
                       <Select
-                        value={mapping.mappedColumn || ''}
-                        onValueChange={(value) => onMappingChange(mapping.groupFieldId, value || null)}
+                        value={mapping.mappedColumn || 'unmapped'}
+                        onValueChange={(value) => onMappingChange(mapping.groupFieldId, value === 'unmapped' ? null : value)}
                       >
                         <SelectTrigger className="w-full">
                           <SelectValue placeholder={strings.bulkAdd.mapping.unmapped} />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="">
+                          <SelectItem value="unmapped">
                             {strings.bulkAdd.mapping.unmapped}
                           </SelectItem>
                           {fileHeaders.map(header => (

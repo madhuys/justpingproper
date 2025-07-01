@@ -111,6 +111,8 @@ export default function CreateWorkflowAgentPage() {
   const [nodeMaxTokens, setNodeMaxTokens] = useState(500);
   const [hasCustomLabel, setHasCustomLabel] = useState(false);
   const [nodeBranchCount, setNodeBranchCount] = useState(2);
+  const [nodeTeamInboxId, setNodeTeamInboxId] = useState('');
+  const [nodeTeamInboxState, setNodeTeamInboxState] = useState('');
   const [nodeFiles, setNodeFiles] = useState<Array<{
     id: string;
     name: string;
@@ -202,6 +204,12 @@ export default function CreateWorkflowAgentPage() {
     // Load branch count for branch nodes
     if (node.data.type === 'branch') {
       setNodeBranchCount(node.data.branchCount || 2);
+    }
+    
+    // Load team inbox fields
+    if (node.data.type === 'allocateToTeamInbox' || node.data.type === 'takeoverFromTeamInbox') {
+      setNodeTeamInboxId(node.data.teamInboxId || '');
+      setNodeTeamInboxState(node.data.teamInboxState || '');
     }
     
     // Load files
@@ -389,7 +397,9 @@ export default function CreateWorkflowAgentPage() {
         options: nodeInputType === 'multiselect' ? nodeChoices.filter(c => c.trim() !== '') : undefined,
         branchCount: selectedNode.data.type === 'branch' ? nodeBranchCount : undefined,
         files: nodeFiles,
-        actionConfig: selectedNode.data.type === 'action' ? actionFields : undefined
+        actionConfig: selectedNode.data.type === 'action' ? actionFields : undefined,
+        teamInboxId: nodeTeamInboxId || selectedNode.data.teamInboxId,
+        teamInboxState: nodeTeamInboxState || selectedNode.data.teamInboxState
       }
     };
     
@@ -398,7 +408,7 @@ export default function CreateWorkflowAgentPage() {
     selectedNode, nodeLabel, nodePrompt, nodeVariable, nodeVariables, nodeVariableValidations,
     nodeInputType, nodeValidation, nodeActionType, nodeAiModel, nodeSystemPrompt,
     nodeTemperature, nodeMaxTokens, nodeChoices, hasCustomLabel, nodeBranchCount,
-    nodeFiles, actionFields
+    nodeFiles, actionFields, nodeTeamInboxId, nodeTeamInboxState
   ]);
 
   // Load saved workflows
@@ -415,9 +425,28 @@ export default function CreateWorkflowAgentPage() {
       }
     };
 
+    const handleTeamInboxUpdate = (event: CustomEvent) => {
+      if (selectedNode && (selectedNode.data.type === 'allocateToTeamInbox' || selectedNode.data.type === 'takeoverFromTeamInbox')) {
+        setNodeTeamInboxId(event.detail.teamInboxId);
+        updateNodeInRealTime();
+      }
+    };
+
+    const handleTeamInboxStateUpdate = (event: CustomEvent) => {
+      if (selectedNode && (selectedNode.data.type === 'takeoverFromTeamInbox' || selectedNode.data.type === 'allocateToTeamInbox')) {
+        setNodeTeamInboxState(event.detail.teamInboxState);
+        updateNodeInRealTime();
+      }
+    };
+
     window.addEventListener('updateActionConfig', handleActionConfigUpdate as EventListener);
+    window.addEventListener('updateTeamInbox', handleTeamInboxUpdate as EventListener);
+    window.addEventListener('updateTeamInboxState', handleTeamInboxStateUpdate as EventListener);
+    
     return () => {
       window.removeEventListener('updateActionConfig', handleActionConfigUpdate as EventListener);
+      window.removeEventListener('updateTeamInbox', handleTeamInboxUpdate as EventListener);
+      window.removeEventListener('updateTeamInboxState', handleTeamInboxStateUpdate as EventListener);
     };
   }, [selectedNode, updateNodeInRealTime]);
 

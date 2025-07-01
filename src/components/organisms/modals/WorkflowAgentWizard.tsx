@@ -195,7 +195,7 @@ export function WorkflowAgentWizard({ isOpen, onClose, onCreateAgent }: Workflow
       name,
       templateId,
       steps,
-      knowledgeIndexId,
+      knowledgeIndexId: knowledgeIndexId === 'none' ? '' : knowledgeIndexId,
       mcpServerIds: selectedMcpServers,
       enabledTools,
       apiKey
@@ -300,7 +300,7 @@ export function WorkflowAgentWizard({ isOpen, onClose, onCreateAgent }: Workflow
                   <SelectValue placeholder={agentsStrings.wizard.workflow.integrations.knowledgeIndexPlaceholder} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">None</SelectItem>
+                  <SelectItem value="none">None</SelectItem>
                   {knowledgeIndexes.map(index => (
                     <SelectItem key={index.id} value={index.id}>
                       {index.name}

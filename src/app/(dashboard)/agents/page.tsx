@@ -21,7 +21,6 @@ import {
   MessageSquare
 } from 'lucide-react';
 import { useAgents } from '@/hooks/useAgents';
-import { FreeFlowAgentWizard } from '@/components/organisms/modals/FreeFlowAgentWizard';
 import { AgentTestModal } from '@/components/organisms/modals/AgentTestModal';
 import { useRouter } from 'next/navigation';
 import {
@@ -220,7 +219,7 @@ export default function AgentsPage() {
                     <Button 
                       variant="outline" 
                       size="sm"
-                      disabled
+                      onClick={() => router.push('/agents/freeflow')}
                     >
                       <Edit className="h-4 w-4 mr-2" />
                       {agentsStrings.actions.edit}
@@ -298,7 +297,10 @@ export default function AgentsPage() {
               </Button>
             )}
             {activeTab === 'freeflow' && (
-              <Button onClick={() => openWizard('freeflow')}>
+              <Button onClick={() => {
+                // Trigger the OmniChat FAB with freeflow context
+                (window as any).openOmniChat?.('freeflow');
+              }}>
                 <Plus className="h-4 w-4 mr-2" />
                 {agentsStrings.actions.newFreeflowAgent}
               </Button>
@@ -315,13 +317,6 @@ export default function AgentsPage() {
         </Tabs>
       </div>
 
-      {wizardType === 'freeflow' && (
-        <FreeFlowAgentWizard
-          isOpen={wizardOpen}
-          onClose={closeWizard}
-          onCreateAgent={createFreeFlowAgent}
-        />
-      )}
 
       {testAgent && (
         <AgentTestModal

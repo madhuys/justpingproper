@@ -1,0 +1,108 @@
+{
+  "title": "Free-Flow Agent Playground",
+  "description": "Configure and test free-form conversational agents",
+  "leftPane": {
+    "title": "Configuration",
+    "provider": {
+      "label": "AI Provider",
+      "placeholder": "Select provider"
+    },
+    "model": {
+      "label": "Model",
+      "placeholder": "Select model"
+    },
+    "persona": {
+      "label": "Persona",
+      "placeholder": "Select persona",
+      "custom": "Create Custom Persona"
+    },
+    "knowledgeSearch": {
+      "label": "Knowledge Search",
+      "description": "Enable searching across knowledge indexes",
+      "selectPlaceholder": "Select knowledge indexes"
+    },
+    "webSearch": {
+      "label": "Web Search",
+      "description": "Enable web search capabilities",
+      "selectPlaceholder": "Select search providers"
+    },
+    "systemPrompt": {
+      "label": "System Prompt",
+      "placeholder": "Enter system prompt or use Magic Prompter",
+      "magicPrompter": {
+        "button": "Magic Prompter",
+        "label": "Task Description",
+        "placeholder": "Describe what your agent should do...",
+        "generate": "Generate Prompt"
+      }
+    },
+    "multimodal": {
+      "label": "Multimodal Input",
+      "description": "Attach images, audio, or documents",
+      "uploadButton": "Upload Files"
+    }
+  },
+  "centerPane": {
+    "tabs": {
+      "chat": "Chat",
+      "json": "JSON"
+    },
+    "chat": {
+      "placeholder": "Type a message to test your agent...",
+      "send": "Send"
+    },
+    "json": {
+      "request": "Request",
+      "response": "Response"
+    },
+    "controls": {
+      "save": "Save",
+      "load": "Load",
+      "clear": "Clear Chat"
+    }
+  },
+  "rightPane": {
+    "title": "AI Parameters",
+    "temperature": {
+      "label": "Temperature",
+      "description": "Controls randomness (0 = focused, 1 = creative)"
+    },
+    "topP": {
+      "label": "Top-p",
+      "description": "Controls diversity via nucleus sampling"
+    },
+    "maxTokens": {
+      "label": "Max Tokens",
+      "description": "Maximum response length"
+    },
+    "frequencyPenalty": {
+      "label": "Frequency Penalty",
+      "description": "Reduces repetition (-2 to 2)"
+    },
+    "presencePenalty": {
+      "label": "Presence Penalty",
+      "description": "Encourages new topics (-2 to 2)"
+    },
+    "stopSequences": {
+      "label": "Stop Sequences",
+      "placeholder": "Enter stop sequences (one per line)"
+    },
+    "customHeaders": {
+      "label": "Custom Headers",
+      "placeholder": "{ \"key\": \"value\" }"
+    }
+  },
+  "publish": {
+    "button": "Publish Agent",
+    "title": "Publish to Channels",
+    "description": "Select channels to publish your agent",
+    "confirm": "Confirm Publish",
+    "cancel": "Cancel",
+    "success": "Agent published to {count} channels"
+  },
+  "errors": {
+    "loadFailed": "Failed to load configuration",
+    "saveFailed": "Failed to save configuration",
+    "publishFailed": "Failed to publish agent"
+  }
+}
